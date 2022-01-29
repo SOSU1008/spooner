@@ -11,11 +11,10 @@
     <script type="text/javascript" src="scripts/common.js"></script>
   </head>
   <body>
-    <div id="root" style="background-color: #48239d">
-      <!-- pc 작업 끝나면 style 제거하기! -->
+    <div id="root">
       <header>
         <div class="inner">
-          <h1>SPONNER NFT</h1>
+          <h1><a href="#" onclick="scrollMove('#root'); return false;">SPONNER NFT</a></h1>
           <button
             type="button"
             class="btn-nav-toggle"
@@ -26,13 +25,13 @@
           <nav id="nav">
             <div class="nav-inner">
               <ul>
-                <li><a href="#">nft</a></li>
-                <li><a href="#">own 2 earn</a></li>
-                <li><a href="#">benefits</a></li>
-                <li><a href="#">whitelist</a></li>
-                <li><a href="#">mint</a></li>
-                <li><a href="#">roadmap</a></li>
-                <li><a href="#">whitepaper</a></li>
+                <li><a href="#" onclick="scrollMove('.online-service'); return false;">nft</a></li>
+                <li><a href="#" onclick="scrollMove('.own-2-earn'); return false;">own 2 earn</a></li>
+                <li><a href="#" onclick="scrollMove('.benefits'); return false;">benefits</a></li>
+                <li><a href="#" onclick="scrollMove('.whitelist'); return false;">whitelist</a></li>
+                <li><a href="#" onclick="scrollMove('.spooner-nft'); return false;">mint</a></li>
+                <li><a href="#" onclick="alert('미구현 메뉴'); return false;">roadmap</a></li>
+                <li><a href="#" onclick="alert('링크를 공유해 주신다고 하셨죠'); return false;">whitepaper</a></li>
               </ul>
               <div class="btn-group">
                 <button type="button" class="btn-opensea">opensea</button>

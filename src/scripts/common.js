@@ -42,9 +42,9 @@ function setBenefitInfo() {
   let revenueBox = document.getElementById('revenueBox');
   let gradeInfoBox = document.getElementById('gradeInfoBox');
   let price = 0;
-  revenue = 0;
-  returnRate = 0;
-  gradeInfo = '';
+  let revenue = 0;
+  let returnRate = 0;
+  let gradeInfo = '';
 
   if (gradeSelect !== 'default' && mintSelect !== 0) {
     for (let i = 0; i < gradeDetail.length; i++) {
@@ -95,6 +95,12 @@ function mobileNavToggle() {
   headerItem.classList.value.indexOf('mobile-nav') !== -1
     ? headerItem.classList.remove('mobile-nav')
     : headerItem.classList.add('mobile-nav');
+}
+
+// 메뉴 이동 함수 입니다. 매개변수로 tagName 값을 받고, 해당 tagName으로 지정한 위치로 스크롤 이동 시킵니다. 
+function scrollMove(tagName){
+  let positionY = window.pageYOffset + document.querySelector(tagName).getBoundingClientRect().top;
+  window.scrollTo({top:positionY, behavior:'smooth'});
 }
 
 window.addEventListener('load', function () {

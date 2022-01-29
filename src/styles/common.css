@@ -125,7 +125,9 @@ input:-ms-input-placeholder {
   height: 100%;
   margin: 0 auto;
 }
-
+#root {
+  background-color: #48239d;
+}
 section h2 {
   font-size: 4.2rem;
 }
@@ -148,7 +150,6 @@ section .desc + .desc {
 section .desc + h3 {
   margin-top: 3.7rem;
 }
-
 header {
   position: relative;
   width: 100%;
@@ -178,6 +179,10 @@ header h1 {
   background: url(../images/ico_logo_before.png) no-repeat 1rem 50%;
   transition: 0.3s;
   text-indent: -999rem;
+}
+header h1 a{
+  display: block;
+  height: 100%;
 }
 header nav {
   position: absolute;
