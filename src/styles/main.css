@@ -17,8 +17,16 @@
   background: url(../images/bg_pc_visual.png) 50% 0 no-repeat;
   background-size: 100% auto;
 }
+.visual h2 {
+  font-size: 4.8rem;
+}
+.visual h2 + h3 {
+  margin-top: 1.3rem;
+  font-size: 3rem;
+}
 .visual .desc {
   width: 42rem;
+  font-size: 1.6rem;
 }
 
 .visual .btn-area {
@@ -31,6 +39,174 @@
 
 .visual .btn-area .btn + .btn {
   margin-left: 1.3rem;
+}
+
+.online-service {
+  overflow: hidden;
+  position: relative;
+  padding-top: 15.4rem;
+  padding-bottom: 18.4rem;
+  background: linear-gradient(#421f91, #210f4c);
+}
+.online-service .txt-area {
+  position: relative;
+  padding-right: 42rem;
+}
+.online-service .txt-area .ico-jackpot {
+  position: absolute;
+  top: -1.5rem;
+  right: -2rem;
+}
+.online-service .btn-area {
+  margin-top: 11rem;
+  white-space: nowrap;
+}
+.online-service .btn-area .btn {
+  display: inline-block;
+}
+.online-service .btn-area .btn + .btn {
+  margin-left: -7.5rem;
+}
+
+.own-2-earn {
+  position: relative;
+  padding-top: 16rem;
+  padding-bottom: 18.4rem;
+  background: linear-gradient(#421f90, #210f4c);
+}
+.own-2-earn .btn-area {
+  position: relative;
+  height: 42.3rem;
+  margin-top: 6.7rem;
+  background: url(../images/bg_own_2_earn_pc.png) 50% 0 no-repeat;
+  background-size: 100% auto;
+  text-align: center;
+}
+.own-2-earn .btn-area .btn-move {
+  position: absolute;
+  bottom: 7.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1.4rem 1.1em 2rem;
+  font-size: 2.4rem;
+  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #532bb0;
+  border-radius: 2rem;
+}
+
+.benefits {
+  position: relative;
+  padding-top: 14rem;
+  padding-bottom: 18rem;
+  background: linear-gradient(#421f90, #210f4c);
+  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.benefits .mobile {
+  display: none;
+}
+.benefits .select-area {
+  margin-top: 3rem;
+  padding: 4rem 11.1rem 10rem 11.1rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  text-align: center;
+  border-radius: 5rem;
+}
+.benefits .select-area .desc {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  font-size: 1.6rem;
+  text-align: left;
+}
+.benefits .select-area .flex-form {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 4.7rem;
+}
+.benefits .select-area .flex-form > div {
+  width: 30.3rem;
+}
+.benefits .select-area .flex-form .result {
+  position: absolute;
+  right: 0;
+  bottom: -5rem;
+  font-size: 1.4rem;
+}
+.benefits .select-area .title {
+  display: block;
+  margin-bottom: 3.7rem;
+  font-weight: normal;
+  font-size: 3.6rem;
+  color: #ffba00;
+}
+.benefits .select-form {
+  position: relative;
+}
+.benefits .select-form + .select-form {
+  margin-top: 0.9rem;
+}
+.benefits .input-form {
+  margin-top: 3.1rem;
+}
+.benefits .input-form .sub-title {
+  display: block;
+  padding-left: 4.5rem;
+  font-weight: 300;
+  font-size: 2.4rem;
+  text-align: left;
+}
+.benefits .input-form .price-box {
+  width: 100%;
+  height: 7rem;
+  margin-top: 0.6rem;
+  padding: 1rem 3rem;
+  font-weight: 400;
+  color: #fff;
+  background-color: #3f2178;
+  border-radius: 2rem;
+}
+.benefits .input-form .price-box p {
+  position: relative;
+  padding-right: 3.8rem;
+  font-size: 2.8rem;
+  line-height: 1.7;
+}
+.benefits .input-form .price-box p::after {
+  content: 'ETH';
+  position: absolute;
+  top: 0.5rem;
+  right: 0;
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: #ffba00;
+}
+.benefits .input-form.rate .price-box {
+  height: 11.5rem;
+  padding: 0rem 7rem 2.05rem;
+}
+.benefits .input-form.rate .price-box p {
+  padding-right: 0;
+  font-size: 6rem;
+}
+.benefits .input-form.rate .price-box p::after {
+  content: '%';
+  display: inline-block;
+  position: relative;
+  top: 0;
+  margin-left: 0.8rem;
+  font-size: 4.8rem;
+  font-weight: 400;
+}
+.benefits .ico-arrow {
+  margin: 12rem 0;
+  transform: rotate(270deg);
+}
+.benefits .result {
+  margin-top: 10rem;
+  font-size: 2.8rem;
+  color: #b093f7;
+  line-height: 1.7;
 }
 
 @media screen and (max-width: 1024px) {
@@ -70,63 +246,81 @@
   }
 
   .online-service {
-    position: relative;
     padding-top: 20rem;
     padding-bottom: 10rem;
-    background: linear-gradient(#421f91, #210f4c);
+  }
+  .online-service .txt-area {
+    padding: 0;
+  }
+  .online-service .txt-area .ico-jackpot {
+    display: block;
+    position: relative;
+    margin: 4rem auto 0;
+    width: 57.4rem;
+    height: 56.8rem;
+    top: auto;
+    right: auto;
   }
   .online-service .btn-area {
     margin-top: 4rem;
+    white-space: normal;
   }
   .online-service .btn-area .btn {
     display: block;
     margin: 0 auto;
+    width: 57.4rem;
+    height: 56.8rem;
   }
   .online-service .btn-area .btn + .btn {
-    margin-top: 4rem;
+    margin: 4rem auto 0 auto;
   }
 
   .own-2-earn {
-    position: relative;
     padding-top: 12rem;
     padding-bottom: 26rem;
-    background: linear-gradient(#421f90, #210f4c);
   }
   .own-2-earn .img-area {
     margin-top: 8rem;
     text-align: center;
   }
   .own-2-earn .btn-area {
+    height: 188.4rem;
     margin-top: 14rem;
-    text-align: center;
+    background: url(../images/bg_own_2_earn.png) 50% 0 no-repeat;
   }
   .own-2-earn .btn-area .btn-move {
-    display: inline-block;
+    bottom: 0;
     padding: 2.4rem 1.4em 3.6rem;
     font-size: 3.6rem;
-    font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #532bb0;
     border-radius: 5rem;
+    white-space: nowrap;
   }
 
   .benefits {
-    position: relative;
-    padding-top: 14rem;
     padding-bottom: 14rem;
-    background: linear-gradient(#421f90, #210f4c);
-    font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  .benefits .mobile {
+    display: block;
   }
   .benefits .select-area {
     margin-top: 12rem;
     padding: 0 6rem;
+    background-color: transparent;
     text-align: center;
   }
-  .benefits .select-area .title {
+  .benefits .select-area .flex-form {
     display: block;
+    margin-top: 0;
+  }
+  .benefits .select-area .flex-form > div {
+    width: 100%;
+  }
+  .benefits .select-area .desc {
+    display: none;
+  }
+  .benefits .select-area .title {
     margin-bottom: 6rem;
-    font-weight: normal;
     font-size: 6rem;
-    color: #ffba00;
   }
   .benefits .select-form {
     position: relative;
@@ -138,58 +332,41 @@
     margin-top: 6rem;
   }
   .benefits .input-form .sub-title {
-    display: block;
     padding-left: 7rem;
     font-size: 4rem;
-    text-align: left;
   }
   .benefits .input-form .price-box {
-    width: 100%;
     height: 12.4rem;
     margin-top: 2rem;
     padding: 1.5rem 7rem 4.05rem;
-    font-weight: 400;
-    font-size: 4rem;
-    color: #fff;
-    background-color: #3f2178;
     border-radius: 3.6rem;
   }
   .benefits .input-form .price-box p {
-    position: relative;
     padding-right: 6.4rem;
     font-size: 4.8rem;
-    line-height: 1.7;
   }
   .benefits .input-form .price-box p::after {
-    content: 'ETH';
-    position: absolute;
-    top: 0.5rem;
-    right: 0;
     font-size: 4rem;
     font-weight: 300;
-    color: #ffba00;
   }
   .benefits .input-form.rate .price-box {
     height: 19.8rem;
     padding: 1rem 7rem 4.05rem;
   }
   .benefits .input-form.rate .price-box p {
-    padding-right: 0;
     font-size: 10rem;
   }
   .benefits .input-form.rate .price-box p::after {
-    content: '%';
-    display: inline-block;
-    position: relative;
-    top: 0;
-    margin-left: 0.8rem;
     font-size: 8.2rem;
-    font-weight: 400;
   }
   .benefits .ico-arrow {
     margin: 12rem 0;
+    transform: none;
   }
-  .benefits .result {
+  .benefits .select-area .flex-form .result {
+    position: relative;
+    right: auto;
+    bottom: auto;
     margin-top: 10rem;
     font-size: 2.8rem;
     color: #b093f7;

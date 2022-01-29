@@ -11,11 +11,18 @@
     <script type="text/javascript" src="scripts/common.js"></script>
   </head>
   <body>
-    <div id="root" style="background-color:#48239d;"> <!-- pc 작업 끝나면 style 제거하기! -->
+    <div id="root" style="background-color: #48239d">
+      <!-- pc 작업 끝나면 style 제거하기! -->
       <header>
         <div class="inner">
           <h1>SPONNER NFT</h1>
-          <button type="button" class="btn-nav-toggle" onclick="mobileNavToggle();"><span>메뉴</span></button>
+          <button
+            type="button"
+            class="btn-nav-toggle"
+            onclick="mobileNavToggle();"
+          >
+            <span>메뉴</span>
+          </button>
           <nav id="nav">
             <div class="nav-inner">
               <ul>
@@ -60,26 +67,29 @@
         </section>
         <section class="online-service">
           <div class="inner">
-            <h2>SPOONER NFT</h2>
-            <h3>BETTINGSPOON OPERATES 5 ONLINE SERVICES:</h3>
-            <p class="desc">
-              Sports Betting, Table Game, Slot, Poker, and Original Game.
-              SPOONER NFT is an NFT minted by Bettingspoon and is a token that
-              digitalizes the assets of Bettingspoon online gambling service. We
-              have minted a total of 11,584 SPOONER NFTs, that can get investors
-              the ownership and profitability of the Ethereum blockchain.
-            </p>
-            <p class="desc">
-              SPOONER-NFT is based on the ERC-1155 standard. SPOONER NFT will
-              distribute SPOONER NFT holders a portion of the revenue associated
-              with Bettingspoon's online gambling business. This will be the key
-              that can further increase the value of the SPOONER-NFT, and will
-              be highlighted in the NFT Marketplace.
-            </p>
-            <div class="btn-area">
-              <button class="btn">
+            <div class="txt-area">
+              <h2>SPOONER NFT</h2>
+              <h3>BETTINGSPOON OPERATES 5 ONLINE SERVICES:</h3>
+              <p class="desc">
+                Sports Betting, Table Game, Slot, Poker, and Original Game.
+                SPOONER NFT is an NFT minted by Bettingspoon and is a token that
+                digitalizes the assets of Bettingspoon online gambling service.
+                We have minted a total of 11,584 SPOONER NFTs, that can get
+                investors the ownership and profitability of the Ethereum
+                blockchain.
+              </p>
+              <p class="desc">
+                SPOONER-NFT is based on the ERC-1155 standard. SPOONER NFT will
+                distribute SPOONER NFT holders a portion of the revenue
+                associated with Bettingspoon's online gambling business. This
+                will be the key that can further increase the value of the
+                SPOONER-NFT, and will be highlighted in the NFT Marketplace.
+              </p>
+              <span class="ico-jackpot">
                 <img src="./images/ico_jackpot.png" alt="" />
-              </button>
+              </span>
+            </div>
+            <div class="btn-area">
               <button class="btn">
                 <img src="./images/ico_a_class.png" alt="" />
               </button>
@@ -118,9 +128,6 @@
               We will pay the revenue to the NFT holder to their wallet address
               on a daily basis.
             </p>
-            <div class="img-area">
-              <img src="./images/bg_own_2_earn.png" alt="" />
-            </div>
             <div class="btn-area">
               <a href="" class="btn-move">
                 <span>Check out your future income!</span>
@@ -134,81 +141,91 @@
             <h3>Check out your future income!</h3>
             <p class="desc">
               This is a profit simulator which calculates the future income you
-              will get if you own SPOONER NFT. You can also find the expected
-              rate of returns by selecting the NFT grade and quantity you want
-              to own.
+              will get if you own SPOONER NFT. <br />You can also find the
+              expected rate of returns by selecting the NFT grade and quantity
+              you want to own.
             </p>
-            <p class="desc v2">
+            <p class="desc v2 mobile">
               Distribution of 90% of 1 day revenue from NFT CASINO: Calculated
               on the basis of $300,000 (1ETH = $4,000).
             </p>
-            <p class="desc v2">
+            <p class="desc v2 mobile">
               If you select 'SPOONER NFT Grade' and 'MINT', the expected rate of
               return will be calculated automatically.
             </p>
             <div class="select-area">
-              <div class="investment-area">
-                <strong class="title">INVESTMENT</strong>
-                <div class="select-form">
-                  <select
-                    class="default-select"
-                    name="gradeSelect"
-                    id="gradeSelect"
-                  >
-                    <option value="default" disabled selected hidden>
-                      NFT GRADE
-                    </option>
-                    <option value="A CLASS">A CLASS</option>
-                    <option value="K CLASS">K CLASS</option>
-                    <option value="Q CLASS">Q CLASS</option>
-                    <option value="J CLASS">J CLASS</option>
-                    <option value="10 CLASS">10 CLASS</option>
-                  </select>
-                </div>
-                <div class="select-form">
-                  <select
-                    class="default-select"
-                    name="mintSelect"
-                    id="mintSelect"
-                  >
-                    <option value="default" disabled selected hidden>
-                      MINT
-                    </option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                  </select>
-                </div>
-                <div class="input-form">
-                  <strong class="sub-title">PRICE</strong>
-                  <div class="price-box">
-                    <p style="border-bottom: 1px solid #825bdc">0.2</p>
-                  </div>
-                </div>
-              </div>
-              <div class="ico-arrow">
-                <img src="./images/ico_arrow_down.png" alt="" />
-              </div>
-              <div class="income-area">
-                <strong class="title" style="color: #00baff">INCOME</strong>
-                <div class="input-form">
-                  <strong class="sub-title">Revenue ( 1 month )</strong>
-                  <div class="price-box">
-                    <p>0.02325325</p>
-                  </div>
-                </div>
-                <div class="input-form rate">
-                  <strong class="sub-title">Rate of returns</strong>
-                  <div class="price-box">
-                    <p>14</p>
-                  </div>
-                </div>
-              </div>
-              <p class="result">
-                ※ This is the expected rate of returns from
-                <span>3 A CLASS</span> NFTs.
+              <p class="desc v2">
+                Distribution of 90% of 1 day revenue from NFT CASINO: Calculated
+                on the basis of $300,000 (1ETH = $4,000).
               </p>
+              <p class="desc v2">
+                If you select 'SPOONER NFT Grade' and 'MINT', the expected rate
+                of return will be calculated automatically.
+              </p>
+              <div class="flex-form">
+                <div class="investment-area">
+                  <strong class="title">INVESTMENT</strong>
+                  <div class="select-form">
+                    <select
+                      class="default-select"
+                      name="gradeSelect"
+                      id="gradeSelect"
+                    >
+                      <option value="default" disabled selected hidden>
+                        NFT GRADE
+                      </option>
+                      <option value="A CLASS">A CLASS</option>
+                      <option value="K CLASS">K CLASS</option>
+                      <option value="Q CLASS">Q CLASS</option>
+                      <option value="J CLASS">J CLASS</option>
+                      <option value="10 CLASS">10 CLASS</option>
+                    </select>
+                  </div>
+                  <div class="select-form">
+                    <select
+                      class="default-select"
+                      name="mintSelect"
+                      id="mintSelect"
+                    >
+                      <option value="default" disabled selected hidden>
+                        MINT
+                      </option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </div>
+                  <div class="input-form">
+                    <strong class="sub-title">PRICE</strong>
+                    <div class="price-box">
+                      <p style="border-bottom: 1px solid #825bdc">0.2</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="ico-arrow">
+                  <img src="./images/ico_arrow_down.png" alt="" />
+                </div>
+                <div class="income-area">
+                  <strong class="title" style="color: #00baff">INCOME</strong>
+                  <div class="input-form">
+                    <strong class="sub-title">Revenue ( 1 month )</strong>
+                    <div class="price-box">
+                      <p>0.02325325</p>
+                    </div>
+                  </div>
+                  <div class="input-form rate">
+                    <strong class="sub-title">Rate of returns</strong>
+                    <div class="price-box">
+                      <p>14</p>
+                    </div>
+                  </div>
+                </div>
+                <p class="result">
+                  ※ This is the expected rate of returns from
+                  <span>3 A CLASS</span> NFTs.
+                </p>
+              </div>
             </div>
           </div>
         </section>
