@@ -28,7 +28,19 @@
   width: 42rem;
   font-size: 1.6rem;
 }
-
+.visual .timer-area {
+  margin-top: 5rem;
+}
+.visual .timer-area p {
+  font-size: 3rem;
+  color: #a47dfd;
+  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.visual .timer-area p span {
+  color: #ffba00;
+}
+.visual .timer-area {
+}
 .visual .btn-area {
   margin-top: 2.7rem;
 }

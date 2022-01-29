@@ -63,16 +63,17 @@ function setBenefitInfo() {
   }
 }
 
-// whiteList 함수
+// whitelist에 수량 선택 시 수량값 가져오는 함수
 let qClassMint;
 let jClassMint;
 let tenClassMint;
 function onChangeWhiteList() {
   qClassMint = Number(document.getElementById('qClassMint').value);
   jClassMint = Number(document.getElementById('jClassMint').value);
-  tenClassMint = Number(document.getElementById('10ClassMint').value);
+  tenClassMint = Number(document.getElementById('tenClassMint').value);
 }
 
+// apply 버튼 클릭 시 예외처리 함수
 function checkWhiteList() {
   if (qClassMint && jClassMint && tenClassMint) {
     console.log('전부 입력 됨');
@@ -102,21 +103,13 @@ window.addEventListener('load', function () {
     document.getElementById('gradeSelect').innerHTML +=
       '<option value="' + data.gradeName + '">' + data.gradeName + '</option>';
   });
+
+  let mintSelectLists = document.querySelectorAll('.mint-select');
   mintList.forEach(function (data) {
-    document.getElementById('mintSelect').innerHTML +=
-      '<option value="' + data + '">' + data + '</option>';
-  });
-  mintList.forEach(function (data) {
-    document.getElementById('qClassMint').innerHTML +=
-      '<option value="' + data + '">' + data + '</option>';
-  });
-  mintList.forEach(function (data) {
-    document.getElementById('jClassMint').innerHTML +=
-      '<option value="' + data + '">' + data + '</option>';
-  });
-  mintList.forEach(function (data) {
-    document.getElementById('tenClassMint').innerHTML +=
-      '<option value="' + data + '">' + data + '</option>';
+    mintSelectLists.forEach(function (mintSelectItem) {
+      mintSelectItem.innerHTML +=
+        '<option value="' + data + '">' + data + '</option>';
+    });
   });
 });
 
