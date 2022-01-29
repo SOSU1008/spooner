@@ -1,0 +1,72 @@
+@media screen and (max-width: 1024px) {
+  .visual {
+    position: relative;
+    height: 93.5em;
+    padding-top: 6em;
+    background: linear-gradient(#47229c, #2b1460);
+  }
+
+  .visual::after {
+    content: '';
+    position: absolute;
+    bottom: -3.5em;
+    right: 0;
+    z-index: 1;
+    width: 34em;
+    height: 66.6em;
+    background: url(../images/bg_visual.png) 100% 0 no-repeat;
+    background-size: 100% auto;
+  }
+
+  .visual .btn-area {
+    margin-top: 2em;
+  }
+
+  .visual .btn-area .btn {
+    display: inline-block;
+  }
+
+  .visual .btn-area .btn + .btn {
+    margin-left: 1em;
+  }
+
+  .online-service {
+    position: relative;
+    padding-top: 10em;
+    padding-bottom: 5em;
+    background: linear-gradient(#421f91, #210f4c);
+  }
+  .online-service .btn-area {
+    margin-top: 2em;
+  }
+  .online-service .btn-area .btn {
+    display: block;
+    margin: 0 auto;
+  }
+  .online-service .btn-area .btn + .btn {
+    margin-top: 2em;
+  }
+
+  .own-2-earn {
+    position: relative;
+    padding-top: 6em;
+    padding-bottom: 13em;
+    background: linear-gradient(#421f90, #210f4c);
+  }
+  .own-2-earn .img-area {
+    margin-top: 4em;
+    text-align: center;
+  }
+  .own-2-earn .btn-area {
+    margin-top: 7em;
+    text-align: center;
+  }
+  .own-2-earn .btn-area .btn-move {
+    display: inline-block;
+    padding: 0.8em 1.2em 0.9em;
+    font-size: 1.8em;
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #532bb0;
+    border-radius: 2.5em;
+  }
+}
