@@ -184,15 +184,15 @@
                       id="mintSelect"
                       onchange="setBenefitInfo();"
                     >
-                      <option value="0" disabled selected hidden>
-                        MINT
-                      </option>
+                      <option value="0" disabled selected hidden>MINT</option>
                     </select>
                   </div>
                   <div class="input-form">
                     <strong class="sub-title">PRICE</strong>
                     <div class="price-box">
-                      <p style="border-bottom: 1px solid #825bdc" id="priceBox">-</p>
+                      <p style="border-bottom: 1px solid #825bdc" id="priceBox">
+                        -
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -264,16 +264,13 @@
                       <strong class="mobile"> Q CLASS </strong>
                       <select
                         class="default-select"
-                        name="mintSelect2"
-                        id="mintSelect2"
+                        name="qClassMint"
+                        id="qClassMint"
+                        onchange="onChangeWhiteList();"
                       >
                         <option value="default" disabled selected hidden>
                           MINT
                         </option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
                       </select>
                     </div>
                   </li>
@@ -286,16 +283,13 @@
                       <strong class="mobile"> J CLASS </strong>
                       <select
                         class="default-select"
-                        name="mintSelect3"
-                        id="mintSelect3"
+                        name="jClassMint"
+                        id="jClassMint"
+                        onchange="onChangeWhiteList();"
                       >
                         <option value="default" disabled selected hidden>
                           MINT
                         </option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
                       </select>
                     </div>
                   </li>
@@ -308,23 +302,20 @@
                       <strong class="mobile"> 10 CLASS </strong>
                       <select
                         class="default-select"
-                        name="mintSelect4"
-                        id="mintSelect4"
+                        name="10ClassMint"
+                        id="10ClassMint"
+                        onchange="onChangeWhiteList();"
                       >
                         <option value="default" disabled selected hidden>
                           MINT
                         </option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
                       </select>
                     </div>
                   </li>
                 </ul>
               </div>
               <div class="btn-area">
-                <a href="" class="btn">
+                <a href="#;" class="btn" onclick="checkWhiteList()">
                   <span>APPLY</span>
                 </a>
               </div>
