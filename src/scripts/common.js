@@ -35,6 +35,7 @@ const gradeDetail =
         }
     ];
 
+// benefit 영역에 select된 값을 기준으로 수익율 정보를 계산해주는 함수입니다.
 function setBenefitInfo() {
     let gradeSelect = document.getElementById('gradeSelect').value;
     let mintSelect = Number(document.getElementById('mintSelect').value);
@@ -58,31 +59,32 @@ function setBenefitInfo() {
         returnRateBox.innerHTML = returnRate;
         revenueBox.innerHTML = revenue * mintSelect;
         gradeInfoBox.innerHTML = gradeInfo;
-    } else {
-        priceBox.innerHTML = '-';
-        returnRateBox.innerHTML = '-';
-        revenueBox.innerHTML = '-';
-        gradeInfoBox.innerHTML = '-';
     }
 }
 
+// 페이지 스크롤 시 GNB 노출 여부 함수 입니다.
 function navScroll() {
     const ScrollChk = window.scrollY || document.documentElement.scrollTop;
     const setScroll = document.querySelector('#root').classList;
     ScrollChk <= 0 ? setScroll.remove('nav-fixed') : setScroll.add('nav-fixed');
 }
 
+// 모바일 메뉴 노출 toggle 함수 입니다.
 function mobileNavToggle() {
     const headerItem = document.querySelector('header');
     (headerItem.classList.value.indexOf('mobile-nav') !== -1) ? headerItem.classList.remove('mobile-nav') : headerItem.classList.add('mobile-nav');
 }
 
-window.addEventListener('scroll', function () {
-    navScroll();
+window.addEventListener('load', function () {
+    // 페이지 로드 시 mintList, gradeDetail 값을 기준으로 benefit 영역의 selectbox 에 목록을 그려줍니다.
     gradeDetail.forEach(function (data) {
         document.getElementById('gradeSelect').innerHTML += '<option value="' + data.gradeName + '">' + data.gradeName + '</option>';
     });
     mintList.forEach(function (data) {
         document.getElementById('mintSelect').innerHTML += '<option value="' + data + '">' + data + '</option>';
     });
+});
+
+window.addEventListener('scroll', function () {
+    navScroll();
 });
