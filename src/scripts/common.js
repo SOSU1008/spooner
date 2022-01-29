@@ -1,13 +1,13 @@
 
-// BENEFIT 영역의 grade 변수값 기준입니다.
-// 유지보수를 고려하여 해당 배열의 정보만 추가 및 수정 시 계산이 적용됩니다.
+// 유지보수를 고려하여 mintList, gradeDetail 배열의 정보를 추가 및 수정 시 계산식이 적용되도록 처리 하였습니다.
+const mintList = [1, 2, 3, 4];
 const gradeDetail =
     [
         {
-            "gradeName": "A CLASS", // Class type
-            "price": 100, // Net Price(ETH)
-            "revenue": 12.94747572, // 수익(ETH) * 1 MINT
-            "returnRate": 13 // 수익율 (%)
+            "gradeName": "A CLASS",
+            "price": 100,
+            "revenue": 12.94747572,
+            "returnRate": 13
         },
         {
             "gradeName": "K CLASS",
@@ -79,4 +79,10 @@ function mobileNavToggle() {
 
 window.addEventListener('scroll', function () {
     navScroll();
+    gradeDetail.forEach(function (data) {
+        document.getElementById('gradeSelect').innerHTML += '<option value="' + data.gradeName + '">' + data.gradeName + '</option>';
+    });
+    mintList.forEach(function (data) {
+        document.getElementById('mintSelect').innerHTML += '<option value="' + data + '">' + data + '</option>';
+    });
 });
