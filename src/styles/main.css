@@ -1,14 +1,49 @@
+.visual {
+  overflow: hidden;
+  position: relative;
+  height: 100rem;
+  padding-top: 4.8rem;
+  background: linear-gradient(#47229c, #2b1460);
+}
+
+.visual .inner::after {
+  content: '';
+  position: absolute;
+  top: 2.2rem;
+  left: 0;
+  z-index: 1;
+  width: 142.9rem;
+  height: 87.9rem;
+  background: url(../images/bg_pc_visual.png) 50% 0 no-repeat;
+  background-size: 100% auto;
+}
+.visual .desc {
+  width: 42rem;
+}
+
+.visual .btn-area {
+  margin-top: 2.7rem;
+}
+
+.visual .btn-area .btn {
+  display: inline-block;
+}
+
+.visual .btn-area .btn + .btn {
+  margin-left: 1.3rem;
+}
+
 @media screen and (max-width: 1024px) {
   .visual {
-    position: relative;
     height: 187rem;
     padding-top: 12rem;
-    background: linear-gradient(#47229c, #2b1460);
   }
 
-  .visual::after {
+  .visual .inner::after {
     content: '';
     position: absolute;
+    top: auto;
+    left: auto;
     bottom: -7rem;
     right: 0;
     z-index: 1;
@@ -17,13 +52,17 @@
     background: url(../images/bg_visual.png) 100% 0 no-repeat;
     background-size: 100% auto;
   }
+  .visual .desc {
+    width: 100%;
+  }
 
   .visual .btn-area {
     margin-top: 4rem;
   }
 
   .visual .btn-area .btn {
-    display: inline-block;
+    width: 22rem;
+    height: 8.8rem;
   }
 
   .visual .btn-area .btn + .btn {
