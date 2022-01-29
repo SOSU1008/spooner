@@ -170,6 +170,7 @@
                       class="default-select"
                       name="gradeSelect"
                       id="gradeSelect"
+                      onchange="setBenefitInfo();"
                     >
                       <option value="default" disabled selected hidden>
                         NFT GRADE
@@ -186,8 +187,9 @@
                       class="default-select"
                       name="mintSelect"
                       id="mintSelect"
+                      onchange="setBenefitInfo();"
                     >
-                      <option value="default" disabled selected hidden>
+                      <option value="0" disabled selected hidden>
                         MINT
                       </option>
                       <option value="1">1</option>
@@ -199,7 +201,7 @@
                   <div class="input-form">
                     <strong class="sub-title">PRICE</strong>
                     <div class="price-box">
-                      <p style="border-bottom: 1px solid #825bdc">0.2</p>
+                      <p style="border-bottom: 1px solid #825bdc" id="priceBox">-</p>
                     </div>
                   </div>
                 </div>
@@ -211,19 +213,19 @@
                   <div class="input-form">
                     <strong class="sub-title">Revenue ( 1 month )</strong>
                     <div class="price-box">
-                      <p>0.02325325</p>
+                      <p id="revenueBox">-</p>
                     </div>
                   </div>
                   <div class="input-form rate">
                     <strong class="sub-title">Rate of returns</strong>
                     <div class="price-box">
-                      <p>14</p>
+                      <p id="returnRateBox"></p>
                     </div>
                   </div>
                 </div>
                 <p class="result">
                   ※ This is the expected rate of returns from
-                  <span>3 A CLASS</span> NFTs.
+                  <span id="gradeInfoBox">-</span> NFTs.
                 </p>
               </div>
             </div>
