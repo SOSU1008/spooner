@@ -142,7 +142,7 @@ input:-ms-input-placeholder {
     font-size: 6rem;
   }
   section h2 + h3 {
-    margin-top: 0.6rem;
+    margin-top: 1.2rem;
   }
 
   section h3 {
@@ -171,5 +171,64 @@ input:-ms-input-placeholder {
 
   .fixed body {
     overflow: hidden;
+  }
+
+  .select-form {
+    position: relative;
+  }
+  .select-form .default-select {
+    display: block;
+    width: 100%;
+    height: 12.4rem;
+    padding: 3rem 7rem 4.05rem;
+    font-weight: 400;
+    font-size: 4rem;
+    color: #fff;
+    background-color: #532bb0;
+    border-radius: 3.6rem;
+    border: none;
+  }
+
+  .select-form::after {
+    content: '';
+    position: absolute;
+    top: 33%;
+    right: 5rem;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-top-width: 4rem;
+    border-bottom-width: 4rem;
+    border-left-width: 2.8rem;
+    border-right-width: 2.8rem;
+    border-color: transparent;
+    border-top-color: #7c4be6;
+  }
+
+  footer {
+    padding: 12rem 4rem;
+    background-color: #180b38;
+    text-align: center;
+  }
+  footer .footer-logo {
+    display: inline-block;
+    width: 21rem;
+    height: 3rem;
+  }
+  footer .ico-lists {
+    margin-top: 6rem;
+  }
+  footer .ico-lists .ico {
+    display: inline-block;
+    width: 6.6rem;
+    height: 6.6rem;
+  }
+  footer .ico-lists .ico + .ico {
+    margin-left: 0.8rem;
+  }
+  footer address {
+    margin-top: 6rem;
+    font-size: 2rem;
+    color: #574597;
   }
 }

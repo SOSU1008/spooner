@@ -128,7 +128,11 @@
               <div class="investment-area">
                 <strong class="title">INVESTMENT</strong>
                 <div class="select-form">
-                  <select name="gradeSelect" id="gradeSelect">
+                  <select
+                    class="default-select"
+                    name="gradeSelect"
+                    id="gradeSelect"
+                  >
                     <option value="default" disabled selected hidden>
                       NFT GRADE
                     </option>
@@ -138,7 +142,13 @@
                     <option value="J CLASS">J CLASS</option>
                     <option value="10 CLASS">10 CLASS</option>
                   </select>
-                  <select name="mintSelect" id="mintSelect">
+                </div>
+                <div class="select-form">
+                  <select
+                    class="default-select"
+                    name="mintSelect"
+                    id="mintSelect"
+                  >
                     <option value="default" disabled selected hidden>
                       MINT
                     </option>
@@ -151,12 +161,15 @@
                 <div class="input-form">
                   <strong class="sub-title">PRICE</strong>
                   <div class="price-box">
-                    <p>0.2</p>
+                    <p style="border-bottom: 1px solid #825bdc">0.2</p>
                   </div>
                 </div>
               </div>
+              <div class="ico-arrow">
+                <img src="./images/ico_arrow_down.png" alt="" />
+              </div>
               <div class="income-area">
-                <strong class="sub-title"> INCOME </strong>
+                <strong class="title" style="color: #00baff">INCOME</strong>
                 <div class="input-form">
                   <strong class="sub-title">Revenue ( 1 month )</strong>
                   <div class="price-box">
@@ -164,7 +177,7 @@
                   </div>
                 </div>
                 <div class="input-form rate">
-                  <strong class="title">Rate of returns</strong>
+                  <strong class="sub-title">Rate of returns</strong>
                   <div class="price-box">
                     <p>14</p>
                   </div>
@@ -177,7 +190,144 @@
             </div>
           </div>
         </section>
+        <section class="whitelist">
+          <div class="inner">
+            <h2>WHITELIST</h2>
+            <h3>Only the first 400 Wallet limited (30% discount)</h3>
+            <p class="desc">
+              To participate in SPOONER NFT Presale, you must register on the
+              SPOONER Whitelist.<br />
+              An e-wallet address is required for whitelist registration. If
+              only wallet address information is used when connecting to an
+              e-wallet, no payment will be processed.
+            </p>
+            <!-- [D]지갑 로그아웃 상태 -->
+            <div class="logout" style="display: none">
+              <div class="img-area">
+                <img src="./images/img_whitelist.png" alt="" />
+              </div>
+              <div class="btn-area">
+                <strong>SPOONER NFT WHITELIST JOIN</strong>
+                <a href="" class="btn">
+                  <span>CONNECT WALLET</span>
+                </a>
+                <!-- [D] 지갑 설치가 되어있지 않을 때 노출 -->
+                <a href="https://metamask.io/" target="_blank" class="btn">
+                  <span>INSTALL WALLWE </span>
+                </a>
+              </div>
+            </div>
+            <!-- [D]지갑 로그인 상태 -->
+            <div class="login">
+              <p>SPOONER NFT WHITELIST JOIN</p>
+              <p>Wallet Connected : <strong>0x7b55...ea52</strong></p>
+              <div class="count-box">
+                <ul>
+                  <li>
+                    <div class="img-box">
+                      <img src="./images/ico_q_class.png" alt="" />
+                    </div>
+                    <div class="select-form">
+                      <strong> Q CLASS </strong>
+                      <select
+                        class="default-select"
+                        name="mintSelect2"
+                        id="mintSelect2"
+                      >
+                        <option value="default" disabled selected hidden>
+                          MINT
+                        </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-box">
+                      <img src="./images/ico_j_class.png" alt="" />
+                    </div>
+                    <div class="select-form">
+                      <strong> Q CLASS </strong>
+                      <select
+                        class="default-select"
+                        name="mintSelect3"
+                        id="mintSelect3"
+                      >
+                        <option value="default" disabled selected hidden>
+                          MINT
+                        </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-box">
+                      <img src="./images/ico_10_class.png" alt="" />
+                    </div>
+                    <div class="select-form">
+                      <strong> Q CLASS </strong>
+                      <select
+                        class="default-select"
+                        name="mintSelect4"
+                        id="mintSelect4"
+                      >
+                        <option value="default" disabled selected hidden>
+                          MINT
+                        </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="btn-area">
+                <a href="" class="btn">
+                  <span>APPLY</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+      <footer>
+        <div class="inner">
+          <a href="" class="footer-logo">
+            <img src="./images/ico_footer_logo.png" alt="sppner nft" />
+          </a>
+          <div class="ico-lists">
+            <a
+              href="https://discord.com/invite/spooner-nft"
+              target="_blank"
+              class="ico"
+            >
+              <img src="./images/ico_footer_01.png" alt="" />
+            </a>
+            <a
+              href="https://twitter.com/spooner_nft"
+              target="_blank"
+              class="ico"
+            >
+              <img src="./images/ico_footer_02.png" alt="" />
+            </a>
+            <a
+              href="https://twitter.com/spooner_nft"
+              target="_blank"
+              class="ico"
+            >
+              <img src="./images/ico_footer_03.png" alt="" />
+            </a>
+          </div>
+          <address>© Copyright 2022, Bettingspoon. All Rights Reserved</address>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
