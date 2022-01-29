@@ -14,7 +14,7 @@
   z-index: 1;
   width: 142.9rem;
   height: 87.9rem;
-  background: url(../images/bg_pc_visual.png) 50% 0 no-repeat;
+  background: url(../images/bg_visual_pc.png) 50% 0 no-repeat;
   background-size: 100% auto;
 }
 .visual h2 {
@@ -140,9 +140,6 @@
   font-size: 3.6rem;
   color: #ffba00;
 }
-.benefits .select-form {
-  position: relative;
-}
 .benefits .select-form + .select-form {
   margin-top: 0.9rem;
 }
@@ -209,8 +206,121 @@
   line-height: 1.7;
 }
 
+.whitelist {
+  padding-top: 14rem;
+  padding-bottom: 15rem;
+  background: linear-gradient(#401e8c, #271256);
+  text-align: center;
+}
+.whitelist h3 {
+  color: #ffc000;
+}
+.whitelist .logout {
+  margin-top: 3rem;
+}
+.whitelist .img-area {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.whitelist .btn-area {
+  text-align: center;
+}
+.whitelist .btn-area strong {
+  display: block;
+  font-size: 2.4rem;
+  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.whitelist .btn-area .btn {
+  display: block;
+  width: 33.3rem;
+  margin: 3rem auto 0;
+  padding: 1.8rem 4rem 1.9rem;
+  font-weight: 400;
+  font-size: 3rem;
+  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #fff;
+  background-color: #6132c8;
+  border-radius: 2.2rem;
+}
+.whitelist .btn-area .btn + .btn {
+  margin-top: 1.3rem;
+}
+
+.whitelist .login {
+  margin-top: 4.8rem;
+}
+.whitelist .login p {
+  font-size: 2.1rem;
+  text-align: center;
+}
+.whitelist .login p strong {
+  color: #00f0ff;
+}
+.whitelist .login p + p {
+  margin-top: 1rem;
+}
+.whitelist .count-box {
+  margin-top: 2.3rem;
+  padding: 0 7.5rem;
+}
+.whitelist .count-box ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.whitelist .count-box li {
+  display: block;
+  position: relative;
+  padding-top: 3.5rem;
+}
+.whitelist .count-box li .pc {
+  font-size: 3.2rem;
+  color: #ffba00;
+  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.whitelist .count-box li .select-form {
+  width: 22.3rem;
+  margin: 0 auto;
+}
+.whitelist .count-box li .select-form .mobile {
+  display: none;
+}
+.whitelist .count-box li .select-form .default-select {
+  height: 6.2rem;
+  margin-top: -4rem;
+  padding: 0 4.6rem;
+  font-size: 2.1rem;
+  border-radius: 2.2rem;
+}
+
+.spooner-nft {
+  /* height: 144.2rem; */
+  padding-top: 26rem;
+  padding-bottom: 74rem;
+  background: url(../images/bg_spooner.png) 50% 0 no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.spooner-nft h2 {
+  font-size: 6rem;
+}
+.spooner-nft .desc {
+  margin-top: 5.8rem;
+  font-size: 2.8rem;
+  color: #fff;
+  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.spooner-nft .btn-area {
+  margin-top: 9.3rem;
+}
+.spooner-nft .btn-area .btn + .btn {
+  margin-left: 2.8rem;
+}
+
 @media screen and (max-width: 1024px) {
   .visual {
+    overflow: inherit;
     height: 187rem;
     padding-top: 12rem;
   }
@@ -322,9 +432,6 @@
     margin-bottom: 6rem;
     font-size: 6rem;
   }
-  .benefits .select-form {
-    position: relative;
-  }
   .benefits .select-form + .select-form {
     margin-top: 1.2rem;
   }
@@ -377,34 +484,26 @@
     padding-top: 10rem;
     padding-bottom: 10rem;
     background: linear-gradient(#46219a, #241053);
-  }
-  .whitelist h3 {
-    color: #ffc000;
+    text-align: left;
   }
   .whitelist .logout {
     margin-top: 8rem;
   }
   .whitelist .img-area {
     margin-bottom: 8rem;
-    text-align: center;
   }
-  .whitelist .btn-area {
-    text-align: center;
+  .whitelist .img-area img {
+    width: 40.8rem;
+    height: 40.2rem;
   }
   .whitelist .btn-area strong {
-    display: block;
     font-size: 3.6rem;
   }
   .whitelist .btn-area .btn {
-    display: block;
     width: 48.4rem;
     margin: 6rem auto 0;
     padding: 3rem 7rem 4.05rem;
-    font-weight: 400;
     font-size: 4.8rem;
-    font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #fff;
-    background-color: #6132c8;
     border-radius: 4.4rem;
   }
   .whitelist .btn-area .btn + .btn {
@@ -416,10 +515,6 @@
   }
   .whitelist .login p {
     font-size: 3.6rem;
-    text-align: center;
-  }
-  .whitelist .login p strong {
-    color: #00f0ff;
   }
   .whitelist .login p + p {
     margin-top: 4rem;
@@ -428,21 +523,30 @@
     margin-top: 6rem;
     padding: 0 3.2rem;
   }
+  .whitelist .count-box ul {
+    display: block;
+  }
   .whitelist .count-box li {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .whitelist .count-box li .pc {
+    display: none;
   }
   .whitelist .count-box li .img-box {
     width: 29rem;
     height: 29rem;
   }
   .whitelist .count-box li .select-form {
+    width: auto;
     min-width: 28rem;
-    margin-left: 2rem;
+    margin: 0 0 0 2rem;
+  }
+  .whitelist .count-box li .select-form .mobile {
+    display: block;
   }
   .whitelist .count-box li .select-form strong {
-    display: block;
     font-weight: 400;
     font-size: 4.8rem;
     font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
