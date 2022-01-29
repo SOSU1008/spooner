@@ -135,32 +135,38 @@ input:-ms-input-placeholder {
   }
 
   .inner {
-    padding: 0 2em;
+    padding: 0 4rem;
   }
 
   section h2 {
-    font-size: 3em;
+    font-size: 6rem;
   }
   section h2 + h3 {
-    margin-top: 0.3em;
+    margin-top: 0.6rem;
   }
 
   section h3 {
     font-weight: normal;
-    font-size: 2em;
+    font-size: 4rem;
   }
 
   section .desc {
-    margin-top: 2em;
-    font-size: 1.2em;
+    margin-top: 4rem;
+    font-size: 2.4rem;
     color: #aa8df4;
     line-height: 1.5;
   }
+  section .desc.v2 {
+    margin-top: 8rem;
+    font-size: 2.8rem;
+    color: #c7b2fc;
+    line-height: 1.5;
+  }
   section .desc + .desc {
-    margin-top: 2.3em;
+    margin-top: 4.6rem;
   }
   section .desc + h3 {
-    margin-top: 2.5em;
+    margin-top: 5rem;
   }
 
   .fixed body {

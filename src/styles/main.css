@@ -1,25 +1,25 @@
 @media screen and (max-width: 1024px) {
   .visual {
     position: relative;
-    height: 93.5em;
-    padding-top: 6em;
+    height: 187rem;
+    padding-top: 12rem;
     background: linear-gradient(#47229c, #2b1460);
   }
 
   .visual::after {
     content: '';
     position: absolute;
-    bottom: -3.5em;
+    bottom: -7rem;
     right: 0;
     z-index: 1;
-    width: 34em;
-    height: 66.6em;
+    width: 68rem;
+    height: 133.2rem;
     background: url(../images/bg_visual.png) 100% 0 no-repeat;
     background-size: 100% auto;
   }
 
   .visual .btn-area {
-    margin-top: 2em;
+    margin-top: 4rem;
   }
 
   .visual .btn-area .btn {
@@ -27,46 +27,70 @@
   }
 
   .visual .btn-area .btn + .btn {
-    margin-left: 1em;
+    margin-left: 2rem;
   }
 
   .online-service {
     position: relative;
-    padding-top: 10em;
-    padding-bottom: 5em;
+    padding-top: 20rem;
+    padding-bottom: 10rem;
     background: linear-gradient(#421f91, #210f4c);
   }
   .online-service .btn-area {
-    margin-top: 2em;
+    margin-top: 4rem;
   }
   .online-service .btn-area .btn {
     display: block;
     margin: 0 auto;
   }
   .online-service .btn-area .btn + .btn {
-    margin-top: 2em;
+    margin-top: 4rem;
   }
 
   .own-2-earn {
     position: relative;
-    padding-top: 6em;
-    padding-bottom: 13em;
+    padding-top: 12rem;
+    padding-bottom: 26rem;
     background: linear-gradient(#421f90, #210f4c);
   }
   .own-2-earn .img-area {
-    margin-top: 4em;
+    margin-top: 8rem;
     text-align: center;
   }
   .own-2-earn .btn-area {
-    margin-top: 7em;
+    margin-top: 14rem;
     text-align: center;
   }
   .own-2-earn .btn-area .btn-move {
     display: inline-block;
-    padding: 0.8em 1.2em 0.9em;
-    font-size: 1.8em;
+    padding: 1.6em 2.4em 1.8rem;
+    font-size: 3.6rem;
     font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: #532bb0;
-    border-radius: 2.5em;
+    border-radius: 5rem;
+  }
+
+  .benefits {
+    position: relative;
+    padding-top: 14rem;
+    padding-bottom: 14rem;
+    background: linear-gradient(#421f90, #210f4c);
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  .benefits .select-area {
+    margin-top: 12rem;
+    padding: 0 6rem;
+    text-align: center;
+  }
+  .benefits .select-area .title {
+    display: block;
+    margin-bottom: 6rem;
+    font-weight: normal;
+    font-size: 6rem;
+    color: #ffba00;
+  }
+  .benefits .select-form select {
+    display: block;
+    width: 100%;
   }
 }
