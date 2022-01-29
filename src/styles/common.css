@@ -124,6 +124,30 @@ input:-ms-input-placeholder {
   max-width: 1200px;
   margin: 0 auto;
 }
+header{position:relative; width:100%; height:12rem; padding-top:3rem; background-color:transparent; transition:.3s; z-index:10;}
+header:after{content:''; position:absolute; top:0; left:0; width:100%; height:0; background-color:rgba(255,255,255,0); transition:.3s; z-index:-1;}
+header h1{position:absolute; top:0; left:0; width:22rem; height:6rem; background:url(../images/ico_logo_before.png) no-repeat 1rem 50%; transition:.3s; text-indent:-999rem;}
+header nav{position:absolute; top:0; right:1rem; width:92rem; height:6rem; text-align:right;}
+header nav ul{display:inline-block; text-align:right;}
+header nav li{display:inline-block;}
+header nav li a{display:flex; justify-content:center; align-items:center; height:6rem; padding:0 1.5rem; font-family:'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight:500; font-size:1.4rem; color:#fff; box-sizing:border-box; text-transform:uppercase; transition:.3s;}
+header .btn-nav-toggle{display:none; position:absolute; top:0; right:.5rem; width:9rem; height:9rem; background-color:transparent; z-index:3;}
+header .btn-nav-toggle span{position:absolute; top:0; right:0; bottom:0; left:0; width:4rem; height:1px; margin:auto; background-color:rgba(255,255,255,.5); text-indent:-999rem; transition:.4s;}
+header .btn-nav-toggle span:before{content:''; position:absolute; top:-1.2rem; left:0; width:100%; height:1px; background-color:rgba(255,255,255,.5); transition:.4s;}
+header .btn-nav-toggle span:after{content:''; position:absolute; top:1.2rem; left:0; width:100%; height:1px; background-color:rgba(255,255,255,.5); transition:.4s;}
+
+header .btn-group{display:inline-block; width:29rem; box-sizing:border-box; transition:.3s;}
+header .btn-group button{display:inline-block; width:4rem; height:4rem; margin-right:1rem; text-indent:-9999rem; background-repeat:no-repeat; background-position:50% 50%;}
+header .btn-group .btn-opensea{background-image:url(../images/ico_nav_opensea.png);}
+header .btn-group .btn-discord{background-image:url(../images/ico_nav_discord.png);}
+header .btn-group .btn-twitter{background-image:url(../images/ico_nav_twitter.png);}
+header .btn-group .link-radius{display:inline-block; padding:1.2rem 1.4rem; font-weight:100; font-size:1.2rem; color:#fff; background-color:#23104f; border-radius:3rem; text-transform:uppercase;}
+header .btn-group .link-radius em{font-style:normal; font-weight:800;}
+.nav-fixed main{padding-top:12rem;}
+.nav-fixed header h1{background-image:url(../images/ico_logo_after.png);}
+.nav-fixed header{position:fixed; padding-top:0;}
+.nav-fixed header:after{height:6rem; background-color:rgba(255,255,255,1);}
+.nav-fixed header nav li a{color:#31176d;}
 
 @media screen and (max-width: 1024px) {
   html {
@@ -231,4 +255,22 @@ input:-ms-input-placeholder {
     font-size: 2rem;
     color: #574597;
   }
+  header{height:9rem; padding-top:0;}
+  header h1{width:30rem; height:9rem; background-image:url(../images/ico_logo_before_m.png); background-size:24rem auto; background-position:4rem 50%;}
+  header nav{position:fixed; top:0; right:-100%; width:40rem; height:100%; padding:2rem; background-color:#fff; transition:.5s; overflow-y:auto;}
+  header nav ul{display:block; padding-top:10rem;}
+  header nav li{display:block;}
+  header nav li a{justify-content:left; height:8rem; font-size:3rem; color:#31176d !important;}
+  header nav .nav-inner{overflow-y:auto;}
+  header.mobile-nav nav{right:0;}
+  header.mobile-nav .btn-nav-toggle span{position:absolute; top:0; right:0; bottom:0; left:0; width:4rem; height:1px; margin:auto; background-color:rgba(255,255,255,0);}
+  header.mobile-nav .btn-nav-toggle span:before{top:0; right:0; bottom:0; left:0; height:2px; margin:auto; background-color:rgba(0,0,0,1); transform:rotate(45deg);}
+  header.mobile-nav .btn-nav-toggle span:after{top:0; right:0; bottom:0; left:0; height:2px; margin:auto; background-color:rgba(0,0,0,1); transform:rotate(-45deg);}
+  header .btn-nav-toggle{display:block;}
+  header .btn-group{display:block; text-align:left;}
+  header .btn-group button{display:block; width:7rem; height:7rem; margin:1rem; background-size:100% auto;}
+  header .btn-group .link-radius{margin:1rem; padding:2rem 3rem; font-size:2.8rem; border-radius:8rem;}
+  .nav-fixed header{padding-top:0;}
+  .nav-fixed header h1{width:30rem; background-size:24rem auto;}
+  .nav-fixed header:after{height:9rem; background-color:rgba(0,0,0,.1);}
 }
