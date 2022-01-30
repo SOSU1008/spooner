@@ -435,12 +435,31 @@
 }
 
 .spooner-nft {
-  /* height: 144.2rem; */
-  padding-top: 26rem;
-  padding-bottom: 74rem;
-  background: url(../images/bg_spooner.png) 50% 0 no-repeat;
-  background-size: cover;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 55.95%;
   text-align: center;
+}
+.spooner-nft video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.spooner-nft .inner {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 5;
 }
 .spooner-nft h2 {
   font-size: 6rem;
@@ -506,7 +525,7 @@
   .visual .btn-area {
     margin-top: 4rem;
   }
-
+  .spooner-nft .btn-area .btn,
   .visual .btn-area .btn {
     width: 22rem;
     height: 8.8rem;
@@ -762,5 +781,21 @@
     border-bottom-width: 2.5rem;
     border-left-width: 1.5rem;
     border-right-width: 1.5rem;
+  }
+  .spooner-nft {
+    padding-bottom: 113%;
+  }
+  .spooner-nft video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: 1s opacity;
+    transition: 1s opacity;
   }
 }
