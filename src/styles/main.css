@@ -34,12 +34,46 @@
 .visual .timer-area p {
   font-size: 3rem;
   color: #a47dfd;
-  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Oswald';
 }
 .visual .timer-area p span {
   color: #ffba00;
 }
 .visual .timer-area .timer-box {
+  margin-top: 1.5rem;
+}
+.visual .timer-area .timer-box > div {
+  display: inline-block;
+  position: relative;
+  width: 10rem;
+  height: 7.3rem;
+  margin-right: 2rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #c1a7fc;
+  font-family: 'Oswald';
+  letter-spacing: 3.45rem;
+  background: url(../images/bg_timer_box.png) 0 0 no-repeat;
+}
+.visual .timer-area .timer-box > div::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #7a48e9;
+  letter-spacing: normal;
+}
+.visual .timer-area .timer-box #days::after {
+  content: 'DAYS';
+}
+.visual .timer-area .timer-box #hours::after {
+  content: 'HOURS';
+}
+.visual .timer-area .timer-box #min::after {
+  content: 'MINUTES';
 }
 .visual .btn-area {
   margin-top: 2.7rem;
@@ -101,7 +135,7 @@
   transform: translateX(-50%);
   padding: 1.4rem 1.1em 2rem;
   font-size: 2.4rem;
-  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Oswald';
   background-color: #532bb0;
   border-radius: 2rem;
 }
@@ -111,7 +145,7 @@
   padding-top: 14rem;
   padding-bottom: 18rem;
   background: linear-gradient(#421f90, #210f4c);
-  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Oswald';
 }
 .benefits .mobile {
   display: none;
@@ -241,7 +275,7 @@
 .whitelist .btn-area strong {
   display: block;
   font-size: 2.4rem;
-  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Oswald';
 }
 .whitelist .btn-area .btn {
   display: block;
@@ -250,7 +284,7 @@
   padding: 1.8rem 4rem 1.9rem;
   font-weight: 400;
   font-size: 3rem;
-  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Oswald';
   color: #fff;
   background-color: #6132c8;
   border-radius: 2.2rem;
@@ -289,7 +323,7 @@
 .whitelist .count-box li .pc {
   font-size: 3.2rem;
   color: #ffba00;
-  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Oswald';
 }
 .whitelist .count-box li .select-form {
   width: 22.3rem;
@@ -321,7 +355,7 @@
   margin-top: 5.8rem;
   font-size: 2.8rem;
   color: #fff;
-  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Oswald';
 }
 .spooner-nft .btn-area {
   margin-top: 9.3rem;
@@ -352,6 +386,27 @@
   }
   .visual .desc {
     width: 100%;
+  }
+  /* 카운트다운 영역 모바일 여기서 수정 */
+  .visual .timer-area {
+    margin-top: 5rem;
+  }
+  .visual .timer-area p {
+    font-size: 3rem;
+  }
+  .visual .timer-area .timer-box {
+    margin-top: 1.5rem;
+  }
+  .visual .timer-area .timer-box > div {
+    width: 10rem;
+    height: 7.3rem;
+    margin-right: 2rem;
+    padding: 0.7rem 1.5rem;
+    font-size: 3rem;
+    letter-spacing: 3.45rem;
+  }
+  .visual .timer-area .timer-box > div::after {
+    font-size: 1.2rem;
   }
 
   .visual .btn-area {
@@ -561,7 +616,7 @@
   .whitelist .count-box li .select-form strong {
     font-weight: 400;
     font-size: 4.8rem;
-    font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Oswald';
     color: #ffba00;
   }
   .whitelist .count-box li .select-form .default-select {
