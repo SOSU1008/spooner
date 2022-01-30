@@ -537,6 +537,18 @@
               </button>
             </div>
           </div>
+          <div class="pop-modal modal-metamask">
+            <div
+              class="modal-dimmed"
+              onclick="modalPop('.modal-metamask', false);"
+            ></div>
+            <div class="modal-content">
+              <p>
+                We couldn't detect any wallets on your device.<br />Click the
+                button above to install MetaMask.
+              </p>
+            </div>
+          </div>
           <div class="pop-modal modal-whitelist">
             <div
               class="modal-dimmed"
@@ -546,7 +558,11 @@
               <p id="whiteListCheck" class="info-box"></p>
               <p>Would you like to processed with the reservation?</p>
               <div class="btn-group">
-                <button type="button" class="btn-modal-base type-yellow">
+                <button
+                  type="button"
+                  class="btn-modal-base type-yellow"
+                  onclick="whiteListSubmit();"
+                >
                   OK
                 </button>
                 <button

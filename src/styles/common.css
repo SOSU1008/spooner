@@ -486,7 +486,15 @@ footer address {
   font-size: 2.4rem;
   text-align: center;
 }
-
+/* modal metamask */
+.pop-modal.modal-metamask .modal-content {
+  height: 21rem;
+}
+.pop-modal.modal-metamask .modal-content p {
+  padding: 4rem 0;
+  font-size: 2.6rem;
+  line-height: 1.5;
+}
 /* modal-whitelist */
 .pop-modal.modal-whitelist .btn-group {
   padding-top: 3rem;
@@ -747,7 +755,15 @@ footer address {
     font-size: 3.2rem;
     text-align: center;
   }
-
+  /* modal metamask */
+  .pop-modal.modal-metamask .modal-content {
+    height: 30rem;
+  }
+  .pop-modal.modal-metamask .modal-content p {
+    padding: 5.5rem 0;
+    font-size: 3.2rem;
+    line-height: 1.6;
+  }
   /* modal-whitelist */
   .pop-modal.modal-whitelist .btn-group {
     padding-top: 3rem;

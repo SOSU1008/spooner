@@ -91,6 +91,17 @@ function checkWhiteList() {
   }
 }
 
+// 선착순 지갑 400개 여부를 체크 함, true 라면 정상 등록, false 라면 알럿 문구 노출.
+function whiteListSubmit() {
+  modalPop('.modal-whitelist', false);
+  if (false) {
+    // 선착순 승인 여부 기준으로 판단
+    // 정상 등록 시 실행할 내용 적용
+  } else {
+    modalAlert('Sorry, Whitelist application is ended.');
+  }
+}
+
 // 페이지 스크롤 시 GNB 노출 여부 함수 입니다.
 function navScroll() {
   const ScrollChk = window.scrollY || document.documentElement.scrollTop;
