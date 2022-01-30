@@ -192,6 +192,7 @@ window.addEventListener('load', function () {
     });
   });
   countDown();
+  setInterval(countDown, 3000);
 });
 
 window.addEventListener('scroll', function () {

@@ -109,6 +109,33 @@
 }
 .online-service .btn-area .btn {
   display: inline-block;
+  padding-bottom: 2.3rem;
+  position: relative;
+}
+.online-service .btn-area .btn::after {
+  position: absolute;
+  left: 3.2rem;
+  bottom: 0;
+  padding: 0.9rem 1.5rem 1.3rem 4rem;
+  font-size: 2rem;
+  color: #fff;
+  background: #49269c url(../images/ico_tri.png) 20% 50% no-repeat;
+  border-radius: 1.5rem;
+}
+.online-service .btn-area .a-class::after {
+  content: 'A class';
+}
+.online-service .btn-area .k-class::after {
+  content: 'K class';
+}
+.online-service .btn-area .q-class::after {
+  content: 'Q class';
+}
+.online-service .btn-area .j-class::after {
+  content: 'J class';
+}
+.online-service .btn-area .ten-class::after {
+  content: '10 class';
 }
 .online-service .btn-area .btn + .btn {
   margin-left: -7.5rem;
@@ -445,8 +472,12 @@
   .online-service .btn-area .btn {
     display: block;
     margin: 0 auto;
+    padding: 0;
     width: 57.4rem;
     height: 56.8rem;
+  }
+  .online-service .btn-area .btn::after {
+    display: none;
   }
   .online-service .btn-area .btn + .btn {
     margin: 4rem auto 0 auto;
