@@ -660,6 +660,15 @@ footer address {
     right: 0;
     opacity: 1;
   }
+  .nav-fixed header .btn-nav-toggle span {
+    background-color: rgba(0, 0, 0, 1);
+  }
+  .nav-fixed header .btn-nav-toggle span:before {
+    background-color: rgba(0, 0, 0, 1);
+  }
+  .nav-fixed header .btn-nav-toggle span:after {
+    background-color: rgba(0, 0, 0, 1);
+  }
   header.mobile-nav .btn-nav-toggle span {
     position: absolute;
     top: 0;
@@ -720,7 +729,7 @@ footer address {
   }
   .nav-fixed header:after {
     height: 10rem;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 1);
   }
 
   /* modal common */
