@@ -123,6 +123,60 @@ function scrollMove(tagName) {
   }, 1);
 }
 
+// 숫자가 한자리일 때 앞에 0 표시해주는 함수
+function handleToString(num) {
+  if (String(num).length == 1) {
+    return '0' + num;
+  } else {
+    return num;
+  }
+}
+
+// Math.trunc =
+//   Math.trunc ||
+//   function (x) {
+//     if (isNaN(x)) {
+//       return NaN;
+//     }
+//     if (x > 0) {
+//       return Math.floor(x);
+//     }
+//     return Math.ceil(x);
+//   };
+
+// 기준점 기준으로 카운트 다운 함수
+function countDown() {
+  let eventStartDt = '2022-02-14 20:00:00'; // 기준점
+  let CountYear = parseInt(eventStartDt.substring(0, 4), 10);
+  let CountMonth = parseInt(eventStartDt.substring(5, 7), 10);
+  let CountDate = parseInt(eventStartDt.substring(8, 10), 10);
+  let CountHours = parseInt(eventStartDt.substring(11, 13), 10);
+  let CountMinutes = parseInt(eventStartDt.substring(14, 16), 10);
+  let CountSeconds = parseInt(eventStartDt.substring(17, 19), 10);
+  let CountMilliseconds = 0;
+  let date = new Date(
+    CountYear,
+    CountMonth - 1,
+    CountDate,
+    CountHours,
+    CountMinutes,
+    CountSeconds,
+    CountMilliseconds
+  );
+
+  let timer = date.getTime();
+  let now = new Date();
+  let gap = Math.round(timer - now.getTime());
+  let DD = handleToString(Math.trunc(gap / 1000 / 60 / 60 / 24));
+  let HH = handleToString(Math.trunc((gap / 1000 / 60 / 60) % 24));
+  let MM = handleToString(Math.trunc((gap / 1000 / 60) % 60));
+  // var SS = handleToString(Math.trunc((gap / 1000) % 60));
+
+  document.getElementById('days').innerHTML = DD;
+  document.getElementById('hours').innerHTML = HH;
+  document.getElementById('min').innerHTML = MM;
+}
+
 window.addEventListener('load', function () {
   // 페이지 로드 시 mintList, gradeDetail 값을 기준으로 benefit 영역의 selectbox 에 목록을 그려줍니다.
   gradeDetail.forEach(function (data) {
@@ -137,6 +191,7 @@ window.addEventListener('load', function () {
         '<option value="' + data + '">' + data + '</option>';
     });
   });
+  countDown();
 });
 
 window.addEventListener('scroll', function () {

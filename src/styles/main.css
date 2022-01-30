@@ -39,7 +39,7 @@
 .visual .timer-area p span {
   color: #ffba00;
 }
-.visual .timer-area {
+.visual .timer-area .timer-box {
 }
 .visual .btn-area {
   margin-top: 2.7rem;
