@@ -508,17 +508,6 @@
   }
   .visual .inner::after {
     display: none;
-    content: '';
-    position: absolute;
-    top: auto;
-    left: auto;
-    bottom: -7rem;
-    right: 0;
-    z-index: 1;
-    width: 72rem;
-    height: 133.2rem;
-    background: url(../images/bg_visual.png) 100% 0 no-repeat;
-    background-size: 100% auto;
   }
   .visual .desc {
     width: 100%;
