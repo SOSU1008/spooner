@@ -7,7 +7,6 @@
     <title>Spooner NFT</title>
     <link rel="stylesheet" href="styles/common.css" />
     <link rel="stylesheet" href="styles/main.css" />
-    <script type="text/javascript" src="scripts/jquery-2.2.4.min.js"></script>
     <script type="text/javascript" src="scripts/common.js"></script>
   </head>
   <body>
@@ -300,7 +299,7 @@
               to an e-wallet, no payment will be processed.
             </p>
             <!-- [D]지갑 로그아웃 상태 -->
-            <div class="logout" style="display: block">
+            <div class="logout" style="display: none">
               <div class="img-area">
                 <img src="./images/img_whitelist.png" alt="" />
               </div>
@@ -323,7 +322,7 @@
               </div>
             </div>
             <!-- [D]지갑 로그인 상태 -->
-            <div class="login" style="display: block">
+            <div class="whitelist-apply login" style="display: block">
               <p class="sub-title">SPOONER NFT WHITELIST JOIN</p>
               <p class="sub-desc">
                 Wallet Connected : <strong>0x7b55...ea52</strong>
@@ -390,7 +389,7 @@
               </div>
             </div>
             <!-- [D] 수량 등록 완료 -->
-            <div class="apply-complete" style="display: block">
+            <div class="apply-complete" style="display: none">
               <p class="sub-title">SPOONER NFT WHITELIST JOIN</p>
               <p class="sub-desc">
                 <span>Congratulations! </span>
@@ -406,7 +405,7 @@
                     </div>
                     <div class="select-form">
                       <strong class="mobile"> Q CLASS </strong>
-                      <div class="num-box">3</div>
+                      <div class="num-box" id="applyCountQ">0</div>
                     </div>
                   </li>
                   <li>
@@ -416,7 +415,7 @@
                     </div>
                     <div class="select-form">
                       <strong class="mobile"> J CLASS </strong>
-                      <div class="num-box">2</div>
+                      <div class="num-box" id="applyCountJ">0</div>
                     </div>
                   </li>
                   <li>
@@ -426,7 +425,7 @@
                     </div>
                     <div class="select-form">
                       <strong class="mobile"> 10 CLASS </strong>
-                      <div class="num-box">1</div>
+                      <div class="num-box" id="applyCountTen">0</div>
                     </div>
                   </li>
                 </ul>

@@ -94,9 +94,13 @@ function checkWhiteList() {
 // 선착순 지갑 400개 여부를 체크 함, true 라면 정상 등록, false 라면 알럿 문구 노출.
 function whiteListSubmit() {
   modalPop('.modal-whitelist', false);
-  if (false) {
-    // 선착순 승인 여부 기준으로 판단
-    // 정상 등록 시 실행할 내용 적용
+  // 선착순 지갑 400 개 승인 여부를 해당 조건문에서 판단이 필요.
+  if (true) {
+    document.querySelector('.whitelist-apply').style.display = 'none';
+    document.querySelector('.apply-complete').style.display = 'block';
+    document.getElementById('applyCountQ').innerHTML = qClassMint;
+    document.getElementById('applyCountJ').innerHTML = jClassMint;
+    document.getElementById('applyCountTen').innerHTML = tenClassMint;
   } else {
     modalAlert('Sorry, Whitelist application is ended.');
   }
@@ -117,10 +121,10 @@ function mobileNavToggle() {
     : headerItem.classList.add('mobile-nav');
 }
 
-// 모달 팝업 노출여부를 처리하는 함수입니다. 매개변수에 className 와 boolean 값으로 대상 팝업의 노출 여부를 제어합니다.
-function modalPop(className, modalBool) {
-  let modalItem = document.querySelector(className);
-  modalBool
+// 모달 팝업 호출 시 modalPop(tagName, Boolean); 형태로 함수를 호출합니다.
+function modalPop(tagName, modalBoolean) {
+  let modalItem = document.querySelector(tagName);
+  modalBoolean
     ? (modalItem.style.display = 'flex')
     : (modalItem.style.display = 'none');
 }
