@@ -132,17 +132,17 @@ function handleToString(num) {
   }
 }
 
-// Math.trunc =
-//   Math.trunc ||
-//   function (x) {
-//     if (isNaN(x)) {
-//       return NaN;
-//     }
-//     if (x > 0) {
-//       return Math.floor(x);
-//     }
-//     return Math.ceil(x);
-//   };
+Math.trunc =
+  Math.trunc ||
+  function (x) {
+    if (isNaN(x)) {
+      return NaN;
+    }
+    if (x > 0) {
+      return Math.floor(x);
+    }
+    return Math.ceil(x);
+  };
 
 // 기준점 기준으로 카운트 다운 함수
 function countDown() {
@@ -170,7 +170,7 @@ function countDown() {
   let DD = handleToString(Math.trunc(gap / 1000 / 60 / 60 / 24));
   let HH = handleToString(Math.trunc((gap / 1000 / 60 / 60) % 24));
   let MM = handleToString(Math.trunc((gap / 1000 / 60) % 60));
-  // var SS = handleToString(Math.trunc((gap / 1000) % 60));
+  // let SS = handleToString(Math.trunc((gap / 1000) % 60));
 
   document.getElementById('days').innerHTML = DD;
   document.getElementById('hours').innerHTML = HH;
