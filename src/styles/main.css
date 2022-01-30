@@ -280,10 +280,13 @@
 }
 
 .whitelist {
+  position: relative;
   padding-top: 14rem;
   padding-bottom: 15rem;
   background: linear-gradient(#401e8c, #271256);
   text-align: center;
+}
+.whitelist.end::after {
 }
 .whitelist h3 {
   color: #ffc000;
@@ -319,19 +322,48 @@
 .whitelist .btn-area .btn + .btn {
   margin-top: 1.3rem;
 }
-
-.whitelist .login {
+.whitelist .login,
+.whitelist .apply-complete {
   margin-top: 4.8rem;
 }
-.whitelist .login p {
+.whitelist .end {
+  position: relative;
+  margin-top: 9rem;
+}
+.whitelist .end .count-box {
+  opacity: 0.3;
+}
+.whitelist .end .end-notice {
+  position: absolute;
+  top: 50%;
+  left: 6rem;
+  right: 6rem;
+  transform: translateY(-50%);
+  padding: 3rem 0;
+  font-weight: 300;
+  font-size: 12rem;
+  font-family: 'Oswald';
+  color: #ffc000;
+  border-top: 1.6rem solid #ffc000;
+  border-bottom: 1.6rem solid #ffc000;
+  text-align: center;
+  line-height: 1.2;
+}
+.whitelist .sub-title,
+.whitelist .sub-desc {
   font-size: 2.1rem;
   text-align: center;
 }
-.whitelist .login p strong {
+.whitelist .sub-desc strong {
   color: #00f0ff;
 }
-.whitelist .login p + p {
+.whitelist .sub-desc {
   margin-top: 1rem;
+  line-height: 1.45;
+}
+.whitelist .sub-desc span {
+  display: block;
+  color: #ffc000;
 }
 .whitelist .count-box {
   margin-top: 2.3rem;
@@ -352,9 +384,26 @@
   color: #ffba00;
   font-family: 'Oswald';
 }
+.whitelist .end .count-box li .select-form::after,
+.whitelist .apply-complete .count-box li .select-form::after {
+  display: none;
+}
 .whitelist .count-box li .select-form {
   width: 22.3rem;
   margin: 0 auto;
+}
+.whitelist .count-box li .select-form .num-box {
+  display: inline-block;
+  width: 22.6rem;
+  height: 14.4rem;
+  margin-top: 1.8rem;
+  padding: 2rem 1rem;
+  font-size: 7.2rem;
+  color: #fff;
+  font-family: 'Oswald';
+  background: #532bb0;
+  border-radius: 4rem;
+  text-align: center;
 }
 .whitelist .count-box li .select-form .mobile {
   display: none;
@@ -608,13 +657,15 @@
     margin-top: 2rem;
   }
 
-  .whitelist .login {
+  .whitelist .login,
+  .whitelist .apply-complete {
     margin-top: 7.5rem;
   }
-  .whitelist .login p {
+  .whitelist .sub-title,
+  .whitelist .sub-desc {
     font-size: 3.6rem;
   }
-  .whitelist .login p + p {
+  .whitelist .sub-desc {
     margin-top: 4rem;
   }
   .whitelist .count-box {
@@ -643,6 +694,7 @@
   }
   .whitelist .count-box li .select-form .mobile {
     display: block;
+    padding-left: 3.5rem;
   }
   .whitelist .count-box li .select-form strong {
     font-weight: 400;

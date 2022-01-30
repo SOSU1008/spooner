@@ -146,7 +146,7 @@ Math.trunc =
 
 // 기준점 기준으로 카운트 다운 함수
 function countDown() {
-  let eventStartDt = '2022-02-14 20:00:00'; // 기준점
+  let eventStartDt = '2022-02-22 09:00:00'; // 기준점
   let CountYear = parseInt(eventStartDt.substring(0, 4), 10);
   let CountMonth = parseInt(eventStartDt.substring(5, 7), 10);
   let CountDate = parseInt(eventStartDt.substring(8, 10), 10);
