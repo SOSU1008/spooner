@@ -87,7 +87,7 @@ function checkWhiteList() {
       '</em>';
     modalPop('.modal-whitelist', true);
   } else {
-    alert('수량을 선택해주세요.');
+    modalAlert('Select the amount to buy');
   }
 }
 
@@ -115,7 +115,7 @@ function modalPop(className, modalBool) {
 }
 
 // 모달 알럿 팝업을 띄우는 함수 입니다. 매개변수 comment에 알럿 문구를 입력하여 선언 시 OK 버튼이 노출되는 알럿 입니다. 짧은 문구의 comment 정도만 가능합니다.
-// ex) modalAlert('Select the amount to buy'); modalAlert('Sorry, Whitelist application is ended.');
+// ex) modalAlert('Sorry, Whitelist application is ended.');
 function modalAlert(comment) {
   let commentItem = document.querySelector('.modal-alert-comment');
   commentItem.innerHTML = comment;
