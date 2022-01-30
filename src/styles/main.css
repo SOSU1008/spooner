@@ -3,9 +3,22 @@
   position: relative;
   height: 100rem;
   padding-top: 4.8rem;
+}
+.visual::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(#47229c, #2b1460);
 }
-
+.visual .mobile {
+  display: none;
+}
+.visual .inner {
+  z-index: 5;
+}
 .visual .inner::after {
   content: '';
   position: absolute;
@@ -480,11 +493,21 @@
 @media screen and (max-width: 1024px) {
   .visual {
     overflow: inherit;
-    height: 187rem;
+    height: 100%;
     padding-top: 12rem;
+    background: transparent;
   }
-
+  .visual::after {
+    bottom: 7rem;
+  }
+  .visual > .mobile {
+    display: block;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+  }
   .visual .inner::after {
+    display: none;
     content: '';
     position: absolute;
     top: auto;
@@ -492,7 +515,7 @@
     bottom: -7rem;
     right: 0;
     z-index: 1;
-    width: 68rem;
+    width: 72rem;
     height: 133.2rem;
     background: url(../images/bg_visual.png) 100% 0 no-repeat;
     background-size: 100% auto;
@@ -535,6 +558,9 @@
     margin-left: 2rem;
   }
 
+  .visual + .online-service {
+    margin-top: -7rem;
+  }
   .online-service {
     padding-top: 20rem;
     padding-bottom: 10rem;

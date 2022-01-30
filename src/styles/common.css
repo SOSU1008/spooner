@@ -319,6 +319,9 @@ header .btn-group .link-radius em {
 .select-form {
   position: relative;
 }
+.select-form.arrow-none::after {
+  display: none;
+}
 .select-form .default-select {
   display: block;
   width: 100%;
@@ -507,6 +510,9 @@ footer address {
   line-height: 1.5;
 }
 /* modal-whitelist */
+.pop-modal.modal-whitelist.v2 .modal-content {
+  padding: 7rem 0;
+}
 .pop-modal.modal-whitelist .btn-group {
   padding-top: 3rem;
 }

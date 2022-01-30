@@ -300,7 +300,7 @@
               to an e-wallet, no payment will be processed.
             </p>
             <!-- [D]지갑 로그아웃 상태 -->
-            <div class="logout" style="display: block">
+            <div class="logout" style="display: none">
               <div class="img-area">
                 <img src="./images/img_whitelist.png" alt="" />
               </div>
@@ -335,16 +335,8 @@
                     <div class="img-box">
                       <img src="./images/ico_q_class.png" alt="" />
                     </div>
-                    <div class="select-form">
+                    <div class="select-form arrow-none">
                       <strong class="mobile"> Q CLASS </strong>
-                      <select
-                        class="default-select mint-select"
-                        name="qClassMint"
-                        id="qClassMint"
-                        onchange="onChangeWhiteList();"
-                      >
-                        <option value="0" disabled selected hidden>MINT</option>
-                      </select>
                     </div>
                   </li>
                   <li>
@@ -352,16 +344,8 @@
                     <div class="img-box">
                       <img src="./images/ico_j_class.png" alt="" />
                     </div>
-                    <div class="select-form">
+                    <div class="select-form arrow-none">
                       <strong class="mobile"> J CLASS </strong>
-                      <select
-                        class="default-select mint-select"
-                        name="jClassMint"
-                        id="jClassMint"
-                        onchange="onChangeWhiteList();"
-                      >
-                        <option value="0" disabled selected hidden>MINT</option>
-                      </select>
                     </div>
                   </li>
                   <li>
@@ -369,28 +353,24 @@
                     <div class="img-box">
                       <img src="./images/ico_10_class.png" alt="" />
                     </div>
-                    <div class="select-form">
+                    <div class="select-form arrow-none">
                       <strong class="mobile"> 10 CLASS </strong>
-                      <select
-                        class="default-select mint-select"
-                        name="tenClassMint"
-                        id="tenClassMint"
-                        onchange="onChangeWhiteList();"
-                      >
-                        <option value="0" disabled selected hidden>MINT</option>
-                      </select>
                     </div>
                   </li>
                 </ul>
               </div>
               <div class="btn-area">
-                <a href="#;" class="btn" onclick="checkWhiteList()">
+                <a
+                  href="#;"
+                  class="btn"
+                  onclick="modalPop('.modal-whitelist', true)"
+                >
                   <span>APPLY</span>
                 </a>
               </div>
             </div>
             <!-- [D] 수량 등록 완료 -->
-            <div class="apply-complete" style="display: block">
+            <div class="apply-complete" style="display: none">
               <p class="sub-title">SPOONER NFT WHITELIST JOIN</p>
               <p class="sub-desc">
                 <span>Congratulations! </span>
@@ -406,7 +386,6 @@
                     </div>
                     <div class="select-form">
                       <strong class="mobile"> Q CLASS </strong>
-                      <div class="num-box" id="applyCountQ">0</div>
                     </div>
                   </li>
                   <li>
@@ -416,7 +395,6 @@
                     </div>
                     <div class="select-form">
                       <strong class="mobile"> J CLASS </strong>
-                      <div class="num-box" id="applyCountJ">0</div>
                     </div>
                   </li>
                   <li>
@@ -426,7 +404,6 @@
                     </div>
                     <div class="select-form">
                       <strong class="mobile"> 10 CLASS </strong>
-                      <div class="num-box" id="applyCountTen">0</div>
                     </div>
                   </li>
                 </ul>
@@ -442,7 +419,7 @@
               </div>
             </div>
             <!-- [D] 화이트리스트 등록 마감 상태 -->
-            <div class="end" style="display: block">
+            <div class="end" style="display: none">
               <p class="sub-title">SPOONER NFT WHITELIST JOIN</p>
               <div class="count-box">
                 <ul>
@@ -565,13 +542,12 @@
               </p>
             </div>
           </div>
-          <div class="pop-modal modal-whitelist">
+          <div class="pop-modal modal-whitelist v2">
             <div
               class="modal-dimmed"
               onclick="modalPop('.modal-whitelist', false);"
             ></div>
             <div class="modal-content">
-              <p id="whiteListCheck" class="info-box"></p>
               <p>Would you like to processed with the reservation?</p>
               <div class="btn-group">
                 <button
