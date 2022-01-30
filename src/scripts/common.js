@@ -64,9 +64,9 @@ function setBenefitInfo() {
 }
 
 // whitelist에 수량 선택 시 수량값 가져오는 함수
-let qClassMint;
-let jClassMint;
-let tenClassMint;
+let qClassMint = 0;
+let jClassMint = 0;
+let tenClassMint = 0;
 function onChangeWhiteList() {
   qClassMint = Number(document.getElementById('qClassMint').value);
   jClassMint = Number(document.getElementById('jClassMint').value);
@@ -75,7 +75,7 @@ function onChangeWhiteList() {
 
 // apply 버튼 클릭 시 예외처리 함수
 function checkWhiteList() {
-  if (qClassMint && jClassMint && tenClassMint) {
+  if (qClassMint + jClassMint + tenClassMint > 0) {
     let whiteListCheck = document.getElementById('whiteListCheck');
     whiteListCheck.innerHTML =
       'Q CLASS : <em>' +
