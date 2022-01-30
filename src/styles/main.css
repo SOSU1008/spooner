@@ -286,8 +286,6 @@
   background: linear-gradient(#401e8c, #271256);
   text-align: center;
 }
-.whitelist.end::after {
-}
 .whitelist h3 {
   color: #ffc000;
 }
@@ -328,7 +326,7 @@
 }
 .whitelist .end {
   position: relative;
-  margin-top: 9rem;
+  margin-top: 3.5rem;
 }
 .whitelist .end .count-box {
   opacity: 0.3;
@@ -336,18 +334,21 @@
 .whitelist .end .end-notice {
   position: absolute;
   top: 50%;
-  left: 6rem;
-  right: 6rem;
+  left: 23.5rem;
+  right: 23.5rem;
   transform: translateY(-50%);
-  padding: 3rem 0;
+  padding: 2.1rem 0;
   font-weight: 300;
-  font-size: 12rem;
+  font-size: 7rem;
   font-family: 'Oswald';
   color: #ffc000;
-  border-top: 1.6rem solid #ffc000;
-  border-bottom: 1.6rem solid #ffc000;
+  border-top: 0.8rem solid #ffc000;
+  border-bottom: 0.8rem solid #ffc000;
   text-align: center;
   line-height: 1.2;
+}
+.whitelist .end .end-notice.mobile {
+  display: none;
 }
 .whitelist .sub-title,
 .whitelist .sub-desc {
@@ -394,15 +395,17 @@
 }
 .whitelist .count-box li .select-form .num-box {
   display: inline-block;
-  width: 22.6rem;
-  height: 14.4rem;
-  margin-top: 1.8rem;
-  padding: 2rem 1rem;
-  font-size: 7.2rem;
+  position: absolute;
+  left: -2.5rem;
+  bottom: 3.5rem;
+  width: 11.2rem;
+  height: 7rem;
+  padding: 1rem;
+  font-size: 3.6rem;
   color: #fff;
   font-family: 'Oswald';
   background: #532bb0;
-  border-radius: 4rem;
+  border-radius: 2rem;
   text-align: center;
 }
 .whitelist .count-box li .select-form .mobile {
@@ -661,6 +664,22 @@
   .whitelist .apply-complete {
     margin-top: 7.5rem;
   }
+  .whitelist .end {
+    margin-top: 9rem;
+  }
+  .whitelist .end .end-notice {
+    display: none;
+  }
+  .whitelist .end .end-notice.mobile {
+    display: block;
+    left: 6rem;
+    right: 6rem;
+    transform: translateY(-50%);
+    padding: 3rem 0;
+    font-size: 12rem;
+    border-top: 1.6rem solid #ffc000;
+    border-bottom: 1.6rem solid #ffc000;
+  }
   .whitelist .sub-title,
   .whitelist .sub-desc {
     font-size: 3.6rem;
@@ -691,6 +710,18 @@
     width: auto;
     min-width: 28rem;
     margin: 0 0 0 2rem;
+  }
+  .whitelist .count-box li .select-form .num-box {
+    display: inline-block;
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: 22.6rem;
+    height: 14.4rem;
+    margin-top: 1.8rem;
+    padding: 2rem 1rem;
+    font-size: 7.2rem;
+    border-radius: 4rem;
   }
   .whitelist .count-box li .select-form .mobile {
     display: block;
