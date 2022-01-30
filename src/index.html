@@ -300,13 +300,20 @@
               to an e-wallet, no payment will be processed.
             </p>
             <!-- [D]지갑 로그아웃 상태 -->
-            <div class="logout" style="display: none">
+            <div class="logout" style="display: block">
               <div class="img-area">
                 <img src="./images/img_whitelist.png" alt="" />
               </div>
               <div class="btn-area">
                 <strong>SPOONER NFT WHITELIST JOIN</strong>
-                <a href="" class="btn">
+                <!-- [D] 앱이 설치 안되어 있을 경우 팝업 노출되게 해놨습니다. 
+									추후 수정 시에 onclick="modalPop('.modal-metamask', true);" 제거 하면 됩니다.
+								-->
+                <a
+                  href="#;"
+                  class="btn"
+                  onclick="modalPop('.modal-metamask', true);"
+                >
                   <span>CONNECT WALLET</span>
                 </a>
                 <!-- [D] 지갑 설치가 되어있지 않을 때 노출 -->
@@ -316,7 +323,7 @@
               </div>
             </div>
             <!-- [D]지갑 로그인 상태 -->
-            <div class="login" style="display: none">
+            <div class="login" style="display: block">
               <p class="sub-title">SPOONER NFT WHITELIST JOIN</p>
               <p class="sub-desc">
                 Wallet Connected : <strong>0x7b55...ea52</strong>
