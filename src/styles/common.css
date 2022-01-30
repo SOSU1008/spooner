@@ -180,7 +180,7 @@ header h1 {
   transition: 0.3s;
   text-indent: -999rem;
 }
-header h1 a{
+header h1 a {
   display: block;
   height: 100%;
 }
@@ -370,6 +370,53 @@ footer address {
   color: #574597;
   font-style: normal;
 }
+.btn-fixed-top {
+  position: fixed;
+  right: 3rem;
+  bottom: -3rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: #41237c;
+  border-radius: 1rem;
+  text-indent: -999rem;
+  transition: 0.3s;
+  opacity: 0;
+  z-index: 2;
+}
+.nav-fixed .btn-fixed-top {
+  bottom: 3rem;
+  opacity: 1;
+}
+.btn-fixed-top:before {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 0.4rem;
+  height: 1.5rem;
+  margin: auto;
+  background-color: #8251e2;
+  border-radius: 0.3rem;
+  transform: rotate(40deg);
+  transform-origin: 100% 0;
+}
+.btn-fixed-top:after {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 0.4rem;
+  height: 1.5rem;
+  margin: auto;
+  background-color: #8251e2;
+  border-radius: 0.3rem;
+  transform: rotate(-40deg);
+  transform-origin: 0 0;
+}
 
 @media screen and (max-width: 1024px) {
   html {
@@ -475,7 +522,7 @@ footer address {
     height: 100%;
     padding: 2rem;
     background-color: #fff;
-    transition: .3s;
+    transition: 0.3s;
     overflow-y: auto;
     opacity: 0;
   }
@@ -559,6 +606,6 @@ footer address {
   }
   .nav-fixed header:after {
     height: 10rem;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, 0.2);
   }
 }

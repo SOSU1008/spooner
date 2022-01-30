@@ -97,10 +97,30 @@ function mobileNavToggle() {
     : headerItem.classList.add('mobile-nav');
 }
 
-// 메뉴 이동 함수 입니다. 매개변수로 tagName 값을 받고, 해당 tagName으로 지정한 위치로 스크롤 이동 시킵니다. 
-function scrollMove(tagName){
-  let positionY = window.pageYOffset + document.querySelector(tagName).getBoundingClientRect().top;
-  window.scrollTo({top:positionY, behavior:'smooth'});
+// 메뉴 이동 함수 입니다. 매개변수로 tagName 값을 받고, 해당 tagName으로 지정한 위치로 스크롤 이동 시킵니다.
+let intervalScroll;
+function scrollMove(tagName) {
+  const gap = 25;
+  let positionY =
+    window.pageYOffset +
+    document.querySelector(tagName).getBoundingClientRect().top;
+  let scrollPosition = window.scrollY || document.documentElement.scrollTop;
+  let scrollMoving = scrollPosition;
+  clearInterval(intervalScroll);
+
+  intervalScroll = setInterval(function () {
+    if (Math.floor(positionY / gap) === Math.floor(scrollMoving / gap)) {
+      scrollMoving = positionY;
+      window.scrollTo({ top: positionY });
+      clearInterval(intervalScroll);
+    } else if (positionY < scrollMoving) {
+      window.scrollTo({ top: scrollMoving });
+      scrollMoving -= gap;
+    } else if (positionY > scrollMoving) {
+      window.scrollTo({ top: scrollMoving });
+      scrollMoving += gap;
+    }
+  }, 1);
 }
 
 window.addEventListener('load', function () {
