@@ -76,7 +76,16 @@ function onChangeWhiteList() {
 // apply 버튼 클릭 시 예외처리 함수
 function checkWhiteList() {
   if (qClassMint && jClassMint && tenClassMint) {
-    console.log('전부 입력 됨');
+    let whiteListCheck = document.getElementById('whiteListCheck');
+    whiteListCheck.innerHTML =
+      'Q CLASS : <em>' +
+      qClassMint +
+      '</em> J CLASS : <em>' +
+      jClassMint +
+      '</em> 10 CLASS : <em>' +
+      tenClassMint +
+      '</em>';
+    modalPop('.modal-whitelist', true);
   } else {
     alert('수량을 선택해주세요.');
   }
@@ -95,6 +104,22 @@ function mobileNavToggle() {
   headerItem.classList.value.indexOf('mobile-nav') !== -1
     ? headerItem.classList.remove('mobile-nav')
     : headerItem.classList.add('mobile-nav');
+}
+
+// 모달 팝업 노출여부를 처리하는 함수입니다. 매개변수에 className 와 boolean 값으로 대상 팝업의 노출 여부를 제어합니다.
+function modalPop(className, modalBool) {
+  let modalItem = document.querySelector(className);
+  modalBool
+    ? (modalItem.style.display = 'flex')
+    : (modalItem.style.display = 'none');
+}
+
+// 모달 알럿 팝업을 띄우는 함수 입니다. 매개변수 comment에 알럿 문구를 입력하여 선언 시 OK 버튼이 노출되는 알럿 입니다. 짧은 문구의 comment 정도만 가능합니다.
+// ex) modalAlert('Select the amount to buy'); modalAlert('Sorry, Whitelist application is ended.');
+function modalAlert(comment) {
+  let commentItem = document.querySelector('.modal-alert-comment');
+  commentItem.innerHTML = comment;
+  modalPop('.modal-alert', true);
 }
 
 // 메뉴 이동 함수 입니다. 매개변수로 tagName 값을 받고, 해당 tagName으로 지정한 위치로 스크롤 이동 시킵니다.
