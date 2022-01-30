@@ -458,14 +458,6 @@ footer address {
   border: 0.3rem solid #9130fe;
   box-sizing: border-box;
 }
-.pop-modal .btn-close {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  width: 2rem;
-  height: 2rem;
-  background-color: #eee;
-}
 .pop-modal .btn-modal-base {
   display: inline-block;
   min-width: 12rem;
@@ -710,5 +702,75 @@ footer address {
   .nav-fixed header:after {
     height: 10rem;
     background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  /* modal common */
+  .pop-modal .modal-content {
+    position: absolute;
+    width: 90%;
+    max-width: 100rem;
+    max-height: 80%;
+    height: 10.5rem;
+    padding: 3rem;
+    background-color: #2f1668;
+    text-align: center;
+    border-radius: 2.2rem;
+    border: 0.4rem solid #9130fe;
+    box-sizing: border-box;
+  }
+  .pop-modal .btn-modal-base {
+    display: inline-block;
+    min-width: 16rem;
+    padding: 1.2rem 2.4rem;
+    font-weight: 500;
+    font-size: 3rem;
+    color: #fff;
+    background-color: #532bb0;
+    border-radius: 1.5rem;
+  }
+  .pop-modal .btn-modal-base + .btn-modal-base {
+    margin-left: 1rem;
+  }
+  .pop-modal .btn-modal-base.type-yellow {
+    color: #000;
+    background-color: #ffc000;
+  }
+  /* modal alert */
+  .pop-modal.modal-alert .modal-content {
+    width: 90%;
+    max-width: 80rem;
+    height: 25rem;
+  }
+  .pop-modal.modal-alert .modal-content p {
+    padding: 2.8rem 0 3rem;
+    font-weight: 500;
+    font-size: 3.2rem;
+    text-align: center;
+  }
+
+  /* modal-whitelist */
+  .pop-modal.modal-whitelist .btn-group {
+    padding-top: 3rem;
+  }
+  .pop-modal.modal-whitelist .modal-content {
+    height: 28rem;
+    padding: 2rem 0;
+  }
+  .pop-modal.modal-whitelist .modal-content .info-box {
+    padding: 3rem 0 2rem 1rem;
+    font-weight: 500;
+    font-size: 2.8rem;
+    color: #ffc000;
+    box-sizing: border-box;
+  }
+  .pop-modal.modal-whitelist .modal-content .info-box em {
+    margin-right: 1rem;
+    font-style: normal;
+    color: #fff;
+  }
+  .pop-modal.modal-whitelist .modal-content p {
+    font-weight: 500;
+    font-size: 2.6rem;
+    text-align: center;
   }
 }
