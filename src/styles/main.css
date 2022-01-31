@@ -505,6 +505,7 @@
     position: relative;
     z-index: 5;
     width: 100%;
+    max-width: 100rem;
   }
   .visual .inner::after {
     display: none;
