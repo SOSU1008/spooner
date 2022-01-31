@@ -106,6 +106,13 @@ function whiteListSubmit() {
   }
 }
 
+// B안에서 쓰이는 함수
+function whiteListSubmitB() {
+  modalPop('.modal-whitelist', false);
+  document.querySelector('.whitelist-apply').style.display = 'none';
+  document.querySelector('.apply-complete').style.display = 'block';
+}
+
 // 페이지 스크롤 시 GNB 노출 여부 함수 입니다.
 function navScroll() {
   const ScrollChk = window.scrollY || document.documentElement.scrollTop;
