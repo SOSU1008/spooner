@@ -220,11 +220,10 @@ function countDown() {
   let DD = handleToString(Math.trunc(gap / 1000 / 60 / 60 / 24));
   let HH = handleToString(Math.trunc((gap / 1000 / 60 / 60) % 24));
   let MM = handleToString(Math.trunc((gap / 1000 / 60) % 60));
-  // let SS = handleToString(Math.trunc((gap / 1000) % 60));
 
-  document.getElementById('days').innerHTML = DD;
-  document.getElementById('hours').innerHTML = HH;
-  document.getElementById('min').innerHTML = MM;
+  document.getElementById('days').innerHTML = DD + HH + MM < 0 ? '00' : DD;
+  document.getElementById('hours').innerHTML = DD + HH + MM < 0 ? '00' : HH;
+  document.getElementById('min').innerHTML = DD + HH + MM < 0 ? '00' : MM;
 }
 
 // 영상 노출 팝업 함수입니다. 매개변수로 url(영상URL), popWid(영상 가로길이), popHei(영상 세로높이) 값을 받으며, 길이, 높이 값을 지정하지 않을 시 70rem x 70rem으로 고정됩니다.
