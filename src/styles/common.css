@@ -873,6 +873,7 @@ footer address {
     bottom: -5rem;
     width: 10rem;
     height: 10rem;
+    border-radius: 1.5rem;
   }
   .btn-fixed-top:before {
     width: 0.8rem;

@@ -120,7 +120,7 @@
   position: relative;
   padding-top: 15.4rem;
   padding-bottom: 18.4rem;
-  background: linear-gradient(#421f91, #210f4c);
+  background: linear-gradient(#48239d, #210f4c);
 }
 .online-service .txt-area {
   position: relative;
@@ -130,6 +130,9 @@
   position: absolute;
   top: -1.5rem;
   right: -2rem;
+}
+.online-service .img-mobile {
+  display: none;
 }
 .online-service .btn-area {
   margin-top: 11rem;
@@ -182,6 +185,9 @@
   background: url(../images/bg_own_2_earn_pc.png) 50% 0 no-repeat;
   background-size: 100% auto;
   text-align: center;
+}
+.own-2-earn .btn-area .mobile {
+  display: none;
 }
 .own-2-earn .btn-area .btn-move {
   position: absolute;
@@ -495,6 +501,7 @@
     overflow: inherit;
     height: 100%;
     padding-top: 12rem;
+    padding-bottom: 60rem;
     background: transparent;
   }
   .visual::after {
@@ -506,9 +513,21 @@
     z-index: 5;
     width: 100%;
     max-width: 100rem;
+    margin-left: 3rem;
   }
   .visual .inner::after {
     display: none;
+  }
+  .visual::before {
+    content: '';
+    position: absolute;
+    bottom: -18rem;
+    right: 0;
+    width: 68.8rem;
+    height: 87.6rem;
+    z-index: 2;
+    background: url(../images/bg_visual_right_m.png) 100% 100% no-repeat;
+    background-size: 100% auto;
   }
   .visual .desc {
     width: 100%;
@@ -524,15 +543,17 @@
     margin-top: 1.5rem;
   }
   .visual .timer-area .timer-box > div {
-    width: 10rem;
-    height: 7.3rem;
-    margin-right: 2rem;
-    padding: 0.7rem 1.5rem;
-    font-size: 3rem;
-    letter-spacing: 3.45rem;
+    width: 12.8rem;
+    height: 10rem;
+    margin-right: 3.5rem;
+    padding: 0.35rem 2.2rem;
+    font-size: 4.6rem;
+    letter-spacing: 4.2rem;
+    background: url(../images/bg_timer_box_m.png) 0 0 no-repeat;
+    background-size: 100% auto;
   }
   .visual .timer-area .timer-box > div::after {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
 
   .visual .btn-area {
@@ -549,10 +570,10 @@
   }
 
   .visual + .online-service {
-    margin-top: -7rem;
+    /* padding-top: 18rem; */
   }
   .online-service {
-    padding-top: 20rem;
+    padding-top: 28rem;
     padding-bottom: 10rem;
   }
   .online-service .txt-area {
@@ -566,6 +587,14 @@
     height: 56.8rem;
     top: auto;
     right: auto;
+  }
+  .online-service img {
+    display: none;
+  }
+  .online-service .img-mobile {
+    display: block;
+    width: 57.6rem;
+    margin: 0 auto;
   }
   .online-service .btn-area {
     margin-top: 4rem;
@@ -594,16 +623,24 @@
     text-align: center;
   }
   .own-2-earn .btn-area {
-    height: 188.4rem;
+    height: auto;
     margin-top: 14rem;
-    background: url(../images/bg_own_2_earn.png) 50% 0 no-repeat;
+    background: none;
+  }
+  .own-2-earn .btn-area .mobile {
+    display: inline-block;
   }
   .own-2-earn .btn-area .btn-move {
-    bottom: 0;
+    display: inline-block;
+    position: relative;
+    left: auto;
+    bottom: auto;
+    margin-top: 12.3rem;
     padding: 2.4rem 1.4em 3.6rem;
     font-size: 3.6rem;
     border-radius: 5rem;
     white-space: nowrap;
+    transform: none;
   }
 
   .benefits {
@@ -776,6 +813,7 @@
   .whitelist .count-box li .select-form .mobile {
     display: block;
     padding-left: 3.5rem;
+    font-size: 6rem;
   }
   .whitelist .count-box li .select-form strong {
     font-weight: 400;
@@ -798,8 +836,18 @@
     border-left-width: 1.5rem;
     border-right-width: 1.5rem;
   }
+  .spooner-nft .inner {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    padding: 0 6rem;
+  }
   .spooner-nft {
-    padding-bottom: 113%;
+    padding-bottom: 112.5%;
+  }
+  .spooner-nft .desc {
+    padding: 0 4rem;
+    font-size: 2.2rem;
   }
   .spooner-nft video {
     position: absolute;
