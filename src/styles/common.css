@@ -261,7 +261,7 @@ header .btn-nav-toggle span:after {
 
 header .btn-group {
   display: inline-block;
-  width: 29rem;
+  width: 12rem;
   box-sizing: border-box;
   transition: 0.3s;
 }
@@ -472,6 +472,20 @@ footer address {
   border: 0.3rem solid #9130fe;
   box-sizing: border-box;
 }
+
+.pop-modal .modal-content-player {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 70rem;
+  height: 70rem;
+  margin: auto;
+  padding: 0;
+  font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
 .pop-modal .btn-modal-base {
   display: inline-block;
   min-width: 12rem;
