@@ -234,6 +234,7 @@ function countDown() {
 // O : https://player.vimeo.com/video/673045195
 function modalPlayer(url, popWid, popHei) {
   let modalContent =
+    '<button type="button" class="btn-close" onclick="modalPop(\'.modal-player\', false); document.querySelector(\'.modal-content-player\').innerHTML=\'\';">닫기</button>' +
     '<iframe src="' +
     url +
     '" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';

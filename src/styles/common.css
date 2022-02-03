@@ -485,6 +485,41 @@ footer address {
   padding: 0;
   font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+.pop-modal .modal-content-player .btn-close {
+  position: absolute;
+  top: -5rem;
+  right: 0;
+  width: 5rem;
+  height: 5rem;
+  background-color: #9130fe;
+  text-indent: -999rem;
+}
+.pop-modal .modal-content-player .btn-close::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 3.5rem;
+  height: 0.2rem;
+  margin: auto;
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+.pop-modal .modal-content-player .btn-close::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 3.5rem;
+  height: 0.2rem;
+  margin: auto;
+  background-color: #fff;
+  transform: rotate(-45deg);
+}
 
 .pop-modal .btn-modal-base {
   display: inline-block;
