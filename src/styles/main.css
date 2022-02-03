@@ -30,12 +30,8 @@
   background: url(../images/bg_visual_pc.png) 50% 0 no-repeat;
   background-size: 100% auto;
 }
-.visual h2 {
-  font-size: 4.8rem;
-}
 .visual h2 + h3 {
   margin-top: 1.3rem;
-  font-size: 3rem;
 }
 .visual .desc {
   width: 42rem;
@@ -267,7 +263,7 @@
   padding: 1rem 3rem;
   font-weight: 400;
   color: #fff;
-  background-color: #3f2178;
+  background-color: #23065c;
   border-radius: 2rem;
 }
 .benefits .input-form .price-box p {
@@ -513,6 +509,7 @@
     z-index: 5;
     width: 100%;
     max-width: 100rem;
+    margin-top: 3rem;
     padding-left: 3rem;
   }
   .visual .inner::after {
@@ -531,6 +528,7 @@
   }
   .visual .desc {
     width: 100%;
+    font-size: 2.4rem;
   }
   /* 카운트다운 영역 모바일 여기서 수정 */
   .visual .timer-area {
