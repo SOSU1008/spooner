@@ -513,7 +513,7 @@
     z-index: 5;
     width: 100%;
     max-width: 100rem;
-    margin-left: 3rem;
+    padding-left: 3rem;
   }
   .visual .inner::after {
     display: none;
