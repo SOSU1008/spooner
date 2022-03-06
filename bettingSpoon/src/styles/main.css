@@ -1,3 +1,99 @@
+/* home */
+.home {
+  padding: 25.5rem 0 0;
+  min-height: 94.2rem;
+  background-image: url(../images/bg_home.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+.home h2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -3.6rem;
+  bottom: 0.9rem;
+  z-index: -1;
+  background-color: #000;
+}
+.home .desc {
+  position: relative;
+  z-index: 1;
+  margin-top: 2.5rem;
+}
+.home .desc::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -0.2rem;
+  right: -0.5rem;
+  bottom: -2.7rem;
+  z-index: -1;
+  background-color: #000;
+}
+.home .btn-more-info {
+  margin-top: 1.5rem;
+}
+.home .title-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home .guide-form {
+  margin-top: 8rem;
+}
+.home .guide-form li {
+  flex: 0 0 33%;
+  min-height: 13rem;
+  padding-left: 1.7rem;
+}
+.home .btn-play-game {
+  display: inline-block;
+  width: 25.4rem;
+  height: 25.4rem;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% auto;
+  background-image: url(../images/btn_play_game.png);
+  text-indent: -9999rem;
+}
+
+/* baccarat */
+.baccarat {
+  padding: 6rem 0;
+  min-height: 94.2rem;
+  background-image: url(../images/bg_baccarat.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.baccarat .play-game {
+  max-width: 1156px;
+  margin-top: 2.4rem;
+}
+.baccarat .guide-form,
+.bigwheel .guide-form,
+.lotto .guide-form {
+  display: none;
+}
+
+.bigwheel {
+  padding: 6rem 0;
+  min-height: 94.2rem;
+  background-image: url(../images/bg_bigwheel.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+.lotto {
+  padding: 6rem 0;
+  min-height: 94.2rem;
+  background-image: url(../images/bg_lotto.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+.lotto .play-game.coming-soon::after {
+  background-image: url(../images/bg_person_lotto.png);
+}
+
 /* video-poker */
 .video-poker {
   position: relative;
@@ -143,6 +239,70 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .home {
+    min-height: 100%;
+    padding: 4.5rem 0;
+    background-image: url(../images/bg_home_m.jpg);
+    background-size: 100% auto;
+  }
+
+  .home h2::after,
+  .home .desc::before {
+    display: none;
+  }
+
+  .home .title-area {
+    display: block;
+  }
+  .home .title-area .btn-area {
+    text-align: center;
+  }
+  .home .btn-play-game {
+    margin-top: 3.3rem;
+    background-image: url(../images/btn_play_game_m.png);
+  }
+  .home .guide-form {
+    margin-top: 9.5rem;
+  }
+  .home .guide-form li {
+    min-height: auto;
+  }
+
+  .baccarat .play-game {
+    max-width: 100%;
+    margin-top: 6rem;
+  }
+
+  /* baccarat */
+  .baccarat {
+    min-height: 100%;
+    background-image: url(../images/bg_baccarat_m.jpg);
+    background-position: 50% 0;
+    background-size: 100% auto;
+  }
+  .baccarat .desc {
+    padding-right: 20rem;
+  }
+  .baccarat .guide-form,
+  .bigwheel .guide-form,
+  .lotto .guide-form {
+    display: block;
+    margin-top: 21.2rem;
+  }
+
+  .bigwheel {
+    min-height: 100%;
+    background-image: url(../images/bg_bigwheel_m.jpg);
+    background-position: 50% 0;
+    background-size: 100% auto;
+  }
+
+  .lotto {
+    min-height: 100%;
+    background-image: url(../images/bg_lotto_m.jpg);
+    background-size: 100% auto;
+  }
+
   .video-poker .video-poker-box {
     position: fixed;
     top: 10.8rem;
