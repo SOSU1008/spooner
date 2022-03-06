@@ -153,6 +153,7 @@ section h2::before {
   color: #eb1616;
 }
 section .desc {
+  margin-top: 1rem;
   font-weight: 300;
   font-family: 'Oswald';
   font-size: 2rem;
@@ -198,6 +199,7 @@ section .desc {
   justify-content: space-around;
 }
 .guide-form li {
+  padding-left: 1.7rem;
   border-left: 0.1rem solid #fff;
 }
 .guide-form li strong {
@@ -245,7 +247,6 @@ section .desc {
   text-transform: uppercase;
   background-repeat: no-repeat;
   background-color: #eb1616;
-  background-image: url(../images/ico_metamask.png);
 }
 .guide-form li .btn-join-discord {
   padding-left: 5.2rem;
@@ -257,6 +258,7 @@ section .desc {
   margin-top: 4.7rem;
   background-position: 1.5rem 50%;
   background-size: 2.2rem auto;
+  background-image: url(../images/ico_metamask.png);
 }
 .guide-form li .btn-metamask.connect {
   background-color: #752ebc;
@@ -486,6 +488,9 @@ footer span {
   }
   body {
     min-width: 360px;
+  }
+  .inner {
+    padding: 0 3.8rem;
   }
 
   .nav-fixed header {
