@@ -48,6 +48,7 @@
   padding-left: 1.7rem;
 }
 .home .btn-play-game {
+  display: block;
   width: 25.4rem;
   height: 25.4rem;
   background-repeat: no-repeat;
@@ -59,7 +60,7 @@
 
 /* baccarat */
 .baccarat {
-  padding: 6rem 0 0;
+  padding: 6rem 0;
   min-height: 94.2rem;
   background-image: url(../images/bg_baccarat.jpg);
   background-repeat: no-repeat;
@@ -70,7 +71,8 @@
   margin-top: 2.4rem;
 }
 .baccarat .guide-form,
-.bigwheel .guide-form {
+.bigwheel .guide-form,
+.lotto .guide-form {
   display: none;
 }
 
@@ -80,6 +82,16 @@
   background-image: url(../images/bg_bigwheel.jpg);
   background-repeat: no-repeat;
   background-position: 50% 0;
+}
+.lotto {
+  padding: 6rem 0;
+  min-height: 94.2rem;
+  background-image: url(../images/bg_lotto.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+.lotto .play-game.coming-soon::after {
+  background-image: url(../images/bg_person_lotto.png);
 }
 
 @media screen and (max-width: 1024px) {
@@ -120,7 +132,6 @@
   /* baccarat */
   .baccarat {
     min-height: 100%;
-    padding: 6rem 0;
     background-image: url(../images/bg_baccarat_m.jpg);
     background-position: 50% 0;
     background-size: 100% auto;
@@ -129,7 +140,8 @@
     padding-right: 20rem;
   }
   .baccarat .guide-form,
-  .bigwheel .guide-form {
+  .bigwheel .guide-form,
+  .lotto .guide-form {
     display: block;
     margin-top: 21.2rem;
   }
@@ -138,6 +150,12 @@
     min-height: 100%;
     background-image: url(../images/bg_bigwheel_m.jpg);
     background-position: 50% 0;
+    background-size: 100% auto;
+  }
+
+  .lotto {
+    min-height: 100%;
+    background-image: url(../images/bg_lotto_m.jpg);
     background-size: 100% auto;
   }
 }
