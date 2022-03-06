@@ -33,10 +33,27 @@
   text-align: left;
 } */
 
+.video-poker .hash-tag {
+  display: inline-block;
+  margin: 0.5rem 0;
+  padding: 0.3rem 1rem;
+  font-weight: 300;
+  font-size: 1.8rem;
+  color: #ec4318;
+  background-color: #000;
+}
+.video-poker .hash-tag::before {
+  content: '#';
+}
 .video-poker .info-box {
-  width: 86.5rem;
-  padding: 10rem 3rem;
-  box-sizing: border-box;
+  width: 80.5rem;
+  padding: 5rem 0;
+}
+.video-poker .info-box ul {
+  padding-top: 4rem;
+}
+.video-poker .info-box li {
+  flex: 0 0 50%;
 }
 .video-poker .play-game {
   width: 80.5rem;
@@ -46,7 +63,10 @@
   height: 20rem;
   font-size: 2.6rem;
 }
-
+.video-poker .guide-form li p {
+  min-height: 10rem;
+  font-size: 1.8rem;
+}
 .video-poker .video-poker-box {
   position: absolute;
   top: 5rem;
@@ -98,6 +118,28 @@
   margin: auto;
   background-color: #fff;
   transform: rotate(-45deg);
+}
+.video-poker .btn-more-play {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 1.1rem 2.3rem 1.1rem 4rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #fff;
+  background: #eb1616 url(../images/btn_ico_play.png) no-repeat 1rem 50% / 2.6rem auto;
+}
+.video-poker .btn-more-discord {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 1.1rem 2.3rem 1.1rem 4.5rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #fff;
+  background: #eb1616 url(../images/ico_discord_w.png) no-repeat 0.8rem 50% / 3.6rem auto;
 }
 
 @media screen and (max-width: 1024px) {
