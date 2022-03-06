@@ -5,7 +5,6 @@
   background-image: url(../images/bg_home.jpg);
   background-repeat: no-repeat;
   background-position: 50% 0;
-  background-size: 100% auto;
 }
 .home h2::after {
   content: '';
@@ -66,24 +65,21 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-.baccarat .play-movie {
-  position: relative;
+.baccarat .play-game {
   max-width: 1156px;
   margin-top: 2.4rem;
 }
-.baccarat .play-movie .btn-play-movie {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 24.6rem;
-  height: 24.6rem;
-  margin: -12.3rem 0 0 -12.3rem;
-  background: url(../images/btn_play_movie.png) 50% 50% no-repeat;
-  background-size: 100% auto;
-  text-indent: -9999rem;
-}
-.baccarat .guide-form {
+.baccarat .guide-form,
+.bigwheel .guide-form {
   display: none;
+}
+
+.bigwheel {
+  padding: 6rem 0;
+  min-height: 94.2rem;
+  background-image: url(../images/bg_bigwheel.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
 }
 
 @media screen and (max-width: 1024px) {
@@ -116,6 +112,11 @@
     min-height: auto;
   }
 
+  .baccarat .play-game {
+    max-width: 100%;
+    margin-top: 6rem;
+  }
+
   /* baccarat */
   .baccarat {
     min-height: 100%;
@@ -127,16 +128,8 @@
   .baccarat .desc {
     padding-right: 20rem;
   }
-  .baccarat .play-movie {
-    max-width: 100%;
-    margin-top: 6rem;
-  }
-  .baccarat .play-movie .btn-play-movie {
-    width: 19.8rem;
-    height: 19.8rem;
-    margin: -9.9rem 0 0 -9.9rem;
-  }
-  .baccarat .guide-form {
+  .baccarat .guide-form,
+  .bigwheel .guide-form {
     display: block;
     margin-top: 21.2rem;
   }
