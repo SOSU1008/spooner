@@ -7,6 +7,7 @@
     <title>Betting Spoon</title>
     <link rel="stylesheet" href="styles/common.css" />
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/home.css" />
   </head>
   <body>
     <div id="root">
@@ -61,7 +62,54 @@
       </header>
       <!-- // header (include) -->
       <main>
-        <section>contents</section>
+        <section class="home">
+          <div class="inner">
+            <div class="title-area">
+              <div class="desc-box">
+                <h2>video poker event</h2>
+                <p class="desc">
+                  This is an event game for SPOONER NFT members.<br />
+                  Catch the Royal Flush! Punch in your luck on Discord.<br />
+                  Prizes are waiting for you!
+                </p>
+                <button class="btn-more-info"><span>more info</span></button>
+              </div>
+              <div class="btn-area">
+                <button type="button" class="btn-play-game">play game</button>
+              </div>
+            </div>
+            <ul class="guide-form">
+              <li>
+                <p>
+                  Only the selected members of SPOONER NFT DISCORD<br />
+                  and the Whitelisted are eligible for participation of the game.
+                </p>
+                <span class="hash">&#35;event_join_wallet</span><br />
+                <button type="button" class="btn-join-discord">join our discord</button>
+              </li>
+              <li>
+                <p>
+                  MetaMask wallet connection is required.<br />
+                  Please install MetaMask before connecting your wallet.
+                </p>
+                <button
+                  type="button"
+                  class="btn-metamask"
+                  onclick="modalAlert('You can’t join the game. If you want to solve the problem, please ask on Discord.')"
+                >
+                  install metamask
+                </button>
+                <button type="button" class="btn-metamask connect">connect metamask</button>
+              </li>
+              <li>
+                <p>
+                  After the wallet is connected, &#91;PLAY&#93; button will be activated. You can start playing the game
+                  clicking the button. Good luck!
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
       </main>
       <!-- footer (include) -->
       <footer>
