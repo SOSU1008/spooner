@@ -524,7 +524,7 @@ footer span {
 
 /* modal alert */
 .pop-modal.modal-alert .modal-content {
-  width: 90%;
+  width: 46%;
   max-width: 80rem;
 }
 .pop-modal.modal-alert .modal-content p {
@@ -553,7 +553,7 @@ footer span {
   right: 0;
   width: 5rem;
   height: 5rem;
-  background-color: #9130fe;
+  background-color: #eb1616;
   text-indent: -999rem;
 }
 .pop-modal .modal-content-player .btn-close::before {
@@ -905,9 +905,10 @@ footer span {
   .pop-modal.modal-alert .modal-content {
     width: 90%;
     max-width: 80rem;
+    padding: 8rem 4rem 6rem;
   }
   .pop-modal.modal-alert .modal-content p {
-    padding-bottom: 3rem;
+    padding-bottom: 7rem;
     font-weight: 500;
     font-size: 3.2rem;
     text-align: center;
