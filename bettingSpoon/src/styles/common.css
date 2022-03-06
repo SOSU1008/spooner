@@ -511,8 +511,8 @@ footer span {
 }
 .pop-modal .btn-modal-base {
   display: inline-block;
-  min-width: 14rem;
-  padding: 0.7rem 1.2rem;
+  min-width: 15.7rem;
+  padding: 1rem 1.8rem 1.1rem;
   font-weight: 500;
   font-size: 2rem;
   color: #fff;
@@ -619,12 +619,13 @@ footer span {
   }
 
   .btn-more-info {
+    margin-top: 1.4rem;
     font-size: 1.8rem;
   }
 
   .play-game {
     max-width: 100%;
-    margin-top: 6rem;
+    margin-top: 5rem;
   }
   .play-game .pc {
     display: none;
@@ -751,7 +752,7 @@ footer span {
     background-color: #fff;
     transition: 0.3s;
     opacity: 0;
-    z-index: 2;
+    z-index: 3;
   }
   header nav .nav-inner {
     display: block;
@@ -803,7 +804,7 @@ footer span {
   header .btn-group {
     display: block;
     margin: 0;
-    padding: 3rem 0 10rem 6rem;
+    padding: 3rem 0 5.5rem 6rem;
   }
   header .btn-discord {
     display: inline-block;
@@ -822,7 +823,7 @@ footer span {
   }
   header .gnb-login {
     display: block;
-    padding-top: 4rem;
+    padding-top: 5.5rem;
   }
   header .btn-metamask {
     display: block;
@@ -890,8 +891,8 @@ footer span {
   }
   .pop-modal .btn-modal-base {
     display: inline-block;
-    min-width: 16rem;
-    padding: 1.2rem 2.4rem;
+    min-width: 19.7rem;
+    padding: 1.4rem 2.4rem 1.5rem;
     font-weight: 500;
     font-size: 3rem;
     color: #fff;
@@ -903,14 +904,13 @@ footer span {
 
   /* modal alert */
   .pop-modal.modal-alert .modal-content {
-    width: 90%;
+    width: 80%;
     max-width: 80rem;
-    padding: 8rem 4rem 6rem;
+    padding: 8rem 8rem 6rem;
   }
   .pop-modal.modal-alert .modal-content p {
     padding-bottom: 7rem;
-    font-weight: 500;
-    font-size: 3.2rem;
+    font-size: 2.4rem;
     text-align: center;
   }
 }

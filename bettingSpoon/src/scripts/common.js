@@ -106,20 +106,14 @@ function fullScreenGame(gameName) {
   }
 }
 
-const enterFullscreenBtn = document.querySelector('.btn-full-screen');
-
-const container = document.querySelector('.pop-game');
-
-enterFullscreenBtn.addEventListener('click', (e) => {
-  fullscreen(container);
-});
-
-const fullscreen = (element) => {
-  if (element.requestFullscreen) return element.requestFullscreen();
-  if (element.webkitRequestFullscreen) return element.webkitRequestFullscreen();
-  if (element.mozRequestFullScreen) return element.mozRequestFullScreen();
-  if (element.msRequestFullscreen) return element.msRequestFullscreen();
-};
+function fullscreen(element) {
+  if (document.querySelector(element).requestFullscreen) return document.querySelector(element).requestFullscreen();
+  if (document.querySelector(element).webkitRequestFullscreen)
+    return document.querySelector(element).webkitRequestFullscreen();
+  if (document.querySelector(element).mozRequestFullScreen)
+    return document.querySelector(element).mozRequestFullScreen();
+  if (document.querySelector(element).msRequestFullscreen) return document.querySelector(element).msRequestFullscreen();
+}
 
 window.addEventListener('load', function () {
   // GNB active

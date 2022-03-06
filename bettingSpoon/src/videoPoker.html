@@ -74,7 +74,8 @@
                 leader board
               </button>
               <div class="play-game">
-                <img src="./images/img_vpoker.jpg" alt="" />
+                <img class="pc" src="./images/img_vpoker.jpg" alt="" />
+                <img class="mobile" src="./images/img_vpoker_m.jpg" alt="" />
                 <button type="button" onclick="playGame('videoPoker');" class="btn-play-game">play game</button>
               </div>
               <ul class="guide-form">
@@ -93,7 +94,7 @@
                   <button
                     type="button"
                     class="btn-more-discord"
-                    onclick="location.href='https://discord.gg/spooner-nft';"
+                    onclick="window.open('https://discord.gg/spooner-nft');"
                   >
                     join our discord
                   </button>
@@ -128,14 +129,14 @@
                 <!-- <button type="button" class="btn-full-screen" onclick="fullScreenGame('videoPoker');">
                   full screen
                 </button> -->
-                <button type="button" class="btn-full-screen">full screen</button>
+                <button type="button" class="btn-full-screen" onclick="fullscreen('.pop-game')">full screen</button>
                 <button type="button" class="btn-close" onclick="endGame('videoPoker');">close</button>
               </div>
             </div>
           </div>
           <div class="content-game">
             <div class="pop-game">
-              <button type="button" class="btn-game-close" onclick="endGame('videoPoker');">닫기</button>
+              <!-- <button type="button" class="btn-game-close" onclick="endGame('videoPoker');">닫기</button> -->
               <iframe
                 src=""
                 frameborder="0"
