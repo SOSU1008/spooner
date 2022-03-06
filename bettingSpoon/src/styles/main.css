@@ -101,34 +101,6 @@
   min-height: 94.2rem;
   background: #000 url(../images/bg_videopoker.jpg) no-repeat 50% 0 / auto 100%;
 }
-/* .video-poker h2 {
-  padding: 6rem 0 3rem;
-}
-.video-poker h2 strong {
-  display: inline-block;
-  position: relative;
-  padding-bottom: 2rem;
-  font-weight: 300;
-  font-size: 6rem;
-  color: #fff;
-}
-.video-poker h2 strong:after {
-  content: '*';
-  position: absolute;
-  top: -2rem;
-  right: -3rem;
-  font-weight: 300;
-  font-size: 8rem;
-  color: #eb1515;
-}
-.video-poker h2 span {
-  display: block;
-  font-weight: 300;
-  font-size: 2rem;
-  color: #fff;
-  text-align: left;
-} */
-
 .video-poker .hash-tag {
   display: inline-block;
   margin: 0.5rem 0;
@@ -163,58 +135,6 @@
   min-height: 10rem;
   font-size: 1.8rem;
 }
-.video-poker .video-poker-box {
-  position: absolute;
-  top: 5rem;
-  right: 0;
-  left: 0;
-  width: calc(100% - 8rem);
-  max-width: 128rem;
-  height: 72rem;
-  margin: auto;
-  background-color: #111;
-  border: 1px solid #000;
-  box-sizing: border-box;
-}
-.video-poker .video-poker-box iframe {
-  width: 100%;
-  height: 100%;
-}
-.video-poker .btn-game-close {
-  position: absolute;
-  top: 0;
-  right: -4rem;
-  width: 4rem;
-  height: 4rem;
-  background-color: #333;
-  text-indent: -999rem;
-}
-.video-poker .btn-game-close:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 0.2rem;
-  height: 3rem;
-  margin: auto;
-  background-color: #fff;
-  transform: rotate(45deg);
-}
-.video-poker .btn-game-close:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 0.2rem;
-  height: 3rem;
-  margin: auto;
-  background-color: #fff;
-  transform: rotate(-45deg);
-}
 .video-poker .btn-more-play {
   position: relative;
   z-index: 1;
@@ -236,6 +156,165 @@
   text-transform: uppercase;
   color: #fff;
   background: #eb1616 url(../images/ico_discord_w.png) no-repeat 0.8rem 50% / 3.6rem auto;
+}
+
+.full-layer-game {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: #000;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  overflow-y: auto;
+  z-index: 10;
+}
+.full-layer-game.active {
+  display: block;
+}
+.full-layer-game .content-game {
+  position: relative;
+  margin-top: 7rem;
+  width: 100%;
+  height: calc(100% - 13rem);
+  min-height: 80rem;
+  overflow: auto;
+}
+.full-layer-game .pop-game {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 128rem;
+  height: 72rem;
+  margin: auto;
+}
+.full-layer-game iframe {
+  width: 100%;
+  height: 100%;
+}
+.full-layer-game .btn-game-close {
+  position: absolute;
+  top: 0;
+  right: -4rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: #333;
+  text-indent: -999rem;
+}
+.full-layer-game .btn-game-close:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 0.2rem;
+  height: 3rem;
+  margin: auto;
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+.full-layer-game .btn-game-close:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 0.2rem;
+  height: 3rem;
+  margin: auto;
+  background-color: #fff;
+  transform: rotate(-45deg);
+}
+.full-layer-game .full-layer-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7rem;
+  background-color: #202020;
+  z-index: 2;
+}
+.full-layer-game.game-video-poker {
+  background: #000 url(../images/bg_videopoker.jpg) no-repeat 50% 0 / cover;
+}
+.full-layer-game.game-video-poker.full-screen .content-game {
+  height: calc(100% - 7rem);
+}
+.full-layer-game.game-video-poker.full-screen .pop-game {
+  width: 100%;
+  min-height: 100%;
+  height: 50rem;
+  overflow: hidden;
+}
+.full-layer-game h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 19rem;
+  height: 100%;
+}
+.full-layer-game h1 a {
+  display: block;
+  height: 100%;
+  position: relative;
+  background: url(../images/img_logo.png) no-repeat 2rem 50% / 16rem auto;
+  text-indent: -9999rem;
+}
+
+.full-layer-game .full-layer-nav {
+  text-align: center;
+}
+.full-layer-game .full-layer-nav strong {
+  display: inline-block;
+  position: relative;
+  margin-top: 0.9rem;
+  padding: 1rem;
+  font-family: 'Oswald';
+  font-weight: 300;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+.full-layer-game .full-layer-nav strong:after {
+  content: '*';
+  position: absolute;
+  top: 0rem;
+  right: -0.6rem;
+  font-weight: 300;
+  font-size: 4rem;
+  color: #eb1616;
+}
+.full-layer-game .full-layer-nav .btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16rem;
+  height: 100%;
+}
+.full-layer-game .full-layer-nav .btn-group button {
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  margin-right: 0.5rem;
+  text-indent: -9999rem;
+}
+.full-layer-game .full-layer-nav .btn-new-window {
+  background: url(../images/btn_new_window.png) no-repeat 50% 50% / 2.5rem auto;
+}
+.full-layer-game .full-layer-nav .btn-full-screen {
+  background: url(../images/btn_full_screen.png) no-repeat 50% 50% / 2.5rem auto;
+}
+.full-layer-game .full-layer-nav .btn-close {
+  background: url(../images/btn_close.png) no-repeat 50% 50% / 2.5rem auto;
 }
 
 @media screen and (max-width: 1024px) {
@@ -303,6 +382,7 @@
     background-size: 100% auto;
   }
 
+  /* mobile vpoker 
   .video-poker .video-poker-box {
     position: fixed;
     top: 10.8rem;
@@ -314,5 +394,5 @@
   }
   .video-poker .btn-game-close {
     display: none;
-  }
+  } */
 }

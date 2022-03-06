@@ -77,6 +77,35 @@ function modalPlayer(url, popWid, popHei) {
   modalPop('.modal-player', true);
 }
 
+function playGame(gameName) {
+  if (gameName === 'videoPoker') {
+    document.querySelector('.game-video-poker').classList.add('active');
+    document.getElementById('iframeVideoPoker').src = 'game/videoPoker/index.html';
+  }
+}
+function endGame(gameName) {
+  if (gameName === 'videoPoker') {
+    document.querySelector('.game-video-poker').classList.remove('active');
+    document.getElementById('iframeVideoPoker').src = '';
+  }
+}
+function newWindowGame(gameName) {
+  if (gameName === 'videoPoker') {
+    document.querySelector('.game-video-poker').classList.remove('active');
+    document.getElementById('iframeVideoPoker').src = '';
+    window.open(
+      'game/videoPoker/index.html',
+      'window',
+      'location=no, directories=no, resizable=no,status=no,toolbar=no, menubar=no, width=1280, height=720,left=0, top=0, scrollbars=yes'
+    );
+  }
+}
+function fullScreenGame(gameName) {
+  if (gameName === 'videoPoker') {
+    document.querySelector('.game-video-poker').classList.add('full-screen');
+  }
+}
+
 window.addEventListener('load', function () {
   // GNB active
   // nav의 li > a 요소에 id 값과 pageURL을 비교하여 동일한 문자열이 발견되면 해당 메뉴에 active를 시켜줍니다.
