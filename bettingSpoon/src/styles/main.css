@@ -159,6 +159,18 @@
   color: #fff;
   background: #eb1616 url(../images/ico_discord_w.png) no-repeat 0.8rem 50% / 3.6rem auto;
 }
+.video-poker .btn-more-board {
+  display: none;
+  position: relative;
+  z-index: 1;
+  margin-top: 1.5rem;
+  padding: 1.1rem 2.3rem 1.1rem 4.5rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #fff;
+  background: #eb1616 url(../images/btn_ico_board.png) no-repeat 1.2rem 50% / 2.8rem auto;
+}
 .video-poker .leader-board {
   position: absolute;
   top: 7rem;
@@ -195,13 +207,48 @@
   display: block;
   width: 100%;
   height: 30rem;
-  margin-top: 20rem;
+  margin-top: 18rem;
   font-family: 'Oswald';
   font-weight: 300;
   font-size: 3.6rem;
   color: #656565;
   text-align: center;
   background: url(../images/ico_nodata.png) no-repeat 50% 8rem / 13.5rem auto;
+}
+.video-poker .leader-board .btn-board-close {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 4rem;
+  height: 4rem;
+  text-indent: -9999rem;
+}
+.video-poker .leader-board .btn-board-close:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 3rem;
+  height: 0.2rem;
+  margin: auto;
+  background-color: #eb1616;
+  transform: rotate(45deg);
+}
+.video-poker .leader-board .btn-board-close:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 3rem;
+  height: 0.2rem;
+  margin: auto;
+  background-color: #eb1616;
+  transform: rotate(-45deg);
 }
 .full-layer-game {
   display: none;
@@ -426,17 +473,62 @@
     background-image: url(../images/bg_lotto_m.jpg);
     background-size: 100% auto;
   }
-
+  .video-poker .guide-form li p {
+    min-height: auto;
+  }
   .video-poker .leader-board {
     display: none;
   }
-
+  .video-poker .leader-board.active {
+    display: block;
+    top: 25rem;
+    right: auto;
+    left: 3.5rem;
+    width: 46rem;
+    z-index: 2;
+  }
+  .video-poker .leader-board .btn-board-close {
+    display: block;
+  }
+  .video-poker .btn-more-board {
+    display: inline-block;
+  }
+  .full-layer-game .full-layer-nav .btn-close {
+    width: 7rem;
+    height: 7rem;
+    background-size: 4rem auto;
+  }
+  .video-poker .play-game {
+    margin-top: 2.5rem;
+  }
+  .video-poker .play-game .btn-play-game {
+    width: 16rem;
+    height: 16rem;
+    font-size: 2.2rem;
+    background-size: 100% auto;
+  }
+  .full-layer-game h1 {
+    width: 22rem;
+  }
+  .full-layer-game h1 a {
+    background-position: 4rem 50%;
+    background-size: 18rem auto;
+  }
   .full-layer-game .full-layer-nav strong {
-    margin-top: 1.2rem;
-    font-size: 3.8rem;
+    margin-top: 2.2rem;
+    font-size: 3rem;
+  }
+  .full-layer-game .full-layer-nav strong:after {
+    top: -0.2rem;
+    right: -1rem;
+    font-size: 5rem;
+  }
+  .full-layer-game .full-layer-nav .btn-new-window,
+  .full-layer-game .full-layer-nav .btn-full-screen {
+    display: none !important;
   }
   .full-layer-game .full-layer-nav .btn-group {
-    display: none;
+    width: 10rem;
   }
   .full-layer-game .full-layer-nav {
     height: 10.8rem;

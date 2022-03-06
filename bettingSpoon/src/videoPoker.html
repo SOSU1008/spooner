@@ -66,6 +66,13 @@
             <div class="info-box">
               <h2>VIDEO POCKER</h2>
               <p class="desc">Catch the Royal Flush! Punch in your luck on Discord.</p>
+              <button
+                type="button"
+                class="btn-more-board"
+                onclick="document.querySelector('.leader-board').classList.add('active');"
+              >
+                leader board
+              </button>
               <div class="play-game">
                 <img src="./images/img_vpoker.jpg" alt="" />
                 <button type="button" onclick="playGame('videoPoker');" class="btn-play-game">play game</button>
@@ -88,6 +95,13 @@
               </ul>
               <div class="leader-board">
                 <h3>leader board</h3>
+                <button
+                  type="button"
+                  class="btn-board-close"
+                  onclick="document.querySelector('.leader-board').classList.remove('active');"
+                >
+                  닫기
+                </button>
                 <dl>
                   <dt></dt>
                   <dd><span class="board-nodata">NO DATA</span></dd>
