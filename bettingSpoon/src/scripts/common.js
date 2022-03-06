@@ -106,6 +106,21 @@ function fullScreenGame(gameName) {
   }
 }
 
+const enterFullscreenBtn = document.querySelector('.btn-full-screen');
+
+const container = document.querySelector('.pop-game');
+
+enterFullscreenBtn.addEventListener('click', (e) => {
+  fullscreen(container);
+});
+
+const fullscreen = (element) => {
+  if (element.requestFullscreen) return element.requestFullscreen();
+  if (element.webkitRequestFullscreen) return element.webkitRequestFullscreen();
+  if (element.mozRequestFullScreen) return element.mozRequestFullScreen();
+  if (element.msRequestFullscreen) return element.msRequestFullscreen();
+};
+
 window.addEventListener('load', function () {
   // GNB active
   // nav의 li > a 요소에 id 값과 pageURL을 비교하여 동일한 문자열이 발견되면 해당 메뉴에 active를 시켜줍니다.
