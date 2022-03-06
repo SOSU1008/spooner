@@ -266,6 +266,35 @@ section .desc {
 
 .play-game {
   position: relative;
+  max-width: 1156px;
+  margin-top: 2.4rem;
+}
+.play-game .mobile {
+  display: none;
+}
+.play-game.coming-soon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url(../images/bg_coming_soon.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 50% 50%;
+}
+.play-game.coming-soon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 32.1rem;
+  height: 30.7rem;
+  background-image: url(../images/bg_person_bigwheel.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 50% 50%;
 }
 .play-game .btn-play-game {
   position: absolute;
@@ -595,12 +624,26 @@ footer span {
     max-width: 100%;
     margin-top: 6rem;
   }
+  .play-game .pc {
+    display: none;
+  }
+  .play-game .mobile {
+    display: block;
+    width: 100%;
+  }
   .play-game .btn-play-game {
     width: 19.8rem;
     height: 19.8rem;
     margin: -9.9rem 0 0 -9.9rem;
     font-size: 2.4rem;
     background-image: url(../images/btn_play_m.png);
+  }
+  .play-game.coming-soon::before {
+    background-image: url(../images/bg_coming_soon_m.png);
+  }
+  .play-game.coming-soon::after {
+    width: 18.2rem;
+    height: 17.4rem;
   }
 
   /* header */

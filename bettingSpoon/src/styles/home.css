@@ -133,4 +133,11 @@
     display: block;
     margin-top: 21.2rem;
   }
+
+  .bigwheel {
+    min-height: 100%;
+    background-image: url(../images/bg_bigwheel_m.jpg);
+    background-position: 50% 0;
+    background-size: 100% auto;
+  }
 }
