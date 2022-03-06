@@ -60,10 +60,13 @@
 
 @media screen and (max-width: 1024px) {
   .video-poker .video-poker-box {
-    top: 0;
+    position: fixed;
+    top: 10.8rem;
+    left: 0;
     width: 100%;
     max-width: 100%;
-    height: 100%;
+    height: calc(100% - 10.8rem);
+    z-index: 2;
   }
   .video-poker .btn-game-close {
     display: none;

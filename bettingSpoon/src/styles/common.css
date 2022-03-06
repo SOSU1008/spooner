@@ -145,6 +145,8 @@ main {
 .nav-fixed main {
   padding-top: 7.2rem;
 }
+
+/* header */
 header {
   position: relative;
   width: 100%;
@@ -264,6 +266,7 @@ header .btn-gnb-login {
   background-color: #1681eb;
 }
 
+/* footer */
 footer {
   width: 100%;
   padding: 2rem 0;
@@ -317,42 +320,35 @@ footer span {
   width: 90%;
   max-width: 100rem;
   max-height: 80%;
-  height: 10.5rem;
   padding: 3rem;
-  background-color: #2f1668;
+  background-color: #202020;
   text-align: center;
-  border-radius: 2.2rem;
-  border: 0.4rem solid #9130fe;
+  border: 0.2rem solid #ec1616;
   box-sizing: border-box;
 }
 .pop-modal .btn-modal-base {
   display: inline-block;
-  min-width: 16rem;
-  padding: 1.2rem 2.4rem;
+  min-width: 14rem;
+  padding: 0.7rem 1.2rem;
   font-weight: 500;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
-  background-color: #532bb0;
-  border-radius: 1.5rem;
+  background-color: #ec1616;
 }
 .pop-modal .btn-modal-base + .btn-modal-base {
   margin-left: 1rem;
-}
-.pop-modal .btn-modal-base.type-yellow {
-  color: #000;
-  background-color: #ffc000;
 }
 
 /* modal alert */
 .pop-modal.modal-alert .modal-content {
   width: 90%;
   max-width: 80rem;
-  height: 25rem;
 }
 .pop-modal.modal-alert .modal-content p {
-  padding: 2.8rem 0 3rem;
-  font-weight: 500;
-  font-size: 3.2rem;
+  padding-bottom: 3rem;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 1.4;
   text-align: center;
 }
 
@@ -370,6 +366,8 @@ footer span {
   .nav-fixed main {
     padding-top: 10.8rem;
   }
+
+  /* header */
   header {
     height: 10.8rem;
   }
@@ -559,16 +557,73 @@ footer span {
     background-color: #1681eb;
   }
 
+  /* footer */
   footer {
     width: 100%;
     padding: 5rem 0;
   }
   footer .footer-logo {
-    width: 28rem;
+    width: 22rem;
     height: 3rem;
-    background: url(../images/img_logo.png) no-repeat 50% 50% / 24rem auto;
+    background: url(../images/img_logo.png) no-repeat 50% 50% / 18rem auto;
   }
   footer span {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
+  }
+
+  /* modal common */
+  .pop-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+  }
+  .pop-modal .modal-dimmed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .pop-modal .modal-content {
+    position: absolute;
+    width: 90%;
+    max-width: 100rem;
+    max-height: 80%;
+    padding: 5rem 3rem;
+    background-color: #202020;
+    text-align: center;
+    border: 0.4rem solid #ec1616;
+    box-sizing: border-box;
+  }
+  .pop-modal .btn-modal-base {
+    display: inline-block;
+    min-width: 16rem;
+    padding: 1.2rem 2.4rem;
+    font-weight: 500;
+    font-size: 3rem;
+    color: #fff;
+    background-color: #ec1616;
+  }
+  .pop-modal .btn-modal-base + .btn-modal-base {
+    margin-left: 1rem;
+  }
+
+  /* modal alert */
+  .pop-modal.modal-alert .modal-content {
+    width: 90%;
+    max-width: 80rem;
+  }
+  .pop-modal.modal-alert .modal-content p {
+    padding-bottom: 3rem;
+    font-weight: 500;
+    font-size: 3.2rem;
+    text-align: center;
   }
 }
