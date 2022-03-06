@@ -57,6 +57,26 @@ function modalAlert(comment, btnText) {
   modalPop('.modal-alert', true);
 }
 
+// 영상 노출 팝업 함수입니다. 매개변수로 url(영상URL), popWid(영상 가로길이), popHei(영상 세로높이) 값을 받으며, 길이, 높이 값을 지정하지 않을 시 70rem x 70rem으로 고정됩니다.
+// 영상 주소는 공유하기 주소 형태로 들어가야 합니다.
+// ex)
+// X : https://vimeo.com/673045195
+// O : https://player.vimeo.com/video/673045195
+function modalPlayer(url, popWid, popHei) {
+  let modalContent =
+    '<button type="button" class="btn-close" onclick="modalPop(\'.modal-player\', false); document.querySelector(\'.modal-content-player\').innerHTML=\'\';">닫기</button>' +
+    '<iframe src="' +
+    url +
+    '" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+
+  document.querySelector('.modal-content-player').innerHTML = modalContent;
+  document.querySelector('.modal-content-player').style.width =
+    (popWid !== undefined ? Math.floor(popWid / 10) : 70) + 'rem';
+  document.querySelector('.modal-content-player').style.height =
+    (popHei !== undefined ? Math.floor(popHei / 10) : 70) + 'rem';
+  modalPop('.modal-player', true);
+}
+
 window.addEventListener('load', function () {
   // GNB active
   // nav의 li > a 요소에 id 값과 pageURL을 비교하여 동일한 문자열이 발견되면 해당 메뉴에 active를 시켜줍니다.
