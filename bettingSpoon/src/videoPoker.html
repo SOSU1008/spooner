@@ -62,7 +62,46 @@
       <!-- // header (include) -->
       <main>
         <section class="video-poker">
-          <div class="video-poker-box">
+          <div class="inner">
+            <div class="info-box">
+              <h2>VIDEO POCKER</h2>
+              <p class="desc">Catch the Royal Flush! Punch in your luck on Discord.</p>
+              <div class="play-game">
+                <img src="./images/img_vpoker.jpg" alt="" />
+                <button
+                  onclick="modalPlayer('https://player.vimeo.com/video/673045195', 720,720);"
+                  class="btn-play-game"
+                >
+                  play game
+                </button>
+              </div>
+              <ul class="guide-form">
+                <li>
+                  <strong>video poker event</strong>
+                  <p>
+                    This is an event game for SPOONER NFT members.<br />
+                    Catch the Royal Flush! Punch in your luck on Discord.<br />
+                    Prizes are waiting for you!
+                  </p>
+                  <button type="button" class="btn-more-info">more info</button>
+                </li>
+                <li>
+                  <strong>video poker event</strong>
+                  <p>
+                    This is an event game for SPOONER NFT members.<br />
+                    Catch the Royal Flush! Punch in your luck on Discord.<br />
+                    Prizes are waiting for you!
+                  </p>
+                  <button type="button" class="btn-more-info">more info</button>
+                </li>
+              </ul>
+              <!-- <dl>
+                <dt></dt>
+                <dd><span class="board-nodata">NO DATA</span></dd>
+              </dl> -->
+            </div>
+          </div>
+          <div class="video-poker-box" style="display: none">
             <button type="button" class="btn-game-close">닫기</button>
             <iframe
               src="game/videoPoker/index.html"

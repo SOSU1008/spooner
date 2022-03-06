@@ -5,6 +5,48 @@
   min-height: 94.2rem;
   background: #000 url(../images/bg_videopoker.jpg) no-repeat 50% 0 / auto 100%;
 }
+/* .video-poker h2 {
+  padding: 6rem 0 3rem;
+}
+.video-poker h2 strong {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 2rem;
+  font-weight: 300;
+  font-size: 6rem;
+  color: #fff;
+}
+.video-poker h2 strong:after {
+  content: '*';
+  position: absolute;
+  top: -2rem;
+  right: -3rem;
+  font-weight: 300;
+  font-size: 8rem;
+  color: #eb1515;
+}
+.video-poker h2 span {
+  display: block;
+  font-weight: 300;
+  font-size: 2rem;
+  color: #fff;
+  text-align: left;
+} */
+
+.video-poker .info-box {
+  width: 86.5rem;
+  padding: 10rem 3rem;
+  box-sizing: border-box;
+}
+.video-poker .play-game {
+  width: 80.5rem;
+}
+.video-poker .play-game .btn-play-game {
+  width: 20rem;
+  height: 20rem;
+  font-size: 2.6rem;
+}
+
 .video-poker .video-poker-box {
   position: absolute;
   top: 5rem;
