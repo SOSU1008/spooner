@@ -43,7 +43,8 @@
       <main>
         <section class="video-poker">
           <div class="video-poker-box">
-            <iframe src="game/videoPoker/index.html"></iframe>
+            <button type="button" class="btn-game-close">닫기</button>
+            <iframe src="game/videoPoker/index.html" frameborder="0" framespacing="0" marginheight="0" marginwidth="0" scrolling="no" vspace="0"></iframe>
           </div>
         </section>
       </main>
@@ -54,6 +55,15 @@
           <span>&copy; 2022 BETTINGSPOON. ALL RIGHTS RESERVED.</span>
         </div>
       </footer>
+      <aside>
+        <div class="pop-modal modal-alert">
+          <div class="modal-dimmed" onclick="modalPop('.modal-alert', false);"></div>
+          <div class="modal-content">
+            <p class="modal-alert-comment"></p>
+            <button type="button" class="btn-modal-base" onclick="modalPop('.modal-alert', false);">OK</button>
+          </div>
+        </div>
+      </aside>
       <!-- // footer (include) -->
     </div>
     <script type="text/javascript" src="scripts/common.js"></script>

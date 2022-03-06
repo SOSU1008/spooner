@@ -31,6 +31,28 @@ function navScroll() {
   ScrollChk <= 0 ? setScroll.remove('nav-fixed') : setScroll.add('nav-fixed');
 }
 
+// 모바일 메뉴 노출 toggle 함수 입니다.
+function mobileNavToggle() {
+  const headerItem = document.querySelector('header');
+  headerItem.classList.value.indexOf('mobile-nav') !== -1 ? headerItem.classList.remove('mobile-nav') : headerItem.classList.add('mobile-nav');
+}
+
+// 모달 팝업 호출 시 modalPop(tagName, Boolean); 형태로 함수를 호출합니다.
+function modalPop(tagName, modalBoolean) {
+  let modalItem = document.querySelector(tagName);
+  modalBoolean
+    ? (modalItem.style.display = 'flex')
+    : (modalItem.style.display = 'none');
+}
+
+// 모달 알럿 팝업을 띄우는 함수 입니다. 매개변수 comment에 알럿 문구를 입력하여 선언 시 OK 버튼이 노출되는 알럿 입니다. 짧은 문구의 comment 정도만 가능합니다.
+// ex) modalAlert('Sorry, Whitelist application is ended.');
+function modalAlert(comment) {
+  let commentItem = document.querySelector('.modal-alert-comment');
+  commentItem.innerHTML = comment;
+  modalPop('.modal-alert', true);
+}
+
 window.addEventListener('load', function () {
   // GNB active
   // nav의 li > a 요소에 id 값과 pageURL을 비교하여 동일한 문자열이 발견되면 해당 메뉴에 active를 시켜줍니다.
@@ -42,7 +64,6 @@ window.addEventListener('load', function () {
     }
   });
   navScroll();
-
 });
 
 window.addEventListener('scroll', function () {
