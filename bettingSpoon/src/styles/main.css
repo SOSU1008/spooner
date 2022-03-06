@@ -114,7 +114,8 @@
   content: '#';
 }
 .video-poker .info-box {
-  width: 80.5rem;
+  width: 62%;
+  max-width: 80.5rem;
   padding: 5rem 0;
 }
 .video-poker .info-box ul {
@@ -124,7 +125,8 @@
   flex: 0 0 50%;
 }
 .video-poker .play-game {
-  width: 80.5rem;
+  width: 100%;
+  max-width: 80.5rem;
 }
 .video-poker .play-game .btn-play-game {
   width: 20rem;
@@ -157,7 +159,50 @@
   color: #fff;
   background: #eb1616 url(../images/ico_discord_w.png) no-repeat 0.8rem 50% / 3.6rem auto;
 }
-
+.video-poker .leader-board {
+  position: absolute;
+  top: 7rem;
+  right: 3rem;
+  width: 34rem;
+  height: 76rem;
+  background-color: #202020;
+  border: 0.3rem solid #ec1616;
+  box-sizing: border-box;
+}
+.video-poker .leader-board h3 {
+  position: absolute;
+  top: -1.5rem;
+  left: -0.3rem;
+  min-width: 22rem;
+  padding: 0.6rem 1rem;
+  font-weight: 300;
+  font-size: 2.2rem;
+  color: #fff;
+  background-color: #eb1616;
+  text-align: center;
+  text-transform: uppercase;
+}
+.video-poker .leader-board dl {
+  height: 100%;
+  box-sizing: border-box;
+}
+.video-poker .leader-board dt {
+  width: 100%;
+  padding-top: 7rem;
+  background-color: #000;
+}
+.video-poker .leader-board .board-nodata {
+  display: block;
+  width: 100%;
+  height: 30rem;
+  margin-top: 20rem;
+  font-family: 'Oswald';
+  font-weight: 300;
+  font-size: 3.6rem;
+  color: #656565;
+  text-align: center;
+  background: url(../images/ico_nodata.png) no-repeat 50% 8rem / 13.5rem auto;
+}
 .full-layer-game {
   display: none;
   position: fixed;
@@ -382,17 +427,32 @@
     background-size: 100% auto;
   }
 
-  /* mobile vpoker 
-  .video-poker .video-poker-box {
-    position: fixed;
-    top: 10.8rem;
-    left: 0;
-    width: 100%;
-    max-width: 100%;
-    height: calc(100% - 10.8rem);
-    z-index: 2;
-  }
-  .video-poker .btn-game-close {
+  .video-poker .leader-board {
     display: none;
-  } */
+  }
+
+  .full-layer-game .full-layer-nav strong {
+    margin-top: 1.2rem;
+    font-size: 3.8rem;
+  }
+  .full-layer-game .full-layer-nav .btn-group {
+    display: none;
+  }
+  .full-layer-game .full-layer-nav {
+    height: 10.8rem;
+  }
+  .full-layer-game .content-game {
+    margin-top: 10.8rem;
+    height: calc(100% - 10.8rem);
+  }
+  .full-layer-game .pop-game {
+    width: 100%;
+    height: 100%;
+  }
+  .full-layer-game .btn-game-close {
+    display: none;
+  }
+  .full-layer-game footer {
+    display: none;
+  }
 }
