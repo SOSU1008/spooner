@@ -295,10 +295,10 @@
 }
 .full-layer-game .btn-game-close {
   position: absolute;
-  top: 0;
-  right: -4rem;
-  width: 4rem;
-  height: 4rem;
+  top: 0.8rem;
+  right: 0.9rem;
+  width: 5.4rem;
+  height: 5.4rem;
   background-color: #333;
   text-indent: -999rem;
 }

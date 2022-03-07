@@ -115,6 +115,13 @@ function fullscreen(element) {
   if (document.querySelector(element).msRequestFullscreen) return document.querySelector(element).msRequestFullscreen();
 }
 
+function exitFullScreen() {
+  if (document.exitFullscreen) return document.exitFullscreen();
+  if (document.webkitCancelFullscreen) return document.webkitCancelFullscreen();
+  if (document.mozCancelFullScreen) return document.mozCancelFullScreen();
+  if (document.msExitFullscreen) return document.msExitFullscreen();
+}
+
 window.addEventListener('load', function () {
   // GNB active
   // nav의 li > a 요소에 id 값과 pageURL을 비교하여 동일한 문자열이 발견되면 해당 메뉴에 active를 시켜줍니다.
