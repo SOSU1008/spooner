@@ -107,19 +107,41 @@ function fullScreenGame(gameName) {
 }
 
 function fullscreen(element) {
-  if (document.querySelector(element).requestFullscreen) return document.querySelector(element).requestFullscreen();
-  if (document.querySelector(element).webkitRequestFullscreen)
-    return document.querySelector(element).webkitRequestFullscreen();
-  if (document.querySelector(element).mozRequestFullScreen)
-    return document.querySelector(element).mozRequestFullScreen();
-  if (document.querySelector(element).msRequestFullscreen) return document.querySelector(element).msRequestFullscreen();
+  if (document.querySelector(element).requestFullscreen) {
+    document.querySelector(element).requestFullscreen();
+    document.querySelector(element).classList.add('full-screen');
+  }
+  if (document.querySelector(element).webkitRequestFullscreen) {
+    document.querySelector(element).webkitRequestFullscreen();
+    document.querySelector(element).classList.add('full-screen');
+  }
+  if (document.querySelector(element).mozRequestFullScreen) {
+    document.querySelector(element).mozRequestFullScreen();
+    document.querySelector(element).classList.add('full-screen');
+  }
+  if (document.querySelector(element).msRequestFullscreen) {
+    document.querySelector(element).msRequestFullscreen();
+    document.querySelector(element).classList.add('full-screen');
+  }
 }
 
-function exitFullScreen() {
-  if (document.exitFullscreen) return document.exitFullscreen();
-  if (document.webkitCancelFullscreen) return document.webkitCancelFullscreen();
-  if (document.mozCancelFullScreen) return document.mozCancelFullScreen();
-  if (document.msExitFullscreen) return document.msExitFullscreen();
+function exitFullScreen(element) {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+    document.querySelector(element).classList.remove('full-screen');
+  }
+  if (document.webkitCancelFullscreen) {
+    document.webkitCancelFullscreen();
+    document.querySelector(element).classList.remove('full-screen');
+  }
+  if (document.mozCancelFullScreen) {
+    document.mozCancelFullScreen();
+    document.querySelector(element).classList.remove('full-screen');
+  }
+  if (document.msExitFullscreen) {
+    document.msExitFullscreen();
+    document.querySelector(element).classList.remove('full-screen');
+  }
 }
 
 window.addEventListener('load', function () {
