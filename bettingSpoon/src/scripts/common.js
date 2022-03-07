@@ -100,11 +100,6 @@ function newWindowGame(gameName) {
     );
   }
 }
-function fullScreenGame(gameName) {
-  if (gameName === 'videoPoker') {
-    document.querySelector('.game-video-poker').classList.add('full-screen');
-  }
-}
 
 function fullscreen(element) {
   if (document.querySelector(element).requestFullscreen) {
