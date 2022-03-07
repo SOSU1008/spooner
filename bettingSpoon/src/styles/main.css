@@ -422,7 +422,7 @@
     min-height: 100%;
     padding: 4.5rem 0;
     background-image: url(../images/bg_home_m.jpg);
-    background-size: 100% auto;
+    background-size: cover;
   }
 
   .home h2::after,
@@ -441,7 +441,7 @@
     background-image: url(../images/btn_play_game_m.png);
   }
   .home .guide-form {
-    margin-top: 9.5rem;
+    margin-top: 3.7rem;
   }
   .home .guide-form li {
     min-height: auto;
@@ -457,7 +457,7 @@
     min-height: 100%;
     background-image: url(../images/bg_baccarat_m.jpg);
     background-position: 50% 0;
-    background-size: 100% auto;
+    background-size: cover;
   }
   .baccarat .desc {
     padding-right: 20rem;
@@ -466,27 +466,27 @@
   .bigwheel .guide-form,
   .lotto .guide-form {
     display: block;
-    margin-top: 21.2rem;
+    margin-top: 10rem;
   }
 
   .bigwheel {
     min-height: 100%;
     background-image: url(../images/bg_bigwheel_m.jpg);
     background-position: 50% 0;
-    background-size: 100% auto;
+    background-size: cover;
   }
 
   .lotto {
     min-height: 100%;
     background-image: url(../images/bg_lotto_m.jpg);
-    background-size: 100% auto;
+    background-size: cover;
   }
 
   .video-poker {
     min-height: 100%;
     background-image: url(../images/bg_videopoker_m.jpg);
-    background-size: 100% auto;
     background-position: 50% 100%;
+    background-size: cover;
   }
   .video-poker .info-box {
     width: 100%;
@@ -507,7 +507,7 @@
   }
   .video-poker .leader-board.active {
     display: block;
-    top: 19rem;
+    top: 18rem;
     right: auto;
     left: 3.5rem;
     width: 75%;
@@ -548,10 +548,15 @@
     width: 6rem;
     height: 0.5rem;
   }
-
+  .video-poker .desc {
+    padding-right: 21rem;
+  }
   .video-poker .btn-more-board {
     display: inline-block;
-    margin-top: 3.7rem;
+    position: absolute;
+    top: 11.2rem;
+    right: 3.8rem;
+    margin-top: 0;
   }
   .full-layer-game .full-layer-nav .btn-close {
     width: 7rem;
@@ -559,7 +564,7 @@
     background-size: 4rem auto;
   }
   .video-poker .play-game {
-    margin-top: 2.5rem;
+    margin-top: 5rem;
   }
   .video-poker .play-game .btn-play-game {
     width: 16rem;
@@ -591,11 +596,12 @@
     width: 10rem;
   }
   .full-layer-game .full-layer-nav {
+    display: none;
     height: 10.8rem;
   }
   .full-layer-game .content-game {
-    margin-top: 10.8rem;
-    height: calc(100% - 10.8rem);
+    margin-top: 0;
+    height: 100%;
   }
   .full-layer-game .pop-game {
     width: 100%;
