@@ -583,6 +583,29 @@ footer span {
   transform: rotate(-45deg);
 }
 
+.checkbox-flex-form {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.checkbox-flex-form input[type='checkbox'] {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+.checkbox-flex-form .ico-check {
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.checkbox-flex-form input[type='checkbox']:checked + .ico-check {
+  background-color: red;
+}
+
 @media screen and (max-width: 1024px) {
   html {
     font-size: 5px;

@@ -139,6 +139,144 @@ function exitFullScreen(element) {
   }
 }
 
+let userId = document.getElementById('userId');
+let userIdWarning = document.getElementById('userIdWarning');
+
+let userPassword = document.getElementById('userPassword');
+let userPwdWarning = document.getElementById('userPwdWarning');
+
+let matchPassword = document.getElementById('matchPassword');
+let matchPwdWarning = document.getElementById('matchPwdWarning');
+
+let emailId = document.getElementById('emailId');
+let emailWarning = document.getElementById('emailWarning');
+
+let ageAgree = document.getElementById('ageAgree');
+let ageAgreeWarning = document.getElementById('ageAgreeWarning');
+
+function join_check() {
+  if (validUserIdCheck(userId) === false) {
+    alert('아이디를 확인해주세요.');
+    userId.focus();
+    return false;
+  }
+
+  if (validPwdCheck(userPassword) === false) {
+    alert('패스워드를 확인해주세요.');
+    userPassword.focus();
+    return false;
+  }
+
+  if (matchPassword.value !== userPassword.value) {
+    alert('confirm password check!');
+    matchPassword.focus();
+    return false;
+  }
+
+  if (validEmailCheck(emailId) === false) {
+    alert('email check!');
+    emailId.focus();
+    return false;
+  }
+
+  if (!ageAgree.checked) {
+    alert('Please show that you agree to our terms and conditions.');
+    ageAgree.focus();
+    return false;
+  }
+
+  // 입력 값 전송
+  // document.join_check.submit();
+}
+
+function validAgeAgree(obj) {
+  if (!obj.checked) {
+    ageAgreeWarning.innerHTML = 'Please show that you agree to our terms and conditions.';
+    ageAgree.focus();
+    return false;
+  } else {
+    ageAgreeWarning.innerHTML = '';
+  }
+}
+
+function validUserId(obj) {
+  if (obj.value === '') {
+    userIdWarning.innerHTML = 'Please enter a valid username.';
+    obj.focus();
+    return false;
+  } else if (obj.value.length < 6 || obj.value.length > 18) {
+    userIdWarning.innerHTML = 'Your username should be 6~18 characters long.';
+    obj.focus();
+    return false;
+  } else if (validUserIdCheck(obj) === false) {
+    userIdWarning.innerHTML = 'Your username has invalid characters, you can only use letters and numbers.';
+    obj.focus();
+    return false;
+  } else {
+    userIdWarning.innerHTML = '';
+  }
+}
+
+function validUserIdCheck(obj) {
+  let pattern = /^[a-zA-Z0-9]{6,18}$/;
+  return obj.value.match(pattern) != null;
+}
+
+function validUserPwd(obj) {
+  if (obj.value === '') {
+    userPwdWarning.innerHTML = 'Please enter a valid password.';
+    obj.focus();
+    return false;
+  } else if (obj.value.length < 6 || obj.value.length > 18) {
+    userPwdWarning.innerHTML = 'Your password should be 6~18 characters long.';
+    obj.focus();
+    return false;
+  } else if (validPwdCheck(obj) === false) {
+    userPwdWarning.innerHTML =
+      'Your password must contain at least one letter, number and symbol (!@#$%^&()*) are allowed.';
+    obj.focus();
+    return false;
+  } else {
+    userPwdWarning.innerHTML = '';
+  }
+}
+
+function validPwdCheck(obj) {
+  let pattern = /^(?=.*[a-zA-Z])(?=.*[!@#$%^&()*])(?=.*[0-9]).{6,18}$/;
+  return obj.value.match(pattern) != null;
+}
+
+function validMatchPwd(obj) {
+  if (obj.value === '') {
+    matchPwdWarning.innerHTML = 'Please enter a valid password.';
+    obj.focus();
+    return false;
+  } else if (obj.value !== userPassword.value) {
+    matchPwdWarning.innerHTML = 'Your passwords do not match. Please try again.';
+    obj.focus();
+    return false;
+  } else {
+    matchPwdWarning.innerHTML = '';
+  }
+}
+
+function validEmail(obj) {
+  if (obj.value === '') {
+    emailWarning.innerHTML = 'Please enter a valid email address.';
+  } else if (validEmailCheck(obj) === false) {
+    emailWarning.innerHTML = 'Please ensure you enter a valid email address.';
+    obj.focus();
+    return false;
+  } else {
+    emailWarning.innerHTML = '';
+  }
+}
+
+function validEmailCheck(obj) {
+  let pattern = /^([\w\.\_\-])*[a-zA-Z0-9]+([\w\.\_\-])*([a-zA-Z0-9])+([\w\.\_\-])+@([a-zA-Z0-9]+\.)+[a-zA-Z0-9]{2,8}$/;
+  return obj.value.match(pattern) != null;
+}
+
 window.addEventListener('load', function () {
   // GNB active
   // nav의 li > a 요소에 id 값과 pageURL을 비교하여 동일한 문자열이 발견되면 해당 메뉴에 active를 시켜줍니다.

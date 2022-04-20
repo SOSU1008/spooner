@@ -54,6 +54,7 @@
                     INSTALL METAMASK
                   </button>
                 </div>
+                <button class="btn-join" onclick="modalPop('.modal-form', true);">join</button>
               </div>
             </div>
           </nav>
@@ -132,6 +133,92 @@
               class="btn-modal-base btn-alert-close"
               onclick="modalPop('.modal-alert', false);"
             ></button>
+          </div>
+        </div>
+        <div class="pop-modal modal-form">
+          <div class="modal-dimmed" onclick="modalPop('.modal-form', false);"></div>
+          <div class="modal-content">
+            <form name="joinForm" action="#">
+              <div class="form-box">
+                <dl>
+                  <dt>Username</dt>
+                  <dd>
+                    <!-- 6-18자, 사용자 이름에 잘못된 문자가 있습니다. 문자와 숫자만 사용할 수 있습니다. -->
+                    <input
+                      type="text"
+                      name="userId"
+                      id="userId"
+                      maxlength="18"
+                      placeholder="아이디를 입력해주세요."
+                      onkeyup="validUserId(this)"
+                    />
+                    <p id="userIdWarning"></p>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>Password</dt>
+                  <dd>
+                    <!-- 6-18자, 비밀번호에는 문자, 숫자 및 기호(!@#$%^&()*)가 하나 이상 포함되어야 합니다. -->
+                    <input
+                      type="password"
+                      name="userPassword"
+                      id="userPassword"
+                      placeholder="비밀번호를 입력해주세요."
+                      onkeyup="validUserPwd(this)"
+                    />
+                    <p id="userPwdWarning"></p>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>Confirm password</dt>
+                  <dd>
+                    <!-- 6-18자, 비밀번호에는 문자, 숫자 및 기호(!@#$%^&()*)가 하나 이상 포함되어야 합니다. -->
+                    <input
+                      type="password"
+                      name="matchPassword"
+                      id="matchPassword"
+                      placeholder="비밀번호를 확인해주세요."
+                      onkeyup="validMatchPwd(this)"
+                    />
+                    <p id="matchPwdWarning"></p>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>Email</dt>
+                  <dd>
+                    <input
+                      type="email"
+                      name="emailId"
+                      id="emailId"
+                      placeholder="이메일을 입력해주세요."
+                      onkeyup="validEmail(this)"
+                    />
+                    <p id="emailWarning"></p>
+                  </dd>
+                </dl>
+                <label for="ageAgree" class="checkbox-flex-form">
+                  <input type="checkbox" name="ageAgree" id="ageAgree" onclick="validAgeAgree(this)" />
+                  <span class="ico-check"></span>
+                  <p>
+                    I confirm that I am at least 18 years of age and that I have read and agreed to Terms and
+                    Conditions, Betting Rules, Cookies Policy and Privacy Policy.
+                  </p>
+                </label>
+                <p id="ageAgreeWarning"></p>
+                <label for="notiAgree" class="checkbox-flex-form">
+                  <input type="checkbox" name="notiAgree" id="notiAgree" />
+                  <span class="ico-check"></span>
+                  <p>
+                    I consent to receive details of special offers, news, promotions and other marketing communications
+                    by email and mobile notification.
+                  </p>
+                </label>
+              </div>
+            </form>
+            <button type="button" onclick="join_check()">Join now</button>
+            <button type="button" class="btn-modal-base btn-alert-close" onclick="modalPop('.modal-form', false);">
+              닫기
+            </button>
           </div>
         </div>
       </aside>
