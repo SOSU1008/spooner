@@ -38,23 +38,36 @@
                   <a href="lotto.html" id="lotto"><span>LOTTO</span></a>
                 </li>
               </ul>
-              <div class="btn-group">
-                <button type="button" class="btn-discord" onclick="window.open('https://discord.gg/spooner-nft');">
-                  discord
-                </button>
-                <button type="button" class="btn-twitter" onclick="window.open('https://twitter.com/SPOONER_NFT');">
-                  twitter
-                </button>
-                <div class="gnb-login">
-                  <button
-                    type="button"
-                    class="btn-metamask"
-                    onclick="setLogin('0x72f29ef34139313246a1a4s4f24de372aaf3e0');"
-                  >
-                    INSTALL METAMASK
-                  </button>
-                </div>
-                <button class="btn-join" onclick="modalPop('.modal-form', true);">join</button>
+                <div class="btn-group">
+                  <button type="button" onclick="window.open('https://discord.gg/spooner-nft');" class="btn-discord"> discord </button>
+                  <button type="button" onclick="window.open('https://twitter.com/SPOONER_NFT');" class="btn-twitter"> twitter </button>
+                  <button type="button" onclick="window.open('https://opensea.io/collection/spooner-nft');" class="btn-opensea"> opensea </button>
+                  <button type="button" onclick="window.open('https://nft.bettingspoon.com');" class="btn-spooner"> spooner NFT </button>
+                  <div class="gnb-login">
+                    
+                    <!-- 2022-04 (1/2) -->
+
+                    <!-- 비 로그인 상태 (LOGIN, JOIN) -->
+                    <button type="button" class="btn-login">LOGIN</button>
+                    <button type="button" class="btn-join" onclick="modalPop('.modal-form', true);">JOIN</button>
+                    <!-- // 비 로그인 상태 (LOGIN, JOIN) -->
+                    
+                    <!-- 로그인 일때 (ID, INSTALL || CONNECT || METAMASK) -->
+                    <a href="#" class="header-profile" style="display:none;">
+                      <span style="background-image: url(images/bg_videopoker.jpg)"></span>
+                      <strong>testerid1234512345123451234512345</strong>
+                    </a>
+                    <ul style="display:none;">
+                      <li><a href="#" onclick="guideGnb('logout');">LOGOUT</a></li>
+                    </ul>
+                    <button type="button" class="btn-metamask install" style="display:none;">INSTALL</button>
+                    <button type="button" class="btn-metamask connect" style="display: none">CONNECT</button>
+                    <button type="button" class="btn-gnb-login" id="metamaskId" style="display: none"></button>
+                    <!-- // 로그인 상태 (ID, INSTALL || CONNECT || METAMASK) -->
+
+                    <!-- // 2022-04 (1/2) -->
+                  </div>
+                </div>                
               </div>
             </div>
           </nav>
@@ -135,97 +148,166 @@
             ></button>
           </div>
         </div>
+        <!-- 2022-04 (2/2) -->
         <div class="pop-modal modal-form">
           <div class="modal-dimmed" onclick="modalPop('.modal-form', false);"></div>
           <div class="modal-content">
-            <form name="joinForm" action="#">
-              <div class="form-box">
-                <dl>
-                  <dt>Username</dt>
-                  <dd>
-                    <!-- 6-18자, 사용자 이름에 잘못된 문자가 있습니다. 문자와 숫자만 사용할 수 있습니다. -->
-                    <input
-                      type="text"
-                      name="userId"
-                      id="userId"
-                      maxlength="18"
-                      placeholder="아이디를 입력해주세요."
-                      onkeyup="validUserId(this)"
-                    />
-                    <p id="userIdWarning"></p>
-                  </dd>
-                </dl>
-                <dl>
-                  <dt>Password</dt>
-                  <dd>
-                    <!-- 6-18자, 비밀번호에는 문자, 숫자 및 기호(!@#$%^&()*)가 하나 이상 포함되어야 합니다. -->
-                    <input
-                      type="password"
-                      name="userPassword"
-                      id="userPassword"
-                      placeholder="비밀번호를 입력해주세요."
-                      autocomplete="off"
-                      onkeyup="validUserPwd(this)"
-                    />
-                    <p id="userPwdWarning"></p>
-                  </dd>
-                </dl>
-                <dl>
-                  <dt>Confirm password</dt>
-                  <dd>
-                    <!-- 6-18자, 비밀번호에는 문자, 숫자 및 기호(!@#$%^&()*)가 하나 이상 포함되어야 합니다. -->
-                    <input
-                      type="password"
-                      name="matchPassword"
-                      id="matchPassword"
-                      placeholder="비밀번호를 확인해주세요."
-                      autocomplete="off"
-                      onkeyup="validMatchPwd(this)"
-                    />
-                    <p id="matchPwdWarning"></p>
-                  </dd>
-                </dl>
-                <dl>
-                  <dt>Email</dt>
-                  <dd>
-                    <input
-                      type="email"
-                      name="emailId"
-                      id="emailId"
-                      placeholder="이메일을 입력해주세요."
-                      onkeyup="validEmail(this)"
-                    />
-                    <p id="emailWarning"></p>
-                  </dd>
-                </dl>
-                <label for="ageAgree" class="checkbox-flex-form">
-                  <input type="checkbox" name="ageAgree" id="ageAgree" onclick="validAgeAgree(this)" />
-                  <span class="ico-check"></span>
-                  <p>
-                    I confirm that I am at least 18 years of age and that I have read and agreed to Terms and
-                    Conditions, Betting Rules, Cookies Policy and Privacy Policy.
-                  </p>
-                </label>
-                <p id="ageAgreeWarning"></p>
-                <label for="notiAgree" class="checkbox-flex-form">
-                  <input type="checkbox" name="notiAgree" id="notiAgree" />
-                  <span class="ico-check"></span>
-                  <p>
-                    I consent to receive details of special offers, news, promotions and other marketing communications
-                    by email and mobile notification.
-                  </p>
-                </label>
-              </div>
-            </form>
-            <button type="button" onclick="join_check()">Join now</button>
+            <h3><strong>Create your account</strong></h3>
             <button type="button" class="btn-modal-base btn-alert-close" onclick="modalPop('.modal-form', false);">
               닫기
             </button>
+            <div class="modal-contents-scroll">
+              <form name="joinForm" action="#">
+                <div class="form-box">
+                  <dl>
+                    <dt>Username</dt>
+                    <dd>
+                      <!-- 6-18자, 사용자 이름에 잘못된 문자가 있습니다. 문자와 숫자만 사용할 수 있습니다. -->
+                      <input
+                        type="text"
+                        name="userId"
+                        id="userId"
+                        maxlength="18"
+                        placeholder="아이디를 입력해주세요."
+                        onkeyup="validUserId(this)"
+                      />
+                      <p id="userIdWarning"></p>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>Password</dt>
+                    <dd>
+                      <!-- 6-18자, 비밀번호에는 문자, 숫자 및 기호(!@#$%^&()*)가 하나 이상 포함되어야 합니다. -->
+                      <input
+                        type="password"
+                        name="userPassword"
+                        id="userPassword"
+                        placeholder="비밀번호를 입력해주세요."
+                        autocomplete="off"
+                        onkeyup="validUserPwd(this)"
+                      />
+                      <p id="userPwdWarning"></p>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>Confirm password</dt>
+                    <dd>
+                      <!-- 6-18자, 비밀번호에는 문자, 숫자 및 기호(!@#$%^&()*)가 하나 이상 포함되어야 합니다. -->
+                      <input
+                        type="password"
+                        name="matchPassword"
+                        id="matchPassword"
+                        placeholder="비밀번호를 확인해주세요."
+                        autocomplete="off"
+                        onkeyup="validMatchPwd(this)"
+                      />
+                      <p id="matchPwdWarning"></p>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>Email</dt>
+                    <dd>
+                      <input
+                        type="email"
+                        name="emailId"
+                        id="emailId"
+                        placeholder="이메일을 입력해주세요."
+                        onkeyup="validEmail(this)"
+                      />
+                      <p id="emailWarning"></p>
+                    </dd>
+                  </dl>
+                  <label for="ageAgree" class="checkbox-flex-form">
+                    <input type="checkbox" name="ageAgree" id="ageAgree" onclick="validAgeAgree(this)" />
+                    <span class="ico-check"></span>
+                    <p>
+                      I confirm that I am at least 18 years of age and that I have read and agreed to Terms and
+                      Conditions, Betting Rules, Cookies Policy and Privacy Policy.
+                    </p>
+                  </label>
+                  <p id="ageAgreeWarning"></p>
+                  <label for="notiAgree" class="checkbox-flex-form">
+                    <input type="checkbox" name="notiAgree" id="notiAgree" />
+                    <span class="ico-check"></span>
+                    <p>
+                      I consent to receive details of special offers, news, promotions and other marketing communications
+                      by email and mobile notification.
+                    </p>
+                  </label>
+                </div>
+              </form>
+              <button type="button" onclick="join_check()">Join now</button>
+            </div>
           </div>
         </div>
+        <div class="pop-modal modal-bs-info">
+          <div class="modal-dimmed" onclick="modalPop('.modal-bs-info', false);"></div>
+          <div class="modal-content">
+            <h3><strong>bs</strong></h3>
+            <button type="button" class="btn-modal-base btn-alert-close" onclick="modalPop('.modal-bs-info', false);">
+              닫기
+            </button>
+            <div class="modal-contents-scroll">
+              ㅇㅇㅇ
+            </div>
+          </div>
+        </div>
+        <!-- // 2022-04 (2/2) -->
       </aside>
       <!-- // footer (include) -->
     </div>
+    <!-- pub guide (가이드를 위한 소스입니다. 참고용으로만 봐주세요.) -->
+    <style>
+      .guide-box{position:fixed; top:10rem; left:10rem; width:25rem; height:auto; padding:1rem; background-color:#fff; border:.2rem solid #ec1616; transition:.3s; z-index:9999;}
+      .guide-box button{width:100%; margin:1rem auto; font-size:1.6rem; color:#000;}
+      .guide-box h1{width:100%; padding:.5rem 0 1rem; font-weight:700; font-size:1.4rem; color:#ec1616; text-align:center; border-bottom:.1rem solid #ec1616;}
+      .guide-box .btn-folder{position:absolute; top:-1.2rem; right:-3.3rem; width:3rem; height:3rem; font-weight:400; font-size:1.3rem; color:#fff; background-color:#ec1616; text-align:center;}
+      .guide-box .btn-folder:before{content:'접기';}
+      .guide-box.fold .btn-folder:before{content:'펴기';}
+      .guide-box.fold{width:1px; height:1px; padding:0;}
+      .guide-box.fold h1, .guide-box.fold .btn-list{display:none;}
+    </style>
+    <div class="guide-box">
+      <h1>이해를 돕기위한 가이드 박스 입니다.</h1>
+      <button type="button" class="btn-folder" onclick="document.querySelector('.guide-box').classList.toggle('fold');"></button>
+      <div class="btn-list">
+        <button type="button" onclick="guideGnb('logout');">GNB - 로그아웃 상태</button>
+        <button type="button" onclick="guideGnb('install');">GNB - 로그인 (INSTALL) </button>
+        <button type="button" onclick="guideGnb('connect');">GNB - 로그인 (CONNECT) </button>
+        <button type="button" onclick="guideGnb('metamask');">GNB - 로그인 (METAMASK) </button>
+        <button type="button" onclick="modalPop('.modal-form', true);">GNB - 회원가입 팝업 </button>
+        <button type="button" onclick="modalPop('.modal-form', true);">BS info 팝업 </button>
+      </div>
+    </div>
+    <script>
+      function guideGnb(type){
+        const gnbLogin = document.querySelector('.gnb-login');
+        gnbLogin.querySelector('.header-profile').style.display = 'none';
+        gnbLogin.querySelector('ul').style.display = 'none';
+        gnbLogin.querySelectorAll('button').forEach( item => {
+          item.style.display = 'none';
+        });
+        
+        if(type === 'logout'){
+          gnbLogin.querySelector('.btn-login').style.display = 'inline-block';
+          gnbLogin.querySelector('.btn-join').style.display = 'inline-block';
+        } else if(type === 'install'){
+          gnbLogin.querySelector('.header-profile').style.display = 'inline-block';
+          gnbLogin.querySelector('ul').style.display = 'block';
+          gnbLogin.querySelector('.install').style.display = 'inline-block';
+        } else if(type === 'connect'){
+          gnbLogin.querySelector('.header-profile').style.display = 'inline-block';
+          gnbLogin.querySelector('ul').style.display = 'block';
+          gnbLogin.querySelector('.connect').style.display = 'inline-block';
+        } else if(type === 'metamask'){
+          gnbLogin.querySelector('.header-profile').style.display = 'inline-block';
+          gnbLogin.querySelector('ul').style.display = 'block';
+          gnbLogin.querySelector('.btn-gnb-login').style.display = 'inline-block';
+        }
+        preventdefault();
+      }
+    </script>
+    <!-- // pub guide -->
     <script type="text/javascript" src="scripts/common.js"></script>
   </body>
 </html>

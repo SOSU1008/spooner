@@ -408,10 +408,12 @@ header nav li a:hover span:before {
   height: 0.7rem;
   opacity: 1;
 }
+
 header .btn-group {
   display: inline-block;
   margin-left: 1rem;
 }
+
 header .btn-discord {
   display: inline-block;
   width: 5rem;
@@ -423,12 +425,9 @@ header .btn-twitter {
   display: inline-block;
   width: 5rem;
   height: 5rem;
-  margin-left: 1rem;
+  margin-left: 0;
   background: url(../images/ico_twitter.png) no-repeat 50% 50% / 5rem auto;
   text-indent: -999rem;
-}
-header .gnb-login {
-  display: inline-block;
 }
 header .btn-metamask {
   display: inline-block;
@@ -448,6 +447,209 @@ header .btn-gnb-login {
   color: #fff;
   background-color: #1681eb;
 }
+header .btn-opensea {
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  margin-left: 0;
+  background: url(../images/ico_opensea.png) no-repeat 50% 50% / 5rem auto;
+  text-indent: -999rem;
+}
+header .btn-spooner {
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  margin-left: 0;
+  background: url(../images/ico_spooner.png) no-repeat 50% 50% / 5rem auto;
+  text-indent: -999rem;
+}
+
+/* 2022-04 (1/1) */
+header .btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+header .gnb-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-left: 1.5rem;
+}
+header .gnb-login button {
+  min-width: 12rem;
+  margin: 0 0.2rem;
+}
+header .btn-login {
+  width: 12rem;
+  height: 3rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #ec1616;
+  background-color: transparent;
+  border: 0.2rem solid #ec1616;
+  box-sizing: border-box;
+  text-align: center;
+}
+header .btn-join {
+  width: 12rem;
+  height: 3rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #ec1616;
+  box-sizing: border-box;
+  text-align: center;
+}
+header .header-profile {
+  display: inline-block;
+  position: relative;
+  width: 12rem;
+  height: 3.7rem;
+  margin-right: 1rem;
+  padding: 1rem 0rem 1rem 3.5rem;
+  box-sizing: border-box;
+}
+header .header-profile strong {
+  display: inline-block;
+  width: 100%;
+  font-weight: 400;
+  font-size: 1.4rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+header .header-profile span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3rem;
+  height: 3rem;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100%;
+}
+header .gnb-login ul {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12rem;
+  height: 0;
+  background-color: #000;
+  border: 0.1rem solid #ec1616;
+  transition: 0.3s;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+header .gnb-login a:hover + ul,
+header .gnb-login ul:hover {
+  display: block;
+  opacity: 1;
+  top: 100%;
+  height: auto;
+  z-index: 2;
+}
+header .gnb-login li {
+  display: block;
+  width: 100%;
+  border-bottom: 0.1rem solid #ec1616;
+}
+header .gnb-login li a {
+  display: block;
+  padding: 1rem 0.5rem;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #ec1616;
+  text-align: center;
+}
+header .gnb-login li a:hover {
+  background-color: #111;
+}
+header .gnb-login li:last-child {
+  border-bottom: 0;
+}
+header .gnb-login .btn-metamask.connect {
+  background-color: #752ebc;
+}
+
+.modal-form {
+  display: none;
+}
+.pop-modal.modal-form h3 {
+  position: absolute;
+  top: -2.5rem;
+  left: -0.2rem;
+}
+.pop-modal.modal-form h3 strong {
+  display: inline-block;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: #ec1616;
+}
+.pop-modal.modal-form .modal-content {
+  max-width: 68rem;
+  height: 90%;
+  padding: 0;
+  max-height: 72rem;
+}
+.pop-modal.modal-form .modal-content .modal-contents-scroll {
+  height: 100%;
+  padding: 3rem;
+  overflow-y: auto;
+}
+.pop-modal.modal-form .btn-alert-close {
+  position: absolute;
+  top: -0.2rem;
+  right: -5.2rem;
+  width: 5rem;
+  min-width: auto;
+  height: 5rem;
+  margin: 0;
+  padding: 0;
+  background-color: #202020;
+  text-indent: -9999rem;
+}
+.pop-modal.modal-form .btn-alert-close:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 3.5rem;
+  height: 0.2rem;
+  margin: auto;
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+.pop-modal.modal-form .btn-alert-close:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 3.5rem;
+  height: 0.2rem;
+  margin: auto;
+  background-color: #fff;
+  transform: rotate(135deg);
+}
+
+.pop-modal.modal-bs-info .modal-content {
+  width: 54rem;
+  height: 64rem;
+}
+
+/* // 2022-04 (1/1) */
 
 /* footer */
 footer {

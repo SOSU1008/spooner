@@ -139,6 +139,7 @@ function exitFullScreen(element) {
   }
 }
 
+// begin : 2022-04 (1/2)
 let userId = document.getElementById('userId');
 let userIdWarning = document.getElementById('userIdWarning');
 
@@ -276,6 +277,7 @@ function validEmailCheck(obj) {
   let pattern = /^([\w\.\_\-])*[a-zA-Z0-9]+([\w\.\_\-])*([a-zA-Z0-9])+([\w\.\_\-])+@([a-zA-Z0-9]+\.)+[a-zA-Z0-9]{2,8}$/;
   return obj.value.match(pattern) != null;
 }
+// end : 2022-04 (1/1)
 
 window.addEventListener('load', function () {
   // GNB active
@@ -288,6 +290,16 @@ window.addEventListener('load', function () {
     }
   });
   navScroll();
+
+  // begin : 2022-04 (2/2)
+
+  // 로그인 + metamask 지갑 주소가 있을때 지갑주소 표기 처리.
+  let metamaskId = '0x72f29ef34139313246a1a4s4f24de372aaf3e0';
+  typeof metamaskId !== undefined && document.getElementById('metamaskId') !== null
+    ? (document.getElementById('metamaskId').innerHTML = wordResize(metamaskId, 8, 8))
+    : null;
+
+  // end : 2022-04 (2/2)
 });
 
 window.addEventListener('scroll', function () {
