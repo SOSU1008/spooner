@@ -586,6 +586,11 @@ header .gnb-login .btn-metamask.connect {
   top: -3rem;
   left: -0.5rem;
 }
+.pop-modal.modal-form h4 {
+  font-weight: lighter;
+  font-size: 3rem;
+  color: #eb1616;
+}
 .pop-modal.modal-form h3 strong {
   display: inline-block;
   padding: 1rem 2.4rem;
@@ -605,6 +610,32 @@ header .gnb-login .btn-metamask.connect {
   height: 100%;
   padding: 5.5rem 3rem 4.5rem;
   overflow-y: auto;
+}
+.pop-modal.modal-form.modal-email .modal-content .modal-contents-scroll {
+  padding: 13.5rem 13.5rem 11.7rem 14.5rem;
+  text-align: left;
+}
+.pop-modal.modal-form.modal-change-email .modal-content .modal-contents-scroll {
+  padding: 16rem 11rem 17rem 12rem;
+  text-align: left;
+}
+.pop-modal.modal-form.modal-change-email h4 {
+  font-weight: lighter;
+  font-size: 1.6rem;
+  color: #fff;
+  font-family: 'Oswald';
+  line-height: 1.6;
+}
+.pop-modal.modal-form.modal-change-email .form-box {
+  margin-top: 3.6rem;
+  padding: 0 3rem 0 0;
+}
+.pop-modal.modal-form.modal-change-email .btn-area {
+  margin-top: 22rem;
+  padding: 0 6.5rem;
+}
+.modal-change-email .form-box dl dt {
+  width: 5rem;
 }
 .pop-modal.modal-form .btn-alert-close {
   position: absolute;
@@ -652,8 +683,13 @@ header .gnb-login .btn-metamask.connect {
 
 .pop-modal.modal-form .btn-area {
   padding: 0 15.5rem;
+  text-align: center;
 }
-.pop-modal.modal-form .btn-area .btn-join-now {
+.pop-modal.modal-form.modal-email .btn-area {
+  margin-top: 10rem;
+  padding: 0 4rem;
+}
+.pop-modal.modal-form .btn-area .btn {
   display: block;
   width: 100%;
   padding: 1.2rem 0 1.4rem;
@@ -664,6 +700,30 @@ header .gnb-login .btn-metamask.connect {
   background-color: #eb1616;
   text-align: center;
   text-transform: uppercase;
+}
+.pop-modal.modal-form .btn-area .btn + a {
+  margin-top: 3.5rem;
+}
+.pop-modal.modal-form .btn-area a {
+  display: inline-block;
+  text-decoration: underline;
+  font-family: 'Oswald';
+  font-weight: lighter;
+  font-size: 1.8rem;
+  color: #ffde00;
+}
+
+.modal-email p{
+  margin-top: 2.8rem;
+  font-weight: lighter;
+  font-size: 1.6rem;
+  color: #fff;
+  font-family: 'Oswald';
+  line-height: 1.6;
+}
+.modal-email p a {
+  text-decoration: underline;
+  color: #ffde00;
 }
 
 .modal-form .form-box {
@@ -714,7 +774,7 @@ header .gnb-login .btn-metamask.connect {
   right: 0;
   width: 2.8rem;
   height: 2.2rem;
-  margin-top: -1.1rem;
+  margin-top: -1.4rem;
   background: url(../images/ico_checked.png) 50% 50% no-repeat;
   background-size: 100% auto;
 }
@@ -725,7 +785,7 @@ header .gnb-login .btn-metamask.connect {
 .form-box #matchPassword {
   background-image: url(../images/ico_security.png);
 }
-.form-box #emailId {
+.form-box .email {
   background-image: url(../images/ico_email.png);
 }
 .form-box dl dd input::placeholder {
@@ -1266,11 +1326,35 @@ footer span {
   }
 
   /* // 2022-04 (2/2) */
+  .pop-modal.modal-form h4 {
+    font-size: 4rem;
+  }
   .pop-modal.modal-form .modal-content {
     max-height: 80%;
   }
   .pop-modal.modal-form .modal-content .modal-contents-scroll {
     padding: 8rem 3rem;
+  }
+  .pop-modal.modal-form.modal-email .modal-content .modal-contents-scroll {
+    padding: 12rem 4.5rem 8rem 6.7rem;
+  }
+  .pop-modal.modal-form.modal-change-email .modal-content .modal-contents-scroll {
+    padding: 18rem 5rem 14rem;
+  }
+  .pop-modal.modal-form.modal-change-email h4 {
+    padding: 0 5rem;
+    font-size: 3rem;
+    text-align: center;
+  }
+  .pop-modal.modal-form.modal-change-email .form-box {
+    margin-top: 11.5rem;
+    padding: 0 3rem;
+  }
+  .pop-modal.modal-form.modal-change-email .btn-area {
+    padding: 0 12.5rem;
+  }
+  .modal-change-email .form-box dl dt {
+    width: 7rem;
   }
   .pop-modal.modal-form .btn-alert-close {
     top: -8.2rem;
@@ -1287,6 +1371,10 @@ footer span {
     width: 5.5rem;
     height: 0.4rem;
     background-color: #eb1616;
+  }
+  .modal-email p {
+    margin-top: 6rem;
+    font-size: 2.4rem;
   }
   .modal-form .form-box {
     padding: 0 2rem 0 0;
@@ -1331,9 +1419,17 @@ footer span {
   .checkbox-form .flex-box input[type='checkbox']:checked + .ico-check {
     background-size: 100% auto;
   }
-  .pop-modal.modal-form .btn-area .btn-join-now {
+  .pop-modal.modal-form.modal-email .btn-area {
+    margin-top: 17rem;
+    padding: 0 12.5rem;
+  }
+  .pop-modal.modal-form .btn-area .btn {
     padding: 1.4rem 0 1.6rem;
     font-size: 3rem;
+  }
+  .pop-modal.modal-form .btn-area a {
+    margin-top: 2.4rem;
+    font-size: 2.4rem;
   }
   /* // 2022-04 (2/2) */
 }

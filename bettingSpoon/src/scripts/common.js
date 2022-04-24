@@ -141,19 +141,15 @@ function exitFullScreen(element) {
 
 // begin : 2022-04 (1/2)
 const userId = document.getElementById('userId');
-const userIdWarning = document.getElementById('userIdWarning');
 
 const userPassword = document.getElementById('userPassword');
-const userPwdWarning = document.getElementById('userPwdWarning');
 
 const matchPassword = document.getElementById('matchPassword');
-const matchPwdWarning = document.getElementById('matchPwdWarning');
 
 const emailId = document.getElementById('emailId');
-const emailWarning = document.getElementById('emailWarning');
+const changeEmailId = document.getElementById('changeEmailId');
 
 const ageAgree = document.getElementById('ageAgree');
-const ageAgreeWarning = document.getElementById('ageAgreeWarning');
 
 function join_check() {
   if (validUserIdCheck(userId) === false) {
@@ -190,32 +186,33 @@ function join_check() {
   // document.join_check.submit();
 }
 
-function validAgeAgree(obj) {
+function validAgeAgree(obj, warning) {
   if (!obj.checked) {
-    ageAgreeWarning.innerHTML = 'Please show that you agree to our terms and conditions.';
+    warning.innerHTML = 'Please show that you agree to our terms and conditions.';
     ageAgree.focus();
     return false;
   } else {
-    ageAgreeWarning.innerHTML = '';
+    warning.innerHTML = '';
   }
 }
-
-function validUserId(obj) {
+function validUserId(obj, warning) {
+  console.log(obj)
+  console.log(warning)
   if (obj.value === '') {
-    userIdWarning.innerHTML = 'Please enter a valid username.';
+    warning.innerHTML = 'Please enter a valid username.';
     obj.focus();
     return false;
   } else if (obj.value.length < 6 || obj.value.length > 18) {
-    userIdWarning.innerHTML = 'Your username should be 6~18 characters long.';
+    warning.innerHTML = 'Your username should be 6~18 characters long.';
     obj.focus();
     return false;
   } else if (validUserIdCheck(obj) === false) {
-    userIdWarning.innerHTML = 'Your username has invalid characters, you can only use letters and numbers.';
+    warning.innerHTML = 'Your username has invalid characters, you can only use letters and numbers.';
     obj.focus();
     return false;
   } else {
-    userId.parentElement.classList.add('active');
-    userIdWarning.innerHTML = '';
+    obj.parentElement.classList.add('active');
+    warning.innerHTML = '';
   }
 }
 
@@ -224,23 +221,23 @@ function validUserIdCheck(obj) {
   return obj.value.match(pattern) != null;
 }
 
-function validUserPwd(obj) {
+function validUserPwd(obj, warning) {
   if (obj.value === '') {
-    userPwdWarning.innerHTML = 'Please enter a valid password.';
+    warning.innerHTML = 'Please enter a valid password.';
     obj.focus();
     return false;
   } else if (obj.value.length < 6 || obj.value.length > 18) {
-    userPwdWarning.innerHTML = 'Your password should be 6~18 characters long.';
+    warning.innerHTML = 'Your password should be 6~18 characters long.';
     obj.focus();
     return false;
   } else if (validPwdCheck(obj) === false) {
-    userPwdWarning.innerHTML =
+    warning.innerHTML =
       'Your password must contain at least one letter, number and symbol (!@#$%^&()*) are allowed.';
     obj.focus();
     return false;
   } else {
-    userPassword.parentElement.classList.add('active');
-    userPwdWarning.innerHTML = '';
+    obj.parentElement.classList.add('active');
+    warning.innerHTML = '';
   }
 }
 
@@ -249,31 +246,31 @@ function validPwdCheck(obj) {
   return obj.value.match(pattern) != null;
 }
 
-function validMatchPwd(obj) {
+function validMatchPwd(obj, warning) {
   if (obj.value === '') {
-    matchPwdWarning.innerHTML = 'Please enter a valid password.';
+    warning.innerHTML = 'Please enter a valid password.';
     obj.focus();
     return false;
   } else if (obj.value !== userPassword.value) {
-    matchPwdWarning.innerHTML = 'Your passwords do not match. Please try again.';
+    warning.innerHTML = 'Your passwords do not match. Please try again.';
     obj.focus();
     return false;
   } else {
-    matchPassword.parentElement.classList.add('active');
-    matchPwdWarning.innerHTML = '';
+    obj.parentElement.classList.add('active');
+    warning.innerHTML = '';
   }
 }
 
-function validEmail(obj) {
+function validEmail(obj, warning) {
   if (obj.value === '') {
-    emailWarning.innerHTML = 'Please enter a valid email address.';
+    warning.innerHTML = 'Please enter a valid email address.';
   } else if (validEmailCheck(obj) === false) {
-    emailWarning.innerHTML = 'Please ensure you enter a valid email address.';
+    warning.innerHTML = 'Please ensure you enter a valid email address.';
     obj.focus();
     return false;
   } else {
-    emailId.parentElement.classList.add('active');
-    emailWarning.innerHTML = '';
+    obj.parentElement.classList.add('active');
+    warning.innerHTML = '';
   }
 }
 

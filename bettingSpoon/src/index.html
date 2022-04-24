@@ -168,7 +168,7 @@
                         name="userId"
                         id="userId"
                         maxlength="18"
-                        onkeyup="validUserId(this)"
+                        onkeyup="validUserId(this, userIdWarning)"
                       />
                       <p id="userIdWarning"></p>
                     </dd>
@@ -181,7 +181,7 @@
                         name="userPassword"
                         id="userPassword"
                         autocomplete="off"
-                        onkeyup="validUserPwd(this)"
+                        onkeyup="validUserPwd(this, userPwdWarning)"
                       />
                       <p id="userPwdWarning"></p>
                     </dd>
@@ -194,7 +194,7 @@
                         name="matchPassword"
                         id="matchPassword"
                         autocomplete="off"
-                        onkeyup="validMatchPwd(this)"
+                        onkeyup="validMatchPwd(this, matchPwdWarning)"
                       />
                       <p id="matchPwdWarning"></p>
                     </dd>
@@ -203,17 +203,18 @@
                     <dt>* Email</dt>
                     <dd>
                       <input
+                        class="email"
                         type="email"
                         name="emailId"
                         id="emailId"
-                        onkeyup="validEmail(this)"
+                        onkeyup="validEmail(this,emailWarning)"
                       />
                       <p id="emailWarning"></p>
                     </dd>
                   </dl>
                   <label for="ageAgree" class="checkbox-form">
                     <div class="flex-box">
-                      <input type="checkbox" name="ageAgree" id="ageAgree" onclick="validAgeAgree(this)" />
+                      <input type="checkbox" name="ageAgree" id="ageAgree" onclick="validAgeAgree(this, ageAgreeWarning)" />
                       <span class="ico-check"></span>
                       <p>
                         I confirm that I am at least 18 years of age and that I have read and agreed to 
@@ -233,10 +234,65 @@
                     </div>
                   </label>
                 </div>
+                <div class="btn-area">
+                  <button type="button" class="btn btn-join-now" onclick="join_check()">Join now</button>
+                </div>
               </form>
+            </div>
+          </div>
+        </div>
+        <div class="pop-modal modal-form modal-email">
+          <div class="modal-dimmed" onclick="modalPop('.modal-email', false);"></div>
+          <div class="modal-content">
+            <h3><strong>You're almost there!</strong></h3>
+            <button type="button" class="btn-modal-base btn-alert-close" onclick="modalPop('.modal-email', false);">
+              닫기
+            </button>
+            <div class="modal-contents-scroll">
+              <h4>Please check your email.</h4>
+              <p>
+                We've sent a verification email to your email address.<br/>
+                Just click the link in your email to finish creating your account.
+              </p>
+              <p>You cannot start a game until you verify your account.</p>
+              <p>If you have not received the email from us, please check your junk mail 
+                or <a href="#">request another email</a>.</p>
               <div class="btn-area">
-                <button type="button" class="btn-join-now" onclick="join_check()">Join now</button>
+                <button class="btn" type="button">RETURN TO HOME</button>
+                <a href="#" onclick="modalPop('.modal-change-email', true);">Change email address</a>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="pop-modal modal-form modal-change-email">
+          <div class="modal-dimmed" onclick="modalPop('.modal-change-email', false);"></div>
+          <div class="modal-content">
+            <h3><strong>Change email address</strong></h3>
+            <button type="button" class="btn-modal-base btn-alert-close" onclick="modalPop('.modal-change-email', false);">
+              닫기
+            </button>
+            <div class="modal-contents-scroll">
+              <h4>Enter your new email address below<span> </span>so we can send you a confirmation email.</h4>
+              <form name="joinForm" action="#">
+                <div class="form-box">
+                  <dl>
+                    <dt>* Email</dt>
+                    <dd>
+                      <input
+                        class="email"
+                        type="email"
+                        name="changeEmailId"
+                        id="changeEmailId"
+                        onkeyup="validEmail(this, changeEmailWarning)"
+                      />
+                      <p id="changeEmailWarning"></p>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="btn-area">
+                  <button type="button" class="btn" onclick="join_check();">Save &amp; Send</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -397,6 +453,8 @@
         <button type="button" onclick="guideGnb('metamask');">GNB - 로그인 (METAMASK) </button>
         <button type="button" onclick="modalPop('.modal-form', true);">GNB - 회원가입 팝업 </button>
         <button type="button" onclick="modalPop('.modal-form', true);">BS info 팝업 </button>
+        <button type="button" onclick="modalPop('.modal-email', true);">팝업 - 이메일 체크 </button>
+        <button type="button" onclick="modalPop('.modal-change-email', true);">팝업 - 이메일 변경 </button>
         <button type="button" onclick="modalPop('.modal-password-reset', true);">팝업 - 비밀번호 변경</button>
         <button type="button" onclick="modalPop('.modal-thanks', true);">팝업 - 비밀번호 변경 성공</button>
         <button type="button" onclick="modalPop('.modal-404', true);">팝업 - 토큰만료 잘못된 접근</button>
