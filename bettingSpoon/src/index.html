@@ -252,6 +252,126 @@
             </div>
           </div>
         </div>
+
+
+
+
+
+        <!-- 현수 영역 시작 (넘어오지 말것!) -->
+        <style>
+          .pop-modal.modal-bs-info .modal-content{width: 54rem; height: 64rem;}
+          .pop-modal.modal-bs-info .modal-content h3{padding:1rem 0; text-align:center;}
+          .pop-modal.modal-bs-info .modal-content h3 strong{display:inline-block; width:40rem; height:6rem; background:#000 url(images/ico_logo_pop.png) no-repeat 50% 50% / 25.6rem auto; border-radius:8rem; text-indent:-9999rem;}
+          .pop-modal.modal-bs-info .btn-alert-close {
+            position: absolute;
+            top: -0.2rem;
+            right: -5.2rem;
+            width: 5rem;
+            min-width: auto;
+            height: 5rem;
+            margin: 0;
+            padding: 0;
+            background-color: #202020;
+            text-indent: -9999rem;
+          }
+          .pop-modal.modal-bs-info .btn-alert-close:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 3.5rem;
+            height: 0.2rem;
+            margin: auto;
+            background-color: #fff;
+            transform: rotate(45deg);
+          }
+          .pop-modal.modal-bs-info .btn-alert-close:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 3.5rem;
+            height: 0.2rem;
+            margin: auto;
+            background-color: #fff;
+            transform: rotate(135deg);
+          }
+          .pop-modal .btn-bs-base{width:29.5rem; height:5rem; font-weight: 400; font-size:1.7rem; color:#fff; background-color:#ec1616;}
+          .pop-modal.modal-thanks h4{padding:10rem 0 2rem; font-weight:500; font-size:2.4rem; color:#ec1616;}
+          .pop-modal.modal-thanks p{font-family:'Oswald'; font-weight:300; font-size:1.8rem; color:#fff;}
+          
+          
+          @media screen and (max-width: 1024px) {
+            .pop-modal.modal-bs-info .modal-content{width:90%; max-width:108rem;}
+            .pop-modal.modal-bs-info .btn-alert-close{top:-5.2rem; right:-.2rem;}
+          }
+          </style>
+          <!-- 비밀번호 변경 -->
+          <div class="pop-modal modal-bs-info modal-password-reset">
+            <div class="modal-dimmed" onclick="modalPop('.modal-password-reset', false);"></div>
+            <div class="modal-content">
+              <h3><strong>Betting Spoon</strong></h3>
+              <button type="button" class="btn-modal-base btn-alert-close" onclick="modalPop('.modal-password-reset', false);">
+                닫기
+              </button>
+              <div class="modal-contents-scroll">
+                <h4>Reset Password</h4>
+                <p>Please complete the fields below to reset your password.</p>
+                <!-- form -->
+                <dl>
+                  <dt>Reset Password</dt>
+                  <dd><input type="password" placeholder="password" /></dd>
+                </dl>
+                <dl>
+                  <dt>Confirm Password</dt>
+                  <dd><input type="password" placeholder="password" /></dd>
+                </dl>
+                <!-- // form -->
+                <button type="button" class="btn-bs-base">SUBMIT</button>
+              </div>
+            </div>
+          </div>
+          <!-- // 비밀번호 변경 -->
+          <!-- 비밀번호 변경 성공-->
+          <div class="pop-modal modal-bs-info modal-thanks">
+            <div class="modal-dimmed" onclick="modalPop('.modal-thanks', false);"></div>
+            <div class="modal-content">
+              <h3><strong>Betting Spoon</strong></h3>
+              <button type="button" class="btn-modal-base btn-alert-close" onclick="modalPop('.modal-thanks', false);">
+                닫기
+              </button>
+              <div class="modal-contents-scroll">
+                <strong>Thank you!</strong>
+                <p>Your password has been successfully reset and you can log in now.</p>
+                <button type="button" class="btn-bs-base">LOG IN</button>
+              </div>
+            </div>
+          </div>
+          <!-- // 비밀번호 변경 성공-->
+          <!-- 잘못된 접근 -->
+          <div class="pop-modal modal-bs-info modal-404">
+            <div class="modal-dimmed" onclick="modalPop('.modal-404', false);"></div>
+            <div class="modal-content">
+              <h3><strong>Betting Spoon</strong></h3>
+              <button type="button" class="btn-modal-base btn-alert-close" onclick="modalPop('.modal-404', false);">
+                닫기
+              </button>
+              <div class="modal-contents-scroll">
+                <strong>Please try again.</strong>
+                <p>The token previously used has expired or is invalid.</p>
+                <button type="button" class="btn-bs-base">CLOSE</button>
+              </div>
+            </div>
+          </div>
+          <!-- // 잘못된 접근 -->
+
+          <!-- 현수 영역 끝 -->
+
+
         <!-- // 2022-04 (2/2) -->
       </aside>
       <!-- // footer (include) -->
@@ -277,6 +397,9 @@
         <button type="button" onclick="guideGnb('metamask');">GNB - 로그인 (METAMASK) </button>
         <button type="button" onclick="modalPop('.modal-form', true);">GNB - 회원가입 팝업 </button>
         <button type="button" onclick="modalPop('.modal-form', true);">BS info 팝업 </button>
+        <button type="button" onclick="modalPop('.modal-password-reset', true);">팝업 - 비밀번호 변경</button>
+        <button type="button" onclick="modalPop('.modal-thanks', true);">팝업 - 비밀번호 변경 성공</button>
+        <button type="button" onclick="modalPop('.modal-404', true);">팝업 - 토큰만료 잘못된 접근</button>
       </div>
     </div>
     <script>
