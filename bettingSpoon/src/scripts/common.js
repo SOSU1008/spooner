@@ -140,20 +140,20 @@ function exitFullScreen(element) {
 }
 
 // begin : 2022-04 (1/2)
-let userId = document.getElementById('userId');
-let userIdWarning = document.getElementById('userIdWarning');
+const userId = document.getElementById('userId');
+const userIdWarning = document.getElementById('userIdWarning');
 
-let userPassword = document.getElementById('userPassword');
-let userPwdWarning = document.getElementById('userPwdWarning');
+const userPassword = document.getElementById('userPassword');
+const userPwdWarning = document.getElementById('userPwdWarning');
 
-let matchPassword = document.getElementById('matchPassword');
-let matchPwdWarning = document.getElementById('matchPwdWarning');
+const matchPassword = document.getElementById('matchPassword');
+const matchPwdWarning = document.getElementById('matchPwdWarning');
 
-let emailId = document.getElementById('emailId');
-let emailWarning = document.getElementById('emailWarning');
+const emailId = document.getElementById('emailId');
+const emailWarning = document.getElementById('emailWarning');
 
-let ageAgree = document.getElementById('ageAgree');
-let ageAgreeWarning = document.getElementById('ageAgreeWarning');
+const ageAgree = document.getElementById('ageAgree');
+const ageAgreeWarning = document.getElementById('ageAgreeWarning');
 
 function join_check() {
   if (validUserIdCheck(userId) === false) {
@@ -214,6 +214,7 @@ function validUserId(obj) {
     obj.focus();
     return false;
   } else {
+    userId.parentElement.classList.add('active');
     userIdWarning.innerHTML = '';
   }
 }
@@ -238,6 +239,7 @@ function validUserPwd(obj) {
     obj.focus();
     return false;
   } else {
+    userPassword.parentElement.classList.add('active');
     userPwdWarning.innerHTML = '';
   }
 }
@@ -257,6 +259,7 @@ function validMatchPwd(obj) {
     obj.focus();
     return false;
   } else {
+    matchPassword.parentElement.classList.add('active');
     matchPwdWarning.innerHTML = '';
   }
 }
@@ -269,6 +272,7 @@ function validEmail(obj) {
     obj.focus();
     return false;
   } else {
+    emailId.parentElement.classList.add('active');
     emailWarning.innerHTML = '';
   }
 }
