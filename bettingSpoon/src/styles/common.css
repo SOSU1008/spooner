@@ -713,7 +713,7 @@ header .gnb-login .btn-metamask.connect {
   color: #ffde00;
 }
 
-.modal-email p{
+.modal-email p {
   margin-top: 2.8rem;
   font-weight: lighter;
   font-size: 1.6rem;
@@ -729,7 +729,7 @@ header .gnb-login .btn-metamask.connect {
 .modal-form .form-box {
   padding: 0 6.5rem 0 0.8rem;
 }
-.form-box dl{
+.form-box dl {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -737,9 +737,9 @@ header .gnb-login .btn-metamask.connect {
 .form-box dl + dl {
   margin-top: 5.2rem;
 }
-.form-box dl dt{
+.form-box dl dt {
   position: relative;
-  flex:0 0 auto;
+  flex: 0 0 auto;
   width: 16rem;
   margin-right: 2.5rem;
   text-align: right;
@@ -750,12 +750,12 @@ header .gnb-login .btn-metamask.connect {
   white-space: nowrap;
   letter-spacing: -0.07rem;
 }
-.form-box dl dd{
+.form-box dl dd {
   position: relative;
-  flex:0 1 auto;
+  flex: 0 1 auto;
   width: 100%;
 }
-.form-box dl dd input{
+.form-box dl dd input {
   width: 100%;
   padding: 0 4.2rem 0.8rem 4.2rem;
   font-weight: normal;
@@ -782,7 +782,8 @@ header .gnb-login .btn-metamask.connect {
   background-image: url(../images/ico_username.png);
 }
 .form-box #userPassword,
-.form-box #matchPassword {
+.form-box #matchPassword,
+.form-box .icon-lock {
   background-image: url(../images/ico_security.png);
 }
 .form-box .email {
@@ -791,7 +792,7 @@ header .gnb-login .btn-metamask.connect {
 .form-box dl dd input::placeholder {
   display: none;
 }
-.form-box dl dd p{
+.form-box dl dd p {
   position: absolute;
   left: 0;
   top: 120%;
@@ -819,7 +820,7 @@ header .gnb-login .btn-metamask.connect {
   font-family: 'Oswald';
   text-align: left;
 }
-.checkbox-form .flex-box{
+.checkbox-form .flex-box {
   display: flex;
   align-items: flex-start;
   justify-content: start;
@@ -853,7 +854,7 @@ header .gnb-login .btn-metamask.connect {
   text-decoration: underline;
 }
 .checkbox-form .flex-box input[type='checkbox']:checked + .ico-check {
-  background:  url(../images/ico_checked_v2.png) 50% 50% no-repeat;
+  background: url(../images/ico_checked_v2.png) 50% 50% no-repeat;
   background-size: 80% auto;
 }
 /* // 2022-04 (1/2) */
@@ -991,8 +992,6 @@ footer span {
   background-color: #fff;
   transform: rotate(-45deg);
 }
-
-
 
 @media screen and (max-width: 1024px) {
   html {
@@ -1382,12 +1381,12 @@ footer span {
   .form-box dl + dl {
     margin-top: 6rem;
   }
-  .form-box dl dt{
+  .form-box dl dt {
     width: 18rem;
     margin-right: 1.8rem;
     font-size: 2.6rem;
   }
-  .form-box dl dd input{
+  .form-box dl dd input {
     padding: 0 4.2rem 0.8rem 4.2rem;
     font-size: 2.6rem;
     line-height: 1.4;
@@ -1406,7 +1405,7 @@ footer span {
     left: 8.2rem;
     font-size: 1.8rem;
   }
-  .checkbox-form .flex-box{
+  .checkbox-form .flex-box {
     margin-bottom: 6rem;
   }
   .checkbox-form .flex-box .ico-check {

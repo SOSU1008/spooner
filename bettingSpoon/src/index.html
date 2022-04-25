@@ -296,18 +296,6 @@
             </div>
           </div>
         </div>
-        <div class="pop-modal modal-bs-info">
-          <div class="modal-dimmed" onclick="modalPop('.modal-bs-info', false);"></div>
-          <div class="modal-content">
-            <h3><strong>bs</strong></h3>
-            <button type="button" class="btn-modal-base btn-alert-close" onclick="modalPop('.modal-bs-info', false);">
-              닫기
-            </button>
-            <div class="modal-contents-scroll">
-              ㅇㅇㅇ
-            </div>
-          </div>
-        </div>
 
 
 
@@ -315,13 +303,13 @@
 
         <!-- 현수 영역 시작 (넘어오지 말것!) -->
         <style>
-          .pop-modal.modal-bs-info .modal-content{width: 54rem; height: 64rem;}
-          .pop-modal.modal-bs-info .modal-content h3{padding:1rem 0; text-align:center;}
+          .pop-modal.modal-bs-info .modal-content{display:flex; justify-content: center; align-items: center; width: 54rem; height: 64rem;}
+          .pop-modal.modal-bs-info .modal-content h3{position:absolute; top:5%; left:0; width:100%; padding:1rem 0; text-align:center;}
           .pop-modal.modal-bs-info .modal-content h3 strong{display:inline-block; width:40rem; height:6rem; background:#000 url(images/ico_logo_pop.png) no-repeat 50% 50% / 25.6rem auto; border-radius:8rem; text-indent:-9999rem;}
           .pop-modal.modal-bs-info .btn-alert-close {
             position: absolute;
-            top: -0.2rem;
-            right: -5.2rem;
+            top: -0.5rem;
+            right: -5.5rem;
             width: 5rem;
             min-width: auto;
             height: 5rem;
@@ -356,16 +344,31 @@
             background-color: #fff;
             transform: rotate(135deg);
           }
-          .pop-modal .btn-bs-base{width:29.5rem; height:5rem; font-weight: 400; font-size:1.7rem; color:#fff; background-color:#ec1616;}
-          .pop-modal.modal-thanks h4{padding:10rem 0 2rem; font-weight:500; font-size:2.4rem; color:#ec1616;}
-          .pop-modal.modal-thanks p{font-family:'Oswald'; font-weight:300; font-size:1.8rem; color:#fff;}
-          
+
+          /* modal-password-reset */
+          .modal-password-reset .modal-contents-scroll{width:35rem;}
+          .modal-password-reset h4{display:block; padding:8rem 0 1rem; font-weight:lighter; font-family:'Oswald'; font-weight:lighter; font-size:3rem; color:#ec1616; text-align:left;}
+          .modal-password-reset p{font-family:'Oswald'; font-weight:lighter; font-size:1.8rem; color:#fff; text-align:left;}
+          .modal-password-reset .form-box{padding:5rem 0;}
+          .modal-password-reset .form-box dl{display:block;}
+          .modal-password-reset .form-box dt{display:block; flex:none; width:100%; padding-bottom:.8rem; font-weight:lighter; text-align:left;}
+          .modal-password-reset .form-box dd{display:block; flex:none; width:100%; text-align:left;}
+          .modal-password-reset .form-box dd p{color:#fff;}
+          .modal-password-reset .btn-area{margin-top:2rem;}
+
+          .pop-modal .modal-contents-middle{display:block; width:100%; max-height:70%; padding-bottom:15%; overflow-y:auto;}
+          .pop-modal .modal-contents-middle strong{display:block; padding-bottom:2rem; font-family:'Oswald'; font-weight:lighter; font-size:3rem; color:#ec1616;}
+          .pop-modal .modal-contents-middle p{font-family:'Oswald'; font-weight:lighter; font-size:1.8rem; color:#fff;}
+          .pop-modal .modal-contents-middle .modal-bottom{position:absolute; right:0; bottom:0; left:0; width:100%; height:20%;}
+          .pop-modal .btn-bs-base{ width:29.5rem; height:5rem; margin:auto; font-family:'Oswald'; font-weight: normal; font-size:2rem; color:#fff; background-color:#ec1616;}
           
           @media screen and (max-width: 1024px) {
             .pop-modal.modal-bs-info .modal-content{width:90%; max-width:108rem;}
             .pop-modal.modal-bs-info .btn-alert-close{top:-5.2rem; right:-.2rem;}
           }
           </style>
+
+
           <!-- 비밀번호 변경 -->
           <div class="pop-modal modal-bs-info modal-password-reset">
             <div class="modal-dimmed" onclick="modalPop('.modal-password-reset', false);"></div>
@@ -377,21 +380,46 @@
               <div class="modal-contents-scroll">
                 <h4>Reset Password</h4>
                 <p>Please complete the fields below to reset your password.</p>
-                <!-- form -->
-                <dl>
-                  <dt>Reset Password</dt>
-                  <dd><input type="password" placeholder="password" /></dd>
-                </dl>
-                <dl>
-                  <dt>Confirm Password</dt>
-                  <dd><input type="password" placeholder="password" /></dd>
-                </dl>
-                <!-- // form -->
-                <button type="button" class="btn-bs-base">SUBMIT</button>
+                <form name="joinForm" action="#">
+                  <div class="form-box">
+                    <dl>
+                      <dt>Reset Password</dt>
+                      <dd>
+                        <input
+                          type="password"
+                          name="resetPassword"
+                          id="resetPassword"
+                          autocomplete="off"
+                          class="icon-lock"
+                          onkeyup="validUserPwd(this, resetPwdWarning)"
+                        />
+                        <p id="resetPwdWarning"></p>
+                      </dd>
+                    </dl>
+                    <dl>
+                      <dt>Confirm password</dt>
+                      <dd>
+                        <input
+                          type="password"
+                          name="resetMatchPassword"
+                          id="resetMatchPassword"
+                          autocomplete="off"
+                          class="icon-lock"
+                          onkeyup="validMatchPwd(this, resetMatchPwdWarning)"
+                        />
+                        <p id="resetMatchPwdWarning"></p>
+                      </dd>
+                    </dl>
+                  </div>
+                  <div class="btn-area">
+                    <button type="button" class="btn btn-bs-base">SUBMIT</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
           <!-- // 비밀번호 변경 -->
+
           <!-- 비밀번호 변경 성공-->
           <div class="pop-modal modal-bs-info modal-thanks">
             <div class="modal-dimmed" onclick="modalPop('.modal-thanks', false);"></div>
@@ -400,10 +428,12 @@
               <button type="button" class="btn-modal-base btn-alert-close" onclick="modalPop('.modal-thanks', false);">
                 닫기
               </button>
-              <div class="modal-contents-scroll">
+              <div class="modal-contents-middle">
                 <strong>Thank you!</strong>
                 <p>Your password has been successfully reset and you can log in now.</p>
-                <button type="button" class="btn-bs-base">LOG IN</button>
+                <div class="modal-bottom">
+                  <button type="button" class="btn-bs-base">LOG IN</button>
+                </div>
               </div>
             </div>
           </div>
@@ -416,14 +446,54 @@
               <button type="button" class="btn-modal-base btn-alert-close" onclick="modalPop('.modal-404', false);">
                 닫기
               </button>
-              <div class="modal-contents-scroll">
+              <div class="modal-contents-middle">
                 <strong>Please try again.</strong>
                 <p>The token previously used has expired or is invalid.</p>
-                <button type="button" class="btn-bs-base">CLOSE</button>
+                <div class="modal-bottom">
+                  <button type="button" class="btn-bs-base">CLOSE</button>
+                </div>
               </div>
             </div>
           </div>
           <!-- // 잘못된 접근 -->
+
+          <!-- 잘못된 접근 -->
+          <div class="pop-modal modal-bs-info modal-404">
+            <div class="modal-dimmed" onclick="modalPop('.modal-404', false);"></div>
+            <div class="modal-content">
+              <h3><strong>Betting Spoon</strong></h3>
+              <button type="button" class="btn-modal-base btn-alert-close" onclick="modalPop('.modal-404', false);">
+                닫기
+              </button>
+              <div class="modal-contents-middle">
+                <strong>Thank you!</strong>
+                <p>Your password has been successfully reset and you can log in now.</p>
+                <div class="modal-bottom">
+                  <button type="button" class="btn-bs-base">CLOSE</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- // 잘못된 접근 -->
+
+          <!-- 이메일 인증 성공 -->
+          <div class="pop-modal modal-bs-info email-auth-success">
+            <div class="modal-dimmed" onclick="modalPop('.email-auth-success', false);"></div>
+            <div class="modal-content">
+              <h3><strong>Betting Spoon</strong></h3>
+              <button type="button" class="btn-modal-base btn-alert-close" onclick="modalPop('.email-auth-success', false);">
+                닫기
+              </button>
+              <div class="modal-contents-middle">
+                <strong>Account activated.</strong>
+                <p>Thank you for confirmning your email address.</p>
+                <div class="modal-bottom">
+                  <button type="button" class="btn-bs-base">CLOSE</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- // 이메일 인증 성공 -->
 
           <!-- 현수 영역 끝 -->
 
@@ -458,6 +528,7 @@
         <button type="button" onclick="modalPop('.modal-password-reset', true);">팝업 - 비밀번호 변경</button>
         <button type="button" onclick="modalPop('.modal-thanks', true);">팝업 - 비밀번호 변경 성공</button>
         <button type="button" onclick="modalPop('.modal-404', true);">팝업 - 토큰만료 잘못된 접근</button>
+        <button type="button" onclick="modalPop('.email-auth-success', true);">팝업 - 이메일 인증 성공</button>
       </div>
     </div>
     <script>
@@ -485,7 +556,6 @@
           gnbLogin.querySelector('ul').style.display = 'block';
           gnbLogin.querySelector('.btn-gnb-login').style.display = 'inline-block';
         }
-        preventdefault();
       }
     </script>
     <!-- // pub guide -->
