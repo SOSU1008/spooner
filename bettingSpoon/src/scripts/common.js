@@ -159,7 +159,6 @@ function validCheck(type, obj) {
 // 유효성 체크 후 해당 input의 형제 요소(.warning-text) 태그 안에 안내 문구를 보여줍니다.
 function validUserId(obj) {
   let warningText = obj.parentNode.querySelector('.warning-text');
-
   if (obj.value === '') {
     warningText.innerHTML = 'Please enter a valid username.';
     obj.focus();
@@ -254,7 +253,7 @@ function validAgeAgree(obj) {
 }
 
 // 회원가입 Join 버튼 선택 시 submit 함수 입니다. 타 페이지에서 사용될 수 있다고 판단되어 매개변수로 form name 값을 받습니다.
-// 각 항목별 유효성 검사 후 알럿 메세지를 띄워줍니다. (일부 문구 한글은 영문으로 변경이 필요해 보입니다.)
+// 각 항목별 유효성 검사 후 알럿 메세지를 띄워줍니다.
 function joinSubmit(formName) {
   let targetForm = document.getElementsByName(formName)[0];
   let userId = targetForm.querySelector('#userId');
@@ -264,24 +263,24 @@ function joinSubmit(formName) {
   let ageAgree = targetForm.querySelector('#ageAgree');
 
   if (!validUserId(userId)) {
-    alert('아이디를 확인해주세요.');
+    alert('Please enter a valid username.');
     return false;
   } else if (!validUserPwd(userPassword)) {
-    alert('패스워드를 확인해주세요.');
+    alert('Please enter a valid password.');
     return false;
   } else if (!validMatchPwd(matchPassword)) {
-    alert('confirm password check!');
+    alert('Your passwords do not match. Please try again.');
     return false;
   } else if (!validEmail(emailId)) {
-    alert('email check!');
+    alert('Please enter a valid email address.');
     return false;
   } else if (!validAgeAgree(ageAgree)) {
     alert('Please show that you agree to our terms and conditions.');
     return false;
   }
 
-  alert('회원가입 성공 api 쏘세요');
-  targetForm.submit();
+  alert('회원가입 성공.');
+  // targetForm.submit();
 }
 
 // end : 2022-04 (1/1)
