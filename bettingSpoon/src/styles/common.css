@@ -810,7 +810,7 @@ header .gnb-login .btn-metamask.connect {
   position: relative;
   padding-left: 10.5rem;
 }
-.checkbox-form #ageAgreeWarning {
+.checkbox-form .warning-text {
   position: absolute;
   left: 14.7rem;
   top: 120%;

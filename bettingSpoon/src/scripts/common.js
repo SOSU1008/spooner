@@ -140,144 +140,150 @@ function exitFullScreen(element) {
 }
 
 // begin : 2022-04 (1/2)
-const userId = document.getElementById('userId');
 
-const userPassword = document.getElementById('userPassword');
-
-const matchPassword = document.getElementById('matchPassword');
-
-const emailId = document.getElementById('emailId');
-const changeEmailId = document.getElementById('changeEmailId');
-
-const ageAgree = document.getElementById('ageAgree');
-
-function join_check() {
-  if (validUserIdCheck(userId) === false) {
-    alert('아이디를 확인해주세요.');
-    userId.focus();
-    return false;
+// 정규식 체크 함수입니다.
+// id, password, email 타입으로 구분하여 입력된 문자열이 정규식에 맞는지 체크 후 결과를 return 합니다.
+function validCheck(type, obj) {
+  let pattern = '';
+  if (type === 'id') {
+    pattern = /^[a-zA-Z0-9]{6,18}$/;
+  } else if (type === 'password') {
+    pattern = /^(?=.*[a-zA-Z])(?=.*[!@#$%^&()*])(?=.*[0-9]).{6,18}$/;
+  } else if (type === 'email') {
+    pattern = /^([\w\.\_\-])*[a-zA-Z0-9]+([\w\.\_\-])*([a-zA-Z0-9])+([\w\.\_\-])+@([a-zA-Z0-9]+\.)+[a-zA-Z0-9]{2,8}$/;
   }
-
-  if (validPwdCheck(userPassword) === false) {
-    alert('패스워드를 확인해주세요.');
-    userPassword.focus();
-    return false;
-  }
-
-  if (matchPassword.value !== userPassword.value) {
-    alert('confirm password check!');
-    matchPassword.focus();
-    return false;
-  }
-
-  if (validEmailCheck(emailId) === false) {
-    alert('email check!');
-    emailId.focus();
-    return false;
-  }
-
-  if (!ageAgree.checked) {
-    alert('Please show that you agree to our terms and conditions.');
-    ageAgree.focus();
-    return false;
-  }
-
-  // 입력 값 전송
-  // document.join_check.submit();
+  return obj.value.match(pattern) != null;
 }
 
-function validAgeAgree(obj, warning) {
-  if (!obj.checked) {
-    warning.innerHTML = 'Please show that you agree to our terms and conditions.';
-    ageAgree.focus();
-    return false;
-  } else {
-    warning.innerHTML = '';
-  }
-}
-function validUserId(obj, warning) {
-  console.log(obj)
-  console.log(warning)
+// 회원가입 시 아이디 입력란의 유효성 체크 입니다.
+// 유효성 체크 후 해당 input의 형제 요소(.warning-text) 태그 안에 안내 문구를 보여줍니다.
+function validUserId(obj) {
+  let warningText = obj.parentNode.querySelector('.warning-text');
+
   if (obj.value === '') {
-    warning.innerHTML = 'Please enter a valid username.';
+    warningText.innerHTML = 'Please enter a valid username.';
     obj.focus();
     return false;
   } else if (obj.value.length < 6 || obj.value.length > 18) {
-    warning.innerHTML = 'Your username should be 6~18 characters long.';
+    warningText.innerHTML = 'Your username should be 6~18 characters long.';
     obj.focus();
     return false;
-  } else if (validUserIdCheck(obj) === false) {
-    warning.innerHTML = 'Your username has invalid characters, you can only use letters and numbers.';
+  } else if (validCheck('id', obj) === false) {
+    warningText.innerHTML = 'Your username has invalid characters, you can only use letters and numbers.';
     obj.focus();
     return false;
   } else {
     obj.parentElement.classList.add('active');
-    warning.innerHTML = '';
+    warningText.innerHTML = '';
+    return true;
   }
 }
 
-function validUserIdCheck(obj) {
-  let pattern = /^[a-zA-Z0-9]{6,18}$/;
-  return obj.value.match(pattern) != null;
-}
-
-function validUserPwd(obj, warning) {
+// 회원가입 시 패스워드 입력란의 유효성 체크 입니다.
+// 유효성 체크 후 해당 input의 형제 요소(.warning-text) 태그 안에 안내 문구를 보여줍니다.
+function validUserPwd(obj) {
+  let warningText = obj.parentNode.querySelector('.warning-text');
   if (obj.value === '') {
-    warning.innerHTML = 'Please enter a valid password.';
+    warningText.innerHTML = 'Please enter a valid password.';
     obj.focus();
     return false;
   } else if (obj.value.length < 6 || obj.value.length > 18) {
-    warning.innerHTML = 'Your password should be 6~18 characters long.';
+    warningText.innerHTML = 'Your password should be 6~18 characters long.';
     obj.focus();
     return false;
-  } else if (validPwdCheck(obj) === false) {
-    warning.innerHTML =
+  } else if (validCheck('password', obj) === false) {
+    warningText.innerHTML =
       'Your password must contain at least one letter, number and symbol (!@#$%^&()*) are allowed.';
     obj.focus();
     return false;
   } else {
     obj.parentElement.classList.add('active');
-    warning.innerHTML = '';
+    warningText.innerHTML = '';
+    return true;
   }
 }
 
-function validPwdCheck(obj) {
-  let pattern = /^(?=.*[a-zA-Z])(?=.*[!@#$%^&()*])(?=.*[0-9]).{6,18}$/;
-  return obj.value.match(pattern) != null;
-}
-
-function validMatchPwd(obj, warning) {
+// 회원가입 시 패스워드 확인 입력란의 유효성 체크 입니다.
+// 유효성 체크 후 해당 input의 형제 요소(.warning-text) 태그 안에 안내 문구를 보여줍니다.
+function validMatchPwd(obj) {
+  let warningText = obj.parentNode.querySelector('.warning-text');
   if (obj.value === '') {
-    warning.innerHTML = 'Please enter a valid password.';
+    warningText.innerHTML = 'Please enter a valid password.';
     obj.focus();
     return false;
   } else if (obj.value !== userPassword.value) {
-    warning.innerHTML = 'Your passwords do not match. Please try again.';
+    warningText.innerHTML = 'Your passwords do not match. Please try again.';
     obj.focus();
     return false;
   } else {
     obj.parentElement.classList.add('active');
-    warning.innerHTML = '';
+    warningText.innerHTML = '';
+    return true;
   }
 }
 
-function validEmail(obj, warning) {
+// 회원가입 시 이메일 입력란의 유효성 체크 입니다.
+// 유효성 체크 후 해당 input의 형제 요소(.warning-text) 태그 안에 안내 문구를 보여줍니다.
+function validEmail(obj) {
+  let warningText = obj.parentNode.querySelector('.warning-text');
   if (obj.value === '') {
-    warning.innerHTML = 'Please enter a valid email address.';
-  } else if (validEmailCheck(obj) === false) {
-    warning.innerHTML = 'Please ensure you enter a valid email address.';
+    warningText.innerHTML = 'Please enter a valid email address.';
+  } else if (validCheck('email', obj) === false) {
+    warningText.innerHTML = 'Please ensure you enter a valid email address.';
     obj.focus();
     return false;
   } else {
     obj.parentElement.classList.add('active');
-    warning.innerHTML = '';
+    warningText.innerHTML = '';
+    return true;
   }
 }
 
-function validEmailCheck(obj) {
-  let pattern = /^([\w\.\_\-])*[a-zA-Z0-9]+([\w\.\_\-])*([a-zA-Z0-9])+([\w\.\_\-])+@([a-zA-Z0-9]+\.)+[a-zA-Z0-9]{2,8}$/;
-  return obj.value.match(pattern) != null;
+// 회원가입 시 필수동의 체크박스 함수 입니다.
+// 체크여부 확인 후 해당 input의 부모 형제 요소(.warning-text) 태그 안에 안내 문구를 보여줍니다.
+function validAgeAgree(obj) {
+  let warningText = obj.parentNode.parentNode.querySelector('.warning-text');
+  if (!obj.checked) {
+    warningText.innerHTML = 'Please show that you agree to our terms and conditions.';
+    ageAgree.focus();
+    return false;
+  } else {
+    warningText.innerHTML = '';
+    return true;
+  }
 }
+
+// 회원가입 Join 버튼 선택 시 submit 함수 입니다. 타 페이지에서 사용될 수 있다고 판단되어 매개변수로 form name 값을 받습니다.
+// 각 항목별 유효성 검사 후 알럿 메세지를 띄워줍니다. (일부 문구 한글은 영문으로 변경이 필요해 보입니다.)
+function joinSubmit(formName) {
+  let targetForm = document.getElementsByName(formName)[0];
+  let userId = targetForm.querySelector('#userId');
+  let userPassword = targetForm.querySelector('#userPassword');
+  let matchPassword = targetForm.querySelector('#matchPassword');
+  let emailId = targetForm.querySelector('#emailId');
+  let ageAgree = targetForm.querySelector('#ageAgree');
+
+  if (!validUserId(userId)) {
+    alert('아이디를 확인해주세요.');
+    return false;
+  } else if (!validUserPwd(userPassword)) {
+    alert('패스워드를 확인해주세요.');
+    return false;
+  } else if (!validMatchPwd(matchPassword)) {
+    alert('confirm password check!');
+    return false;
+  } else if (!validEmail(emailId)) {
+    alert('email check!');
+    return false;
+  } else if (!validAgeAgree(ageAgree)) {
+    alert('Please show that you agree to our terms and conditions.');
+    return false;
+  }
+
+  alert('회원가입 성공 api 쏘세요');
+  targetForm.submit();
+}
+
 // end : 2022-04 (1/1)
 
 window.addEventListener('load', function () {
