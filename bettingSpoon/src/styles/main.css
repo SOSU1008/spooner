@@ -58,9 +58,9 @@
   text-indent: -9999rem;
 }
 
+/* 2022-04(1/1) */
 /* baccarat */
-.baccarat {
-  padding: 6rem 0;
+.baccarat.video-poker {
   min-height: 94.2rem;
   background-image: url(../images/bg_baccarat.jpg);
   background-repeat: no-repeat;
@@ -70,7 +70,6 @@
   max-width: 1156px;
   margin-top: 2.4rem;
 }
-.baccarat .guide-form,
 .bigwheel .guide-form,
 .lotto .guide-form {
   display: none;
@@ -127,6 +126,9 @@
 .video-poker .info-box li {
   flex: 0 0 50%;
 }
+.video-poker.baccarat .info-box li {
+  padding-left: 0;
+}
 .video-poker .play-game {
   width: 100%;
   max-width: 80.5rem;
@@ -140,6 +142,15 @@
 .video-poker .guide-form li p {
   min-height: 10rem;
   font-size: 1.8rem;
+}
+.video-poker.baccarat .guide-form li p {
+  display: inline-block;
+  min-height: 6rem;
+  padding: 0 1.5rem;
+  background-color: #000;
+}
+.video-poker.baccarat .guide-form li p span {
+  color: #ffba00;
 }
 .video-poker .btn-more-play {
   position: relative;
@@ -162,6 +173,9 @@
   text-transform: uppercase;
   color: #fff;
   background: #eb1616 url(../images/ico_discord_w.png) no-repeat 0.8rem 50% / 3.6rem auto;
+}
+.video-poker.baccarat .btn-more-discord {
+  margin-left: 1.5rem;
 }
 .video-poker .btn-more-board {
   display: none;
@@ -189,6 +203,7 @@
   position: absolute;
   top: -1.5rem;
   left: -0.3rem;
+  z-index: 1;
   min-width: 22rem;
   padding: 0.9rem 1rem;
   font-weight: 300;
@@ -199,25 +214,116 @@
   text-transform: uppercase;
 }
 .video-poker .leader-board dl {
+  position: relative;
   height: 100%;
   box-sizing: border-box;
 }
 .video-poker .leader-board dt {
+  position: relative;
   width: 100%;
-  padding-top: 8.5rem;
+  height: 9rem;
+  padding: 5rem 1rem 1.3rem;
   background-color: #000;
+  text-align: center;
+}
+.video-poker .leader-board dt strong {
+  font-weight: lighter;
+  font-size: 1.6rem;
+  color: #fff;
+}
+.video-poker .leader-board dt button {
+  position: absolute;
+  top: 53%;
+  width: 2.3rem;
+  height: 2.3rem;
+  background-color: #eb1616;
+}
+.video-poker .leader-board dt button::before {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: lighter;
+  font-size: 2.6rem;
+  color: #fff;
+}
+.video-poker .leader-board dt .btn-prev {
+  left: 1.6rem;
+}
+.video-poker .leader-board dt .btn-prev::before {
+  content: '<';
+}
+.video-poker .leader-board dt .btn-next {
+  right: 1.6rem;
+}
+.video-poker .leader-board dt .btn-next::before {
+  content: '>';
+}
+.video-poker .leader-board dt button .blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+.video-poker .leader-board dd {
+  height: calc(100% - 9rem);
+  padding: 1.7rem 0.4rem 1.7rem 1.7rem;
+}
+.video-poker .leader-board dd ul {
+  height: 100%;
+  padding: 0 2.6rem 0 0;
+  overflow-y: auto;
+}
+.video-poker .leader-board dd ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.video-poker .leader-board dd ul li + li {
+  margin-top: 1.3rem;
+}
+.video-poker .leader-board dd ul li strong {
+  position: relative;
+  padding-left: 2rem;
+  font-weight: normal;
+  font-size: 1.6rem;
+}
+.video-poker .leader-board dd ul li span {
+  font-size: 1.6rem;
+  color: #ffc600;
+}
+.video-poker .leader-board dd ul li strong::before {
+  content: '>';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #a31a1a;
 }
 .video-poker .leader-board .board-nodata {
-  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
   width: 100%;
-  height: 30rem;
-  margin-top: 20rem;
+  height: 25rem;
+  transform: translateY(-50%);
   font-family: 'Oswald';
   font-weight: 300;
   font-size: 3.6rem;
   color: #656565;
   text-align: center;
-  background: url(../images/ico_nodata.png) no-repeat 50% 9rem / 11rem auto;
+  background-image: url(../images/ico_nodata.png);
+  background-repeat: no-repeat;
+  background-size: 11rem auto;
+  background-position: 50% 9rem;
+}
+.video-poker.baccarat .leader-board .board-nodata {
+  height: 17rem;
+  background-image: url(../images/ico_coffee.png);
+  background-size: 7rem auto;
+  background-position: 53% 7.6rem;
 }
 .video-poker .leader-board .btn-board-close {
   display: none;
@@ -453,16 +559,15 @@
   }
 
   /* baccarat */
-  .baccarat {
+  .baccarat.video-poker {
     min-height: 100%;
-    background-image: url(../images/bg_baccarat_m.jpg);
+    background-image: url(../images/bg_baccarat_m.jpg) !important;
     background-position: 50% 0;
     background-size: cover;
   }
   .baccarat .desc {
     padding-right: 20rem;
   }
-  .baccarat .guide-form,
   .bigwheel .guide-form,
   .lotto .guide-form {
     display: block;
@@ -502,43 +607,92 @@
   .video-poker .guide-form li p {
     min-height: auto;
   }
+  .video-poker.baccarat .guide-form li p {
+    display: block;
+    background-color: transparent;
+  }
   .video-poker .leader-board {
     display: none;
   }
   .video-poker .leader-board.active {
     display: block;
-    top: 18rem;
-    right: auto;
+    top: 11rem;
+    right: 3.5rem;
     left: 3.5rem;
-    width: 75%;
-    height: auto;
+    width: 90%;
+    bottom: 5rem;
     z-index: 2;
     border-width: 0.5rem;
   }
   .video-poker .leader-board h3 {
-    top: -1.7rem;
+    top: auto;
     left: 2.2rem;
+    bottom: 100%;
     min-width: 22rem;
     padding: 1rem 4.4rem;
     font-weight: 300;
     font-size: 3.6rem;
   }
   .video-poker .leader-board dt {
-    padding-top: 11rem;
+    height: 12rem;
+    padding: 4rem 3.6rem;
+  }
+  .video-poker .leader-board dt strong {
+    font-size: 3rem;
+  }
+  .video-poker .leader-board dt button {
+    top: 50%;
+    width: 5rem;
+    height: 5rem;
+    transform: translateY(-50%);
+  }
+  .video-poker .leader-board dt button::before {
+    top: 36%;
+    left: 50%;
+    font-size: 5rem;
+  }
+  .video-poker .leader-board dt .btn-prev {
+    left: 3.6rem;
+  }
+  .video-poker .leader-board dt .btn-next {
+    right: 3.6rem;
+  }
+  .video-poker .leader-board dd {
+    height: calc(100% - 12rem);
+    padding: 2.8rem 0.4rem 2.8rem 6rem;
+  }
+  .video-poker .leader-board dd ul {
+    padding: 0 7.6rem 0 0;
+  }
+  .video-poker .leader-board dd ul li + li {
+    margin-top: 3rem;
+  }
+  .video-poker .leader-board dd ul li strong {
+    padding-left: 3.3rem;
+    font-size: 2.4rem;
+  }
+  .video-poker .leader-board dd ul li span {
+    font-size: 2.4rem;
   }
   .video-poker .leader-board .board-nodata {
-    height: 51rem;
-    margin: 18rem 0 0;
+    height: 36rem;
     font-size: 4.8rem;
     background-position: 50% 12rem;
     background-size: 16.7rem auto;
+  }
+  .video-poker.baccarat .leader-board .board-nodata {
+    height: 29rem;
+    background-repeat: no-repeat;
+    background-size: 15rem auto;
+    background-position: 53% 11rem;
   }
   .video-poker .leader-board .btn-board-close {
     display: block;
     width: 6rem;
     height: 6rem;
-    top: 1.4rem;
+    top: auto;
     right: 1.4rem;
+    bottom: 100%;
   }
   .video-poker .leader-board .btn-board-close:before {
     width: 6rem;
@@ -566,6 +720,10 @@
   .video-poker .play-game {
     margin-top: 5rem;
   }
+  .video-poker.baccarat .play-game {
+    margin-top: 8rem;
+  }
+  /* 2022-04(1/1) */
   .video-poker .play-game .btn-play-game {
     width: 16rem;
     height: 16rem;

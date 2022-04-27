@@ -928,6 +928,11 @@ footer span {
   color: #fff;
   background-color: #ec1616;
 }
+/* 2022-04(1/1) */
+.pop-modal .btn-modal-base.gray {
+  background-color: #626261;
+}
+/* 2022-04(1/1) */
 .pop-modal .btn-modal-base + .btn-modal-base {
   margin-left: 1rem;
 }
