@@ -279,8 +279,19 @@ function joinSubmit(formName) {
     return false;
   }
 
-  alert('회원가입 성공.');
+  alert('* 회원가입 성공.');
   // targetForm.submit();
+}
+
+// 이메일 변경 함수 입니다.
+// 이메일 유효성 검사 후 이메일 주소를 변경합니다.
+function changeEmail(inputName) {
+  const emailId = document.getElementsByName(inputName)[0];
+  if (!validEmail(emailId)) {
+    alert('Please enter a valid email address.');
+    return false;
+  }
+  alert('* 이메일 변경 성공.\n* 변경할 이메일 주소 : ' + emailId.value);
 }
 
 // end : 2022-04 (1/1)

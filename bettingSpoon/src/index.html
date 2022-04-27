@@ -158,9 +158,7 @@
             ></button>
           </div>
         </div>
-
         <!-- 2022-04 (2/2) -->
-
         <!-- 팝업 - 회원가입 -->
         <div class="pop-modal modal-form">
           <div class="modal-dimmed" onclick="modalPop('.modal-form', false);"></div>
@@ -294,14 +292,14 @@
                         type="email"
                         name="changeEmailId"
                         id="changeEmailId"
-                        onkeyup="validEmail(this, changeEmailWarning)"
+                        onkeyup="validEmail(this)"
                       />
-                      <p id="changeEmailWarning"></p>
+                      <p class="warning-text"></p>
                     </dd>
                   </dl>
                 </div>
                 <div class="btn-area">
-                  <button type="button" class="btn" onclick="join_check();">Save &amp; Send</button>
+                  <button type="button" class="btn" onclick="changeEmail('changeEmailId');">Save &amp; Send</button>
                 </div>
               </form>
             </div>
@@ -380,7 +378,7 @@
           </div>
         </div>
         <!-- // 팝업 - 비밀번호 변경 성공 -->
-        <!-- 팝업 - 잘못된 접근 -->
+        <!-- 팝업 - 토큰만료 잘못된 접근 -->
         <div class="pop-modal modal-bs-info modal-404">
           <div class="modal-dimmed" onclick="modalPop('.modal-404', false);"></div>
           <div class="modal-content">
@@ -397,7 +395,7 @@
             </div>
           </div>
         </div>
-        <!-- // 팝업 - 잘못된 접근 -->
+        <!-- // 팝업 - 토큰만료 잘못된 접근 -->
         <!-- 이메일 인증 성공 -->
         <div class="pop-modal modal-bs-info email-auth-success">
           <div class="modal-dimmed" onclick="modalPop('.email-auth-success', false);"></div>
