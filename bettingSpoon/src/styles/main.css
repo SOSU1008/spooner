@@ -206,7 +206,7 @@
   z-index: 1;
   min-width: 22rem;
   padding: 0.9rem 1rem;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 2.4rem;
   color: #fff;
   background-color: #eb1616;
@@ -620,6 +620,7 @@
     right: 3.5rem;
     left: 3.5rem;
     width: 90%;
+    height: 100%;
     bottom: 5rem;
     z-index: 2;
     border-width: 0.5rem;
@@ -630,7 +631,6 @@
     bottom: 100%;
     min-width: 22rem;
     padding: 1rem 4.4rem;
-    font-weight: 300;
     font-size: 3.6rem;
   }
   .video-poker .leader-board dt {

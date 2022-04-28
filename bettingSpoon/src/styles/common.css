@@ -464,7 +464,7 @@ header .btn-spooner {
   text-indent: -999rem;
 }
 
-/* 2022-04 (1/2) */
+/* 2022-04 (1/3) */
 header .btn-group {
   display: flex;
   justify-content: center;
@@ -857,7 +857,7 @@ header .gnb-login .btn-metamask.connect {
   background: url(../images/ico_checked_v2.png) 50% 50% no-repeat;
   background-size: 80% auto;
 }
-/* // 2022-04 (1/2) */
+/* // 2022-04 (1/3) */
 
 /* footer */
 footer {
@@ -928,11 +928,11 @@ footer span {
   color: #fff;
   background-color: #ec1616;
 }
-/* 2022-04(1/1) */
+/* 2022-04(2/3) */
 .pop-modal .btn-modal-base.gray {
   background-color: #626261;
 }
-/* 2022-04(1/1) */
+
 .pop-modal .btn-modal-base + .btn-modal-base {
   margin-left: 1rem;
 }
@@ -944,11 +944,13 @@ footer span {
 }
 .pop-modal.modal-alert .modal-content p {
   padding-bottom: 3rem;
+  font-family: 'Oswald';
   font-weight: 300;
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   line-height: 1.4;
   text-align: center;
 }
+/* 2022-04(2/3) */
 
 .pop-modal .modal-content-player {
   position: absolute;
@@ -1317,19 +1319,19 @@ footer span {
     margin-left: 1rem;
   }
 
+  /*  2022-04 (3/3) */
   /* modal alert */
   .pop-modal.modal-alert .modal-content {
     width: 80%;
     max-width: 80rem;
-    padding: 8rem 8rem 6rem;
+    padding: 8rem 5rem 6rem;
   }
   .pop-modal.modal-alert .modal-content p {
     padding-bottom: 7rem;
-    font-size: 2.4rem;
+    font-size: 3rem;
     text-align: center;
   }
 
-  /* // 2022-04 (2/2) */
   .pop-modal.modal-form h4 {
     font-size: 4rem;
   }
@@ -1435,5 +1437,5 @@ footer span {
     margin-top: 2.4rem;
     font-size: 2.4rem;
   }
-  /* // 2022-04 (2/2) */
+  /* // 2022-04 (3/3) */
 }
