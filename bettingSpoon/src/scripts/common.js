@@ -204,13 +204,14 @@ function validUserPwd(obj) {
 
 // 회원가입 시 패스워드 확인 입력란의 유효성 체크 입니다.
 // 유효성 체크 후 해당 input의 형제 요소(.warning-text) 태그 안에 안내 문구를 보여줍니다.
-function validMatchPwd(obj) {
+function validMatchPwd(obj, targetObj) {
   let warningText = obj.parentNode.querySelector('.warning-text');
+
   if (obj.value === '') {
     warningText.innerHTML = 'Please enter a valid password.';
     obj.focus();
     return false;
-  } else if (obj.value !== userPassword.value) {
+  } else if (obj.value !== targetObj.value) {
     warningText.innerHTML = 'Your passwords do not match. Please try again.';
     obj.focus();
     return false;
@@ -256,11 +257,11 @@ function validAgeAgree(obj) {
 // 각 항목별 유효성 검사 후 알럿 메세지를 띄워줍니다.
 function joinSubmit(formName) {
   let targetForm = document.getElementsByName(formName)[0];
-  let userId = targetForm.querySelector('#userId');
-  let userPassword = targetForm.querySelector('#userPassword');
-  let matchPassword = targetForm.querySelector('#matchPassword');
-  let emailId = targetForm.querySelector('#emailId');
-  let ageAgree = targetForm.querySelector('#ageAgree');
+  let userId = targetForm.userId;
+  let userPassword = targetForm.userPassword;
+  let matchPassword = targetForm.matchPassword;
+  let emailId = targetForm.emailId;
+  let ageAgree = targetForm.ageAgree;
 
   if (!validUserId(userId)) {
     alert('Please enter a valid username.');
@@ -268,7 +269,7 @@ function joinSubmit(formName) {
   } else if (!validUserPwd(userPassword)) {
     alert('Please enter a valid password.');
     return false;
-  } else if (!validMatchPwd(matchPassword)) {
+  } else if (!validMatchPwd(matchPassword, userPassword)) {
     alert('Your passwords do not match. Please try again.');
     return false;
   } else if (!validEmail(emailId)) {
@@ -285,13 +286,26 @@ function joinSubmit(formName) {
 
 // 이메일 변경 함수 입니다.
 // 이메일 유효성 검사 후 이메일 주소를 변경합니다.
-function changeEmail(inputName) {
-  const emailId = document.getElementsByName(inputName)[0];
+function changeEmail(idName) {
+  const emailId = document.getElementsByName(idName)[0];
   if (!validEmail(emailId)) {
     alert('Please enter a valid email address.');
     return false;
   }
-  alert('* 이메일 변경 성공.\n* 변경할 이메일 주소 : ' + emailId.value);
+  alert('* 이메일 변경 성공.\n* 변경한 이메일 주소 : ' + emailId.value);
+}
+
+// 비밀번호 변경 함수 입니다.
+// 유효성 검사 후 비밀번호를 변경합니다.
+function changePassword(pwMatchObj, pwObj) {
+  if (!validUserPwd(pwObj)) {
+    alert('Please enter a valid password.');
+    return false;
+  } else if (!validMatchPwd(pwMatchObj, pwObj)) {
+    alert('Your passwords do not match. Please try again.');
+    return false;
+  }
+  alert('* 비밀번호 변경 성공.\n* 변경한 비밀번호 : ' + pwObj.value);
 }
 
 // end : 2022-04 (1/1)

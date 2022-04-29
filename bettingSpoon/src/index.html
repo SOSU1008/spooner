@@ -173,7 +173,7 @@
                   <dl>
                     <dt>* Username</dt>
                     <dd>
-                      <input type="text" name="userId" id="userId" maxlength="18" onkeyup="validUserId(this)" />
+                      <input type="text" name="userId" maxlength="18" onkeyup="validUserId(this)" class="icon-user" />
                       <p class="warning-text"></p>
                     </dd>
                   </dl>
@@ -183,9 +183,9 @@
                       <input
                         type="password"
                         name="userPassword"
-                        id="userPassword"
                         autocomplete="off"
                         onkeyup="validUserPwd(this)"
+                        class="icon-lock"
                       />
                       <p class="warning-text"></p>
                     </dd>
@@ -196,9 +196,9 @@
                       <input
                         type="password"
                         name="matchPassword"
-                        id="matchPassword"
                         autocomplete="off"
-                        onkeyup="validMatchPwd(this)"
+                        onkeyup="validMatchPwd(this, document.getElementsByName('formJoin')[0].userPassword)"
+                        class="icon-lock"
                       />
                       <p class="warning-text"></p>
                     </dd>
@@ -206,7 +206,7 @@
                   <dl>
                     <dt>* Email</dt>
                     <dd>
-                      <input class="email" type="email" name="emailId" id="emailId" onkeyup="validEmail(this)" />
+                      <input class="email" type="email" name="emailId" onkeyup="validEmail(this)" />
                       <p class="warning-text"></p>
                     </dd>
                   </dl>
@@ -216,8 +216,8 @@
                       <span class="ico-check"></span>
                       <p>
                         I confirm that I am at least 18 years of age and that I have read and agreed to
-                        <a href="">Terms and Conditions</a>, <a href="">Cookies Policy</a> and
-                        <a href="">Privacy Policy</a>.
+                        <a href="#" target="_blank">Terms and Conditions</a>,
+                        <a href="" target="_blank">Cookies Policy</a> and <a href="" target="_blank">Privacy Policy</a>.
                       </p>
                     </div>
                     <p class="warning-text"></p>
@@ -258,7 +258,7 @@
               <p>You cannot start a game until you verify your account.</p>
               <p>
                 If you have not received the email from us, please check your junk mail or
-                <a href="#">request another email</a>.
+                <a href="#" target="_blank">request another email</a>.
               </p>
               <div class="btn-area">
                 <button class="btn" type="button">RETURN TO HOME</button>
@@ -287,13 +287,7 @@
                   <dl>
                     <dt>* Email</dt>
                     <dd>
-                      <input
-                        class="email"
-                        type="email"
-                        name="changeEmailId"
-                        id="changeEmailId"
-                        onkeyup="validEmail(this)"
-                      />
+                      <input class="email" type="email" name="changeEmailId" onkeyup="validEmail(this)" />
                       <p class="warning-text"></p>
                     </dd>
                   </dl>
@@ -307,7 +301,7 @@
         </div>
         <!-- // 팝업 - 이메일 변경 -->
         <!-- 팝업 - 비밀번호 변경 -->
-        <div class="pop-modal modal-bs-info modal-password-reset">
+        <div class="pop-modal modal-logo-type modal-password-reset">
           <div class="modal-dimmed" onclick="modalPop('.modal-password-reset', false);"></div>
           <div class="modal-content">
             <h3><strong>Betting Spoon</strong></h3>
@@ -321,7 +315,8 @@
             <div class="modal-contents-scroll">
               <h4>Reset Password</h4>
               <p>Please complete the fields below to reset your password.</p>
-              <form name="formPassword" action="#">
+              <form name="formResetPassword" action="#">
+                <input type="text" name="testtest" />
                 <div class="form-box">
                   <dl>
                     <dt>Reset Password</dt>
@@ -329,12 +324,11 @@
                       <input
                         type="password"
                         name="resetPassword"
-                        id="resetPassword"
                         autocomplete="off"
                         class="icon-lock"
-                        onkeyup="validUserPwd(this, resetPwdWarning)"
+                        onkeyup="validUserPwd(this)"
                       />
-                      <p id="resetPwdWarning"></p>
+                      <p class="warning-text"></p>
                     </dd>
                   </dl>
                   <dl>
@@ -343,17 +337,22 @@
                       <input
                         type="password"
                         name="resetMatchPassword"
-                        id="resetMatchPassword"
                         autocomplete="off"
                         class="icon-lock"
-                        onkeyup="validMatchPwd(this, resetMatchPwdWarning)"
+                        onkeyup="validMatchPwd(this,document.getElementsByName('resetPassword')[0])"
                       />
-                      <p id="resetMatchPwdWarning"></p>
+                      <p class="warning-text"></p>
                     </dd>
                   </dl>
                 </div>
                 <div class="btn-area">
-                  <button type="button" class="btn btn-bs-base">SUBMIT</button>
+                  <button
+                    type="button"
+                    class="btn btn-bs-base"
+                    onclick="changePassword(document.getElementsByName('resetMatchPassword')[0],document.getElementsByName('resetPassword')[0]);"
+                  >
+                    SUBMIT
+                  </button>
                 </div>
               </form>
             </div>
@@ -361,7 +360,7 @@
         </div>
         <!-- // 팝업 - 비밀번호 변경 -->
         <!-- 팝업 - 비밀번호 변경 성공 -->
-        <div class="pop-modal modal-bs-info modal-thanks">
+        <div class="pop-modal modal-logo-type modal-thanks">
           <div class="modal-dimmed" onclick="modalPop('.modal-thanks', false);"></div>
           <div class="modal-content">
             <h3><strong>Betting Spoon</strong></h3>
@@ -371,7 +370,7 @@
             <div class="modal-contents-middle">
               <strong>Thank you!</strong>
               <p>Your password has been successfully reset and you can log in now.</p>
-              <div class="modal-bottom">
+              <div class="modal-bottom-box">
                 <button type="button" class="btn-bs-base">LOG IN</button>
               </div>
             </div>
@@ -379,7 +378,7 @@
         </div>
         <!-- // 팝업 - 비밀번호 변경 성공 -->
         <!-- 팝업 - 토큰만료 잘못된 접근 -->
-        <div class="pop-modal modal-bs-info modal-404">
+        <div class="pop-modal modal-logo-type modal-404">
           <div class="modal-dimmed" onclick="modalPop('.modal-404', false);"></div>
           <div class="modal-content">
             <h3><strong>Betting Spoon</strong></h3>
@@ -389,15 +388,15 @@
             <div class="modal-contents-middle">
               <strong>Please try again.</strong>
               <p>The token previously used has expired or is invalid.</p>
-              <div class="modal-bottom">
+              <div class="modal-bottom-box">
                 <button type="button" class="btn-bs-base">CLOSE</button>
               </div>
             </div>
           </div>
         </div>
         <!-- // 팝업 - 토큰만료 잘못된 접근 -->
-        <!-- 이메일 인증 성공 -->
-        <div class="pop-modal modal-bs-info email-auth-success">
+        <!-- 팝업 - 이메일 인증 성공 -->
+        <div class="pop-modal modal-logo-type email-auth-success">
           <div class="modal-dimmed" onclick="modalPop('.email-auth-success', false);"></div>
           <div class="modal-content">
             <h3><strong>Betting Spoon</strong></h3>
@@ -411,176 +410,170 @@
             <div class="modal-contents-middle">
               <strong>Account activated.</strong>
               <p>Thank you for confirmning your email address.</p>
-              <div class="modal-bottom">
-                <button type="button" class="btn-bs-base">CLOSE</button>
+              <div class="modal-bottom-box">
+                <button type="button" class="btn-bs-base" onclick="modalPop('.email-auth-success', false);">
+                  CLOSE
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <!-- // 이메일 인증 성공 -->
+        <!-- // 팝업 - 이메일 인증 성공 -->
+        <!-- 팝업 - 이메일 재입력 -->
+        <div class="pop-modal modal-logo-type modal-email-update">
+          <div class="modal-dimmed" onclick="modalPop('.modal-email-update', false);"></div>
+          <div class="modal-content">
+            <h3><strong>Betting Spoon</strong></h3>
+            <button
+              type="button"
+              class="btn-modal-base btn-alert-close"
+              onclick="modalPop('.modal-email-update', false);"
+            >
+              닫기
+            </button>
+            <div class="modal-contents-scroll">
+              <form name="formEmailUpdate" action="#">
+                <div class="form-box">
+                  <p>
+                    Forgot your login credentials?<br />
+                    Please enter your account information below.<br />
+                    If it's on our system, we'll send you an email containing <br />
+                    <em>your username</em> and instructions on how to reset <em>your password.</em>
+                  </p>
+                  <dl>
+                    <dt>Email</dt>
+                    <dd>
+                      <input class="email" type="email" name="updateEmailId" onkeyup="validEmail(this)" />
+                      <p class="warning-text"></p>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="modal-bottom-box">
+                  <button type="button" class="btn-bs-base" onclick="changeEmail('updateEmailId');">SUBMIT</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- // 팝업 - 이메일 재입력 -->
+        <!-- 팝업 - 이메일 인증 확인 -->
+        <div class="pop-modal modal-logo-type modal-email-certification">
+          <div class="modal-dimmed" onclick="modalPop('.modal-email-certification', false);"></div>
+          <div class="modal-content">
+            <h3><strong>Betting Spoon</strong></h3>
+            <button
+              type="button"
+              class="btn-modal-base btn-alert-close"
+              onclick="modalPop('.modal-email-certification', false);"
+            >
+              닫기
+            </button>
+            <div class="modal-contents-scroll">
+              <div class="form-box">
+                <h4>Activate your account</h4>
+                <p>
+                  Your email address has not been verified.<br />
+                  You cannot log in until you verify your email address<br />
+                  as <em>xxxxx@zzz.com</em>.<br />
+                  Please click ‘Resend’ and check your inbox for instructions.
+                </p>
+              </div>
+              <div class="modal-bottom-box">
+                <button type="button" class="btn-bs-base">RESEND</button>
+                <a href="#" target="_blank"><span>Change email address</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // 팝업 - 이메일 인증 확인 -->
 
         <style>
-          .pop-modal.modal-bs-info .modal-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 54rem;
-            height: 64rem;
+          .modal-login .form-box {
+            padding: 3rem 4rem;
           }
-          .pop-modal.modal-bs-info .modal-content h3 {
-            position: absolute;
-            top: 5%;
-            left: 0;
-            width: 100%;
-            padding: 1rem 0;
-            text-align: center;
+          .modal-login .form-box dt {
+            display: none;
           }
-          .pop-modal.modal-bs-info .modal-content h3 strong {
+          .modal-login .checkbox-form {
+            padding-left: 8rem;
+          }
+          .modal-login .checkbox-form .ico-check {
+            margin-right: 1rem;
+          }
+          .modal-login .modal-bottom-box {
+            height: auto;
+            padding-bottom: 3rem;
+          }
+
+          .modal-login label {
             display: inline-block;
-            width: 40rem;
-            height: 6rem;
-            background: #000 url(images/ico_logo_pop.png) no-repeat 50% 50% / 25.6rem auto;
-            border-radius: 8rem;
-            text-indent: -9999rem;
           }
-          .pop-modal.modal-bs-info .btn-alert-close {
-            position: absolute;
-            top: -0.5rem;
-            right: -5.5rem;
-            width: 5rem;
-            min-width: auto;
-            height: 5rem;
-            margin: 0;
-            padding: 0;
-            background-color: #202020;
-            text-indent: -9999rem;
-          }
-          .pop-modal.modal-bs-info .btn-alert-close:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            width: 3.5rem;
-            height: 0.2rem;
-            margin: auto;
-            background-color: #fff;
-            transform: rotate(45deg);
-          }
-          .pop-modal.modal-bs-info .btn-alert-close:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            width: 3.5rem;
-            height: 0.2rem;
-            margin: auto;
-            background-color: #fff;
-            transform: rotate(135deg);
-          }
-
-          /* modal-password-reset */
-          .modal-password-reset .modal-contents-scroll {
-            width: 35rem;
-          }
-          .modal-password-reset h4 {
-            display: block;
-            padding: 8rem 0 1rem;
-            font-weight: lighter;
-            font-family: 'Oswald';
-            font-weight: lighter;
-            font-size: 3rem;
-            color: #ec1616;
-            text-align: left;
-          }
-          .modal-password-reset p {
-            font-family: 'Oswald';
-            font-weight: lighter;
-            font-size: 1.8rem;
-            color: #fff;
-            text-align: left;
-          }
-          .modal-password-reset .form-box {
-            padding: 5rem 0;
-          }
-          .modal-password-reset .form-box dl {
-            display: block;
-          }
-          .modal-password-reset .form-box dt {
-            display: block;
-            flex: none;
-            width: 100%;
-            padding-bottom: 0.8rem;
-            font-weight: lighter;
-            text-align: left;
-          }
-          .modal-password-reset .form-box dd {
-            display: block;
-            flex: none;
-            width: 100%;
-            text-align: left;
-          }
-          .modal-password-reset .form-box dd p {
-            color: #fff;
-          }
-          .modal-password-reset .btn-area {
-            margin-top: 2rem;
-          }
-
-          .pop-modal .modal-contents-middle {
-            display: block;
-            width: 100%;
-            max-height: 70%;
-            padding-bottom: 15%;
-            overflow-y: auto;
-          }
-          .pop-modal .modal-contents-middle strong {
-            display: block;
-            padding-bottom: 2rem;
-            font-family: 'Oswald';
-            font-weight: lighter;
-            font-size: 3rem;
-            color: #ec1616;
-          }
-          .pop-modal .modal-contents-middle p {
-            font-family: 'Oswald';
-            font-weight: lighter;
-            font-size: 1.8rem;
-            color: #fff;
-          }
-          .pop-modal .modal-contents-middle .modal-bottom {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 20%;
-          }
-          .pop-modal .btn-bs-base {
-            width: 29.5rem;
-            height: 5rem;
-            margin: auto;
-            font-family: 'Oswald';
-            font-weight: normal;
-            font-size: 2rem;
-            color: #fff;
-            background-color: #ec1616;
-          }
-
-          @media screen and (max-width: 1024px) {
-            .pop-modal.modal-bs-info .modal-content {
-              width: 90%;
-              max-width: 108rem;
-            }
-            .pop-modal.modal-bs-info .btn-alert-close {
-              top: -5.2rem;
-              right: -0.2rem;
-            }
+          .modal-login .flex-box {
+            margin-bottom: 2.5rem;
           }
         </style>
+        <!-- 팝업 - 로그인 -->
+        <div class="pop-modal modal-logo-type modal-login">
+          <div class="modal-dimmed" onclick="modalPop('.modal-login', false);"></div>
+          <div class="modal-content">
+            <h3><strong>Betting Spoon</strong></h3>
+            <button type="button" class="btn-modal-base btn-alert-close" onclick="modalPop('.modal-login', false);">
+              닫기
+            </button>
+            <div class="modal-contents-scroll">
+              <form name="formModalLogin" action="#">
+                <div class="form-box">
+                  <dl>
+                    <dt>UserName</dt>
+                    <dd>
+                      <input
+                        type="text"
+                        name="userId"
+                        maxlength="18"
+                        onkeyup="validUserId(this)"
+                        class="icon-user"
+                        placeholder="UserName"
+                      />
+                      <p class="warning-text"></p>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>Password</dt>
+                    <dd>
+                      <input
+                        type="password"
+                        name="userPassword"
+                        autocomplete="off"
+                        placeholder="Password"
+                        onkeyup="validUserPwd(this)"
+                        class="icon-lock"
+                      />
+                      <p class="warning-text"></p>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="boxbox"></div>
+                <div class="modal-bottom-box">
+                  <div class="info-box">
+                    <label for="saveUserName" class="checkbox-form">
+                      <div class="flex-box">
+                        <input type="checkbox" name="saveUserName" id="saveUserName" />
+                        <span class="ico-check"></span>
+                        <p>Save username</p>
+                      </div>
+                    </label>
+                    <a href="#"><span>Forgot your login credentials?</span></a>
+                  </div>
+                  <button type="button" class="btn-bs-base">LOG IN</button>
+                  <p>
+                    No account yet? <a href="#" target="_blank"><span>Join now!</span></a>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- // 팝업 - 로그인 -->
 
         <!-- // 2022-04 (2/2) -->
       </aside>
@@ -590,8 +583,8 @@
     <style>
       .guide-box {
         position: fixed;
-        top: 10rem;
-        left: 10rem;
+        top: 6rem;
+        left: 6rem;
         width: 25rem;
         height: auto;
         padding: 1rem;
@@ -655,13 +648,16 @@
         <button type="button" onclick="guideGnb('install');">GNB - 로그인 (INSTALL)</button>
         <button type="button" onclick="guideGnb('connect');">GNB - 로그인 (CONNECT)</button>
         <button type="button" onclick="guideGnb('metamask');">GNB - 로그인 (METAMASK)</button>
-        <button type="button" onclick="modalPop('.modal-form', true);">팝업 - 회원가입</button>
         <button type="button" onclick="modalPop('.modal-email', true);">팝업 - 이메일 체크</button>
         <button type="button" onclick="modalPop('.modal-change-email', true);">팝업 - 이메일 변경</button>
+        <button type="button" onclick="modalPop('.modal-form', true);">팝업 - 회원가입</button>
+        <button type="button" onclick="modalPop('.modal-404', true);">팝업 - 토큰만료 잘못된 접근</button>
         <button type="button" onclick="modalPop('.modal-password-reset', true);">팝업 - 비밀번호 변경</button>
         <button type="button" onclick="modalPop('.modal-thanks', true);">팝업 - 비밀번호 변경 성공</button>
-        <button type="button" onclick="modalPop('.modal-404', true);">팝업 - 토큰만료 잘못된 접근</button>
         <button type="button" onclick="modalPop('.email-auth-success', true);">팝업 - 이메일 인증 성공</button>
+        <button type="button" onclick="modalPop('.modal-email-update', true);">팝업 - 이메일 재입력</button>
+        <button type="button" onclick="modalPop('.modal-email-certification', true);">팝업 - 이메일 인증 확인</button>
+        <button type="button" onclick="modalPop('.modal-login', true);">팝업 - 로그인</button>
       </div>
     </div>
     <script>
