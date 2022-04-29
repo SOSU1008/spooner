@@ -450,6 +450,9 @@
 .full-layer-game.game-video-poker {
   background: #000 url(../images/bg_videopoker.jpg) no-repeat 50% 0 / cover;
 }
+.full-layer-game.game-video-poker.baccarat {
+  background: #000 url(../images/bg_baccarat.jpg) no-repeat 50% 0 / cover;
+}
 .full-layer-game.game-video-poker.full-screen .content-game {
   height: calc(100% - 7rem);
 }
