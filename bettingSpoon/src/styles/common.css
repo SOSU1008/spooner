@@ -1069,7 +1069,37 @@ header .gnb-login .btn-metamask.connect {
   color: #ffde00;
   border-bottom: 0.1rem solid #ffde00;
 }
-
+.modal-login .form-box {
+  padding: 3rem 4rem;
+}
+.modal-login .form-box dt {
+  display: none;
+}
+.modal-login .checkbox-form .ico-check {
+  margin-right: 1rem;
+}
+.modal-login .modal-bottom-box {
+  height: auto;
+  padding-bottom: 3rem;
+}
+.modal-login label {
+  display: inline-block;
+}
+.modal-login .modal-bottom-box .flex-box {
+  margin-bottom: 0;
+}
+.modal-login .modal-bottom-box .info-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  padding-bottom: 2.5rem;
+}
+.modal-login .modal-bottom-box .checkbox-form {
+  flex: 1;
+  padding-left: 0;
+}
 /* // 2022-04 (1/3) */
 
 /* footer */
