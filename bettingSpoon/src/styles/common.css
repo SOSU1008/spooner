@@ -1058,19 +1058,8 @@ header .gnb-login .btn-metamask.connect {
   color: #ffde00;
   border-bottom: 0.1rem solid #ffde00;
 }
-
-.modal-login .modal-bottom-box button + p {
-  display: inline-block;
-  padding-top: 1rem;
-  font-weight: lighter;
-  font-size: 1.8rem;
-}
-.modal-login .modal-bottom-box a span {
-  color: #ffde00;
-  border-bottom: 0.1rem solid #ffde00;
-}
 .modal-login .form-box {
-  padding: 3rem 4rem;
+  padding: 3rem 4rem 2rem;
 }
 .modal-login .form-box dt {
   display: none;
@@ -1085,20 +1074,56 @@ header .gnb-login .btn-metamask.connect {
 .modal-login label {
   display: inline-block;
 }
-.modal-login .modal-bottom-box .flex-box {
+.modal-login .flex-box {
   margin-bottom: 0;
 }
-.modal-login .modal-bottom-box .info-box {
+.modal-login .result-box {
+  position: relative;
+  width: 100%;
+  max-width: 37rem;
+  min-height: 15rem;
+  margin: auto;
+}
+.modal-login .result-box .captcha-box p {
+  font-weight: lighter;
+  padding-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #fff;
+  text-align: left;
+}
+.modal-login .result-box .result-fail {
+  padding-top: 3rem;
+  text-align: left;
+}
+.modal-login .info-box {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 100%;
+  max-width: 37rem;
   margin: auto;
   padding-bottom: 2.5rem;
 }
-.modal-login .modal-bottom-box .checkbox-form {
+.modal-login .checkbox-form {
   flex: 1;
   padding-left: 0;
+}
+.modal-login .info-box button + p {
+  display: inline-block;
+  padding-top: 1rem;
+  font-weight: lighter;
+  font-size: 1.8rem;
+}
+.modal-login a span {
+  color: #ffde00;
+  border-bottom: 0.1rem solid #ffde00;
+}
+
+.modal-login .btn-login {
+  margin-bottom: 2.5rem;
+}
+.text-red {
+  color: #ec1616 !important;
 }
 /* // 2022-04 (1/3) */
 
