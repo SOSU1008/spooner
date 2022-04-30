@@ -469,7 +469,6 @@ header .btn-group {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 1rem;
 }
 header .gnb-login {
   display: flex;
@@ -480,7 +479,7 @@ header .gnb-login {
 }
 header .gnb-login button {
   min-width: 12rem;
-  margin: 0 0.2rem;
+  margin: 0 0.3rem;
 }
 header .btn-login {
   width: 12rem;
@@ -515,6 +514,7 @@ header .header-profile {
 header .header-profile strong {
   display: inline-block;
   width: 100%;
+  margin-left: 0.2rem;
   font-weight: 400;
   font-size: 1.4rem;
   white-space: nowrap;
@@ -529,6 +529,7 @@ header .header-profile span {
   width: 3rem;
   height: 3rem;
   margin: auto;
+  background-color: #0a0a0a;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 100%;
@@ -1491,6 +1492,9 @@ footer span {
     margin: 0;
     padding: 3rem 0 5.5rem 6rem;
   }
+  header .btn-group button {
+    margin: 0 3rem 3rem 0;
+  }
   header .btn-discord {
     display: inline-block;
     width: 8rem;
@@ -1502,12 +1506,26 @@ footer span {
     display: inline-block;
     width: 8rem;
     height: 8rem;
-    margin-left: 2rem;
     background: #eb1616 url(../images/ico_twitter_w.png) no-repeat 50% 50% / 7rem auto;
+    border-radius: 100%;
+  }
+  header .btn-opensea {
+    display: inline-block;
+    width: 8rem;
+    height: 8rem;
+    background: #eb1616 url(../images/ico_opensea_w.png) no-repeat 50% 50% / 7rem auto;
+    border-radius: 100%;
+  }
+  header .btn-spooner {
+    display: inline-block;
+    width: 8rem;
+    height: 8rem;
+    background: #eb1616 url(../images/ico_spooner_w.png) no-repeat 50% 50% / 7rem auto;
     border-radius: 100%;
   }
   header .gnb-login {
     display: block;
+    margin-left: 0;
     padding-top: 5.5rem;
   }
   header .btn-metamask {
@@ -1588,6 +1606,27 @@ footer span {
   }
 
   /*  2022-04 (3/3) */
+
+  /* header */
+  header .btn-twitter {
+    margin-right: 11rem !important;
+  }
+  header .btn-login {
+    width: 33rem;
+    height: 7rem;
+    margin-bottom: 2rem !important;
+    margin-left: 0;
+    font-size: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid #ec1616;
+  }
+  header .btn-join {
+    width: 33rem;
+    height: 7rem;
+    font-size: 3rem;
+    background-color: #ec1616;
+  }
+
   /* modal alert */
   .pop-modal.modal-alert .modal-content {
     width: 80%;

@@ -58,23 +58,27 @@
                 <div class="gnb-login">
                   <!-- 2022-04 (1/2) -->
 
-                  <!-- (PPT page 4) 비 로그인 상태 (LOGIN, JOIN) -->
+                  <!-- (PPT page 4) 비 로그인 상태 GNB (LOGIN, JOIN) -->
                   <button type="button" class="btn-login">LOGIN</button>
                   <button type="button" class="btn-join" onclick="modalPop('.modal-form', true);">JOIN</button>
                   <!-- // (PPT page 4) 비 로그인 상태 (LOGIN, JOIN) -->
 
-                  <!-- 로그인 일때 (ID, INSTALL || CONNECT || METAMASK) -->
+                  <!-- (PPT page 5, 23) 로그인 일때 GNB (ID(공통), INSTALL || CONNECT || METAMASK) -->
+                  <!-- ID(공통 )-->
                   <a href="#" class="header-profile" style="display: none">
                     <span style="background-image: url(images/bg_videopoker.jpg)"></span>
-                    <strong>testerid1234512345123451234512345</strong>
+                    <strong>testerId12345678901234567890</strong>
                   </a>
                   <ul style="display: none">
                     <li><a href="#" onclick="guideGnb('logout');">LOGOUT</a></li>
                   </ul>
+                  <!-- case INSTALL -->
                   <button type="button" class="btn-metamask install" style="display: none">INSTALL</button>
+                  <!-- case CONNECT -->
                   <button type="button" class="btn-metamask connect" style="display: none">CONNECT</button>
+                  <!-- case METAMASK LOGIN -->
                   <button type="button" class="btn-gnb-login" id="metamaskId" style="display: none"></button>
-                  <!-- // 로그인 상태 (ID, INSTALL || CONNECT || METAMASK) -->
+                  <!-- // (PPT page 5, 23) 로그인 일때 GNB (ID(공통), INSTALL || CONNECT || METAMASK) -->
 
                   <!-- // 2022-04 (1/2) -->
                 </div>
@@ -159,7 +163,7 @@
           </div>
         </div>
         <!-- 2022-04 (2/2) -->
-        <!-- 팝업 - 회원가입 -->
+        <!-- (PPT page 6) 팝업 - 회원가입 -->
         <div class="pop-modal modal-form">
           <div class="modal-dimmed" onclick="modalPop('.modal-form', false);"></div>
           <div class="modal-content">
@@ -240,8 +244,8 @@
             </div>
           </div>
         </div>
-        <!-- // 팝업 - 회원가입 -->
-        <!-- 팝업 - 이메일 체크 -->
+        <!-- // (PPT page 6) 팝업 - 회원가입 -->
+        <!-- (PPT page 8) 팝업 - 이메일 체크 -->
         <div class="pop-modal modal-form modal-email">
           <div class="modal-dimmed" onclick="modalPop('.modal-email', false);"></div>
           <div class="modal-content">
@@ -267,8 +271,8 @@
             </div>
           </div>
         </div>
-        <!-- // 팝업 - 이메일 체크 -->
-        <!-- 팝업 - 이메일 변경 -->
+        <!-- // (PPT page 8) 팝업 - 이메일 체크 -->
+        <!-- (PPT page 8) 팝업 - 이메일 변경 -->
         <div class="pop-modal modal-form modal-change-email">
           <div class="modal-dimmed" onclick="modalPop('.modal-change-email', false);"></div>
           <div class="modal-content">
@@ -299,8 +303,8 @@
             </div>
           </div>
         </div>
-        <!-- // 팝업 - 이메일 변경 -->
-        <!-- 팝업 - 비밀번호 변경 -->
+        <!-- // (PPT page 8) 팝업 - 이메일 변경 -->
+        <!-- (PPT page 18) 팝업 - 비밀번호 변경 -->
         <div class="pop-modal modal-logo-type modal-password-reset">
           <div class="modal-dimmed" onclick="modalPop('.modal-password-reset', false);"></div>
           <div class="modal-content">
@@ -357,8 +361,8 @@
             </div>
           </div>
         </div>
-        <!-- // 팝업 - 비밀번호 변경 -->
-        <!-- 팝업 - 비밀번호 변경 성공 -->
+        <!-- // (PPT page 18) 팝업 - 비밀번호 변경 -->
+        <!-- (PPT page 19) 팝업 - 비밀번호 변경 성공 -->
         <div class="pop-modal modal-logo-type modal-thanks">
           <div class="modal-dimmed" onclick="modalPop('.modal-thanks', false);"></div>
           <div class="modal-content">
@@ -375,8 +379,8 @@
             </div>
           </div>
         </div>
-        <!-- // 팝업 - 비밀번호 변경 성공 -->
-        <!-- 팝업 - 토큰만료 잘못된 접근 -->
+        <!-- // (PPT page 19) 팝업 - 비밀번호 변경 성공 -->
+        <!-- (PPT page 20) 팝업 - 토큰만료 잘못된 접근 -->
         <div class="pop-modal modal-logo-type modal-404">
           <div class="modal-dimmed" onclick="modalPop('.modal-404', false);"></div>
           <div class="modal-content">
@@ -393,8 +397,8 @@
             </div>
           </div>
         </div>
-        <!-- // 팝업 - 토큰만료 잘못된 접근 -->
-        <!-- 팝업 - 이메일 인증 성공 -->
+        <!-- // (PPT page 20) 팝업 - 토큰만료 잘못된 접근 -->
+        <!-- (PPT page 14) 팝업 - 이메일 인증 성공 -->
         <div class="pop-modal modal-logo-type email-auth-success">
           <div class="modal-dimmed" onclick="modalPop('.email-auth-success', false);"></div>
           <div class="modal-content">
@@ -408,7 +412,7 @@
             </button>
             <div class="modal-contents-middle">
               <strong>Account activated.</strong>
-              <p>Thank you for confirmning your email address.</p>
+              <p>Thank you for confirming your email address.</p>
               <div class="modal-bottom-box">
                 <button type="button" class="btn-bs-base" onclick="modalPop('.email-auth-success', false);">
                   CLOSE
@@ -417,8 +421,8 @@
             </div>
           </div>
         </div>
-        <!-- // 팝업 - 이메일 인증 성공 -->
-        <!-- 팝업 - 이메일 재입력 -->
+        <!-- // (PPT page 14) 팝업 - 이메일 인증 성공 -->
+        <!-- (PPT page 16) 팝업 - 이메일 재입력 -->
         <div class="pop-modal modal-logo-type modal-email-update">
           <div class="modal-dimmed" onclick="modalPop('.modal-email-update', false);"></div>
           <div class="modal-content">
@@ -454,8 +458,8 @@
             </div>
           </div>
         </div>
-        <!-- // 팝업 - 이메일 재입력 -->
-        <!-- 팝업 - 이메일 인증 확인 -->
+        <!-- // (PPT page 16) 팝업 - 이메일 재입력 -->
+        <!-- (PPT page 13) 팝업 - 이메일 인증 확인 -->
         <div class="pop-modal modal-logo-type modal-email-certification">
           <div class="modal-dimmed" onclick="modalPop('.modal-email-certification', false);"></div>
           <div class="modal-content">
@@ -484,8 +488,8 @@
             </div>
           </div>
         </div>
-        <!-- // 팝업 - 이메일 인증 확인 -->
-        <!-- 팝업 - 로그인 -->
+        <!-- // (PPT page 13) 팝업 - 이메일 인증 확인 -->
+        <!-- (PPT page 10, 11, 12) 팝업 - 로그인 -->
         <div class="pop-modal modal-logo-type modal-login">
           <div class="modal-dimmed" onclick="modalPop('.modal-login', false);"></div>
           <div class="modal-content">
@@ -551,7 +555,7 @@
             </div>
           </div>
         </div>
-        <!-- // 팝업 - 로그인 -->
+        <!-- // (PPT page 10, 11, 12) 팝업 - 로그인 -->
         <!-- // 2022-04 (2/2) -->
       </aside>
       <!-- // footer (include) -->
@@ -560,39 +564,40 @@
     <style>
       .guide-box {
         position: fixed;
-        top: 6rem;
-        left: 6rem;
-        width: 25rem;
+        top: 6em;
+        left: 6em;
+        width: 25em;
         height: auto;
-        padding: 1rem;
+        padding: 1em;
+        font-size: 10px;
         background-color: #fff;
-        border: 0.2rem solid #ec1616;
+        border: 0.2em solid #ec1616;
         transition: 0.3s;
         z-index: 9999;
       }
       .guide-box button {
         width: 100%;
-        margin: 1rem auto;
-        font-size: 1.6rem;
+        margin: 0.5em auto;
+        font-size: 1.6em;
         color: #000;
       }
       .guide-box h1 {
         width: 100%;
-        padding: 0.5rem 0 1rem;
+        padding: 0.5em 0 1em;
         font-weight: 700;
-        font-size: 1.4rem;
+        font-size: 1.4em;
         color: #ec1616;
         text-align: center;
-        border-bottom: 0.1rem solid #ec1616;
+        border-bottom: 0.1em solid #ec1616;
       }
       .guide-box .btn-folder {
         position: absolute;
-        top: -1.2rem;
-        right: -3.3rem;
-        width: 3rem;
-        height: 3rem;
+        top: -0.6em;
+        right: -3.3em;
+        width: 3em;
+        height: 3em;
         font-weight: 400;
-        font-size: 1.3rem;
+        font-size: 1.3em;
         color: #fff;
         background-color: #ec1616;
         text-align: center;
@@ -611,6 +616,11 @@
       .guide-box.fold h1,
       .guide-box.fold .btn-list {
         display: none;
+      }
+      @media screen and (max-width: 1024px) {
+        .guide-box {
+          font-size: 8px;
+        }
       }
     </style>
     <div class="guide-box">
