@@ -56,7 +56,7 @@
                   spooner NFT
                 </button>
                 <div class="gnb-login">
-                  <!-- 2022-04 (1/2) -->
+                  <!-- start : 2022-04 -->
 
                   <!-- (PPT page 4) 비 로그인 상태 GNB (LOGIN, JOIN) -->
                   <button type="button" class="btn-login">LOGIN</button>
@@ -80,7 +80,7 @@
                   <button type="button" class="btn-gnb-login" id="metamaskId" style="display: none"></button>
                   <!-- // (PPT page 5, 23) 로그인 일때 GNB (ID(공통), INSTALL || CONNECT || METAMASK) -->
 
-                  <!-- // 2022-04 (1/2) -->
+                  <!-- end : 2022-04 -->
                 </div>
               </div>
             </div>
@@ -99,16 +99,25 @@
                   Punch in your luck on Discord!<br/>
                   Big prizes are waiting for you.
                 </p>
-                <a href="videoPoker.html" class="btn-more-info"><span>more info</span></a>
+                <a href="baccarat.html" class="btn-more-info"><span>more info</span></a>
               </div>
               <div class="btn-area">
+                <!-- [D] 로그인 전 -->
                 <button
                   type="button"
                   class="btn-play-game"
-                  onclick="modalAlert('You can’t join the game.<br/> If you want to solve the problem, please ask on Discord.')"
+                  onclick="modalAlert('Please log in before you play.','OK')"
                 >
                   play game
                 </button>
+                <!-- [D] 로그인 후 -->
+                <!-- <button
+                  type="button"
+                  class="btn-play-game"
+                  onclick="location.href='/bettingSpoon/src/baccarat.html';"
+                >
+                  play game
+                </button> -->
               </div>
             </div>
             <ul class="guide-form">
@@ -169,7 +178,7 @@
             ></button>
           </div>
         </div>
-        <!-- 2022-04 (2/2) -->
+        <!-- start : 2022-04 -->
         <!-- (PPT page 6) 팝업 - 회원가입 -->
         <div class="pop-modal modal-form">
           <div class="modal-dimmed" onclick="modalPop('.modal-form', false);"></div>
@@ -563,7 +572,7 @@
           </div>
         </div>
         <!-- // (PPT page 10, 11, 12) 팝업 - 로그인 -->
-        <!-- // 2022-04 (2/2) -->
+        <!-- end : 2022-04 -->
       </aside>
       <!-- // footer (include) -->
     </div>
