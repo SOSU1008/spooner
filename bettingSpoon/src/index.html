@@ -59,7 +59,7 @@
                   <!-- start : 2022-04 -->
 
                   <!-- (PPT page 4) 비 로그인 상태 GNB (LOGIN, JOIN) -->
-                  <button type="button" class="btn-login">LOGIN</button>
+                  <button type="button" class="btn-login" onclick="modalPop('.modal-login', true);">LOGIN</button>
                   <button type="button" class="btn-join" onclick="modalPop('.modal-form', true);">JOIN</button>
                   <!-- // (PPT page 4) 비 로그인 상태 (LOGIN, JOIN) -->
 
@@ -95,19 +95,15 @@
               <div class="desc-box">
                 <h2>BACCARAT event</h2>
                 <p class="desc">
-                  This is an event for SPOONER NFT members.<br/>
-                  Punch in your luck on Discord!<br/>
+                  This is an event for SPOONER NFT members.<br />
+                  Punch in your luck on Discord!<br />
                   Big prizes are waiting for you.
                 </p>
                 <a href="baccarat.html" class="btn-more-info"><span>more info</span></a>
               </div>
               <div class="btn-area">
                 <!-- [D] 로그인 전 -->
-                <button
-                  type="button"
-                  class="btn-play-game"
-                  onclick="modalAlert('Please log in before you play.','OK')"
-                >
+                <button type="button" class="btn-play-game" onclick="modalAlert('Please log in before you play.','OK')">
                   play game
                 </button>
                 <!-- [D] 로그인 후 -->
@@ -122,14 +118,10 @@
             </div>
             <ul class="guide-form">
               <li>
-                <p>
-                  Only the selected members of SPOONER NFT DISCORD 
-                </p>
+                <p>Only the selected members of SPOONER NFT DISCORD</p>
                 <span class="hash">Join the BACCARAT event now!</span><br />
                 <!-- [D] 로그인 전 -->
-                <button type="button" class="btn-join-now" onclick="modalPop('.modal-form', true);">
-                  join now
-                </button>
+                <button type="button" class="btn-join-now" onclick="modalPop('.modal-form', true);">join now</button>
                 <!-- [D] 로그인 후 -->
                 <!-- <button type="button" class="btn-join-now" onclick="location.href='/bettingSpoon/src/baccarat.html';">
                   more info
@@ -137,8 +129,8 @@
               </li>
               <li>
                 <p>
-                  For the Whitelisted and SPOONER NFT holders,<br/>
-                  please connect your MetaMask wallet.<br/> 
+                  For the Whitelisted and SPOONER NFT holders,<br />
+                  please connect your MetaMask wallet.<br />
                   You will earn more benefits.
                 </p>
                 <button type="button" class="btn-metamask" onclick="window.open('https://www.metamask.io')">
@@ -149,9 +141,9 @@
               </li>
               <li>
                 <p>
-                  After the login, the &#91;PLAY&#93; button is activated. <br/>
-                  By clicking the button, you may start playing the game. <br/>
-                  The game money is automatically refilled once a day. <br/>
+                  After the login, the &#91;PLAY&#93; button is activated. <br />
+                  By clicking the button, you may start playing the game. <br />
+                  The game money is automatically refilled once a day. <br />
                   Good luck!
                 </p>
               </li>
@@ -180,11 +172,11 @@
         </div>
         <!-- start : 2022-04 -->
         <!-- (PPT page 6) 팝업 - 회원가입 -->
-        <div class="pop-modal modal-form">
-          <div class="modal-dimmed" onclick="modalPop('.modal-form', false);"></div>
+        <div class="pop-modal modal-form modal-join">
+          <div class="modal-dimmed" onclick="modalPop('.modal-join', false);"></div>
           <div class="modal-content">
             <h3><strong>Create your account</strong></h3>
-            <button type="button" class="btn-modal-base btn-alert-close" onclick="modalPop('.modal-form', false);">
+            <button type="button" class="btn-modal-base btn-alert-close" onclick="modalPop('.modal-join', false);">
               닫기
             </button>
             <div class="modal-contents-scroll">
@@ -281,8 +273,16 @@
                 <a href="#" target="_blank">request another email</a>.
               </p>
               <div class="btn-area">
-                <button class="btn" type="button">RETURN TO HOME</button>
-                <a href="#" onclick="modalPop('.modal-change-email', true);">Change email address</a>
+                <button
+                  class="btn"
+                  type="button"
+                  onclick="modalPop('.modal-change-email', false); location.href='index.html';"
+                >
+                  RETURN TO HOME
+                </button>
+                <a href="#" onclick="modalPop('.modal-form modal-email', false); modalPop('.modal-change-email', true);"
+                  >Change email address</a
+                >
               </div>
             </div>
           </div>
@@ -408,7 +408,7 @@
               <strong>Please try again.</strong>
               <p>The token previously used has expired or is invalid.</p>
               <div class="modal-bottom-box">
-                <button type="button" class="btn-bs-base">CLOSE</button>
+                <button type="button" class="btn-bs-base" onclick="modalPop('.modal-404', false);">CLOSE</button>
               </div>
             </div>
           </div>
@@ -499,7 +499,11 @@
               </div>
               <div class="modal-bottom-box">
                 <button type="button" class="btn-bs-base">RESEND</button>
-                <a href="#" target="_blank"><span>Change email address</span></a>
+                <a
+                  href="#"
+                  onclick="modalPop('.modal-email-certification', false); modalPop('.modal-change-email', true);"
+                  ><span>Change email address</span></a
+                >
               </div>
             </div>
           </div>
@@ -597,6 +601,14 @@
         font-size: 1.6em;
         color: #000;
       }
+      .guide-box button span {
+        display: block;
+        margin-top: 0.2rem;
+        font-size: 1.2rem;
+        font-weight: lighter;
+        color: #999;
+        text-transform: uppercase;
+      }
       .guide-box h1 {
         width: 100%;
         padding: 0.5em 0 1em;
@@ -647,20 +659,44 @@
         onclick="document.querySelector('.guide-box').classList.toggle('fold');"
       ></button>
       <div class="btn-list">
-        <button type="button" onclick="guideGnb('logout');">GNB - 로그아웃 상태</button>
-        <button type="button" onclick="guideGnb('install');">GNB - 로그인 (INSTALL)</button>
-        <button type="button" onclick="guideGnb('connect');">GNB - 로그인 (CONNECT)</button>
-        <button type="button" onclick="guideGnb('metamask');">GNB - 로그인 (METAMASK)</button>
-        <button type="button" onclick="modalPop('.modal-email', true);">팝업 - 이메일 체크</button>
-        <button type="button" onclick="modalPop('.modal-change-email', true);">팝업 - 이메일 변경</button>
-        <button type="button" onclick="modalPop('.modal-form', true);">팝업 - 회원가입</button>
-        <button type="button" onclick="modalPop('.modal-404', true);">팝업 - 토큰만료 잘못된 접근</button>
-        <button type="button" onclick="modalPop('.modal-password-reset', true);">팝업 - 비밀번호 변경</button>
-        <button type="button" onclick="modalPop('.modal-thanks', true);">팝업 - 비밀번호 변경 성공</button>
-        <button type="button" onclick="modalPop('.email-auth-success', true);">팝업 - 이메일 인증 성공</button>
-        <button type="button" onclick="modalPop('.modal-email-update', true);">팝업 - 이메일 재입력</button>
-        <button type="button" onclick="modalPop('.modal-email-certification', true);">팝업 - 이메일 인증 확인</button>
-        <button type="button" onclick="modalPop('.modal-login', true);">팝업 - 로그인</button>
+        <button type="button" onclick="guideGnb('logout');">GNB - 로그아웃 상태 <span>PPT page 4, 5, 24</span></button>
+        <button type="button" onclick="guideGnb('install');">
+          GNB - 로그인 (INSTALL)<span>PPT page 4, 5, 24</span>
+        </button>
+        <button type="button" onclick="guideGnb('connect');">
+          GNB - 로그인 (CONNECT)<span>PPT page 4, 5, 24</span>
+        </button>
+        <button type="button" onclick="guideGnb('metamask');">
+          GNB - 로그인 (METAMASK)<span>PPT page 4, 5, 24</span>
+        </button>
+        <button type="button" onclick="modalPop('.modal-email', true);">
+          팝업 - 이메일 체크<span>PPT page 8</span>
+        </button>
+        <button type="button" onclick="modalPop('.modal-change-email', true);">
+          팝업 - 이메일 변경<span>PPT page 8</span>
+        </button>
+        <button type="button" onclick="modalPop('.modal-join', true);">팝업 - 회원가입<span>PPT page 6</span></button>
+        <button type="button" onclick="modalPop('.modal-404', true);">
+          팝업 - 토큰만료 잘못된 접근<span>PPT page 20</span>
+        </button>
+        <button type="button" onclick="modalPop('.modal-password-reset', true);">
+          팝업 - 비밀번호 변경<span>PPT page 18</span>
+        </button>
+        <button type="button" onclick="modalPop('.modal-thanks', true);">
+          팝업 - 비밀번호 변경 성공<span>PPT page 19</span>
+        </button>
+        <button type="button" onclick="modalPop('.email-auth-success', true);">
+          팝업 - 이메일 인증 성공<span>PPT page 14</span>
+        </button>
+        <button type="button" onclick="modalPop('.modal-email-update', true);">
+          팝업 - 이메일 재입력<span>PPT page 16</span>
+        </button>
+        <button type="button" onclick="modalPop('.modal-email-certification', true);">
+          팝업 - 이메일 인증 확인<span>PPT page 13</span>
+        </button>
+        <button type="button" onclick="modalPop('.modal-login', true);">
+          팝업 - 로그인<span>PPT page 4, 5, 24</span>
+        </button>
       </div>
     </div>
     <script>
