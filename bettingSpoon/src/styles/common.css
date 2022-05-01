@@ -1678,7 +1678,7 @@ footer span {
     height: auto;
     margin-bottom: 2rem;
     background-color: #fff;
-    border: 0.1rem solid #999;
+    border: 1px solid #999;
     transition: 0s;
     opacity: 1;
     overflow: hidden;
