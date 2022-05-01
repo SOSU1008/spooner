@@ -869,7 +869,7 @@ header .gnb-login .btn-metamask.connect {
   justify-content: center;
   align-items: center;
   width: 54rem;
-  height: 64rem;
+  height: 75rem;
 }
 .pop-modal.modal-logo-type .modal-content h3 {
   position: absolute;
@@ -932,7 +932,7 @@ header .gnb-login .btn-metamask.connect {
 }
 .modal-password-reset h4 {
   display: block;
-  padding: 8rem 0 1rem;
+  padding: 3rem 0 1rem;
   font-weight: lighter;
   font-family: 'Oswald';
   font-weight: lighter;
@@ -1027,7 +1027,7 @@ header .gnb-login .btn-metamask.connect {
 .modal-logo-type .modal-contents-scroll {
   width: 95%;
   height: 85%;
-  max-height: 48rem;
+  max-height: 53rem;
   margin-top: 9rem;
   font-family: 'Oswald';
   font-weight: lighter;
@@ -1038,7 +1038,7 @@ header .gnb-login .btn-metamask.connect {
 }
 .modal-logo-type h4 {
   display: block;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   font-family: 'Oswald';
   font-weight: lighter;
   font-size: 3rem;
@@ -1539,6 +1539,7 @@ footer span {
   }
   header .btn-gnb-login {
     display: block;
+    width: 33rem;
     margin: 0;
     padding: 2rem 5rem;
     font-weight: 400;
@@ -1581,7 +1582,7 @@ footer span {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
   }
-  .pop-modal .modal-content {
+  .pop-modal.modal-form .modal-content {
     position: absolute;
     width: 90%;
     max-width: 100rem;
@@ -1623,8 +1624,75 @@ footer span {
   header .btn-join {
     width: 33rem;
     height: 7rem;
+    margin-bottom: 2rem !important;
     font-size: 3rem;
     background-color: #ec1616;
+  }
+
+  header .header-profile {
+    display: inline-block;
+    position: relative;
+    width: 33rem;
+    height: auto;
+    margin-bottom: 2.5rem;
+    margin-right: 1rem;
+    padding: 1rem 0rem 1rem 7.5rem;
+    box-sizing: border-box;
+  }
+  header .header-profile strong {
+    display: inline-block;
+    width: 100%;
+    margin-left: 0.2rem;
+    font-weight: lighter;
+    font-size: 2.8rem;
+    color: #000;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  header .header-profile span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 6rem;
+    height: 6rem;
+    margin: auto;
+    background-color: #0a0a0a;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+  }
+  header .gnb-login ul {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 33rem;
+    height: auto;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    border: 0.1rem solid #999;
+    transition: 0s;
+    opacity: 1;
+    overflow: hidden;
+    z-index: 2;
+  }
+  header .gnb-login li {
+    width: 33rem;
+    height: auto;
+  }
+  header .gnb-login li a {
+    padding: 1.8rem 0 2rem;
+    font-weight: lighter;
+    font-size: 2.6rem;
+    color: #3a3a3a;
+  }
+  header .btn-metamask {
+    width: 33rem;
+  }
+  header .btn-metamask:after {
+    content: ' METAMASK';
   }
 
   /* modal alert */
@@ -1641,9 +1709,6 @@ footer span {
 
   .pop-modal.modal-form h4 {
     font-size: 4rem;
-  }
-  .pop-modal.modal-form .modal-content {
-    max-height: 80%;
   }
   .pop-modal.modal-form .modal-content .modal-contents-scroll {
     padding: 8rem 3rem;
@@ -1698,7 +1763,7 @@ footer span {
   .form-box dl dt {
     width: 18rem;
     margin-right: 1.8rem;
-    font-size: 2.6rem;
+    font-size: 3rem;
   }
   .form-box dl dd input {
     padding: 0 4.2rem 0.8rem 4.2rem;
@@ -1707,7 +1772,7 @@ footer span {
     border-bottom: 2px solid #eb1616;
     background-repeat: no-repeat;
     background-size: 4.1rem auto;
-    background-position: -2% 50%;
+    background-position: 0% 50%;
   }
   .form-box dl + .checkbox-form {
     margin-top: 11rem;
@@ -1723,11 +1788,11 @@ footer span {
     margin-bottom: 6rem;
   }
   .checkbox-form .flex-box .ico-check {
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 4.2rem;
+    height: 4.2rem;
   }
-  .checkbox-form .flex-box p {
-    font-size: 1.8rem;
+  .modal-logo-type .checkbox-form .flex-box p {
+    font-size: 2.6rem;
   }
   .checkbox-form .flex-box input[type='checkbox']:checked + .ico-check {
     background-size: 100% auto;
@@ -1749,8 +1814,97 @@ footer span {
     max-width: 108rem;
   }
   .pop-modal.modal-logo-type .btn-alert-close {
-    top: -5.2rem;
-    right: -0.2rem;
+    top: -8.2rem;
+    right: -0.5rem;
+    width: 7.8rem;
+    height: 7.8rem;
   }
+  .pop-modal.modal-logo-type .btn-alert-close:before {
+    width: 5.5rem;
+    height: 0.2rem;
+  }
+  .pop-modal.modal-logo-type .btn-alert-close:after {
+    width: 5.5rem;
+    height: 0.2rem;
+  }
+
+  .pop-modal.modal-logo-type .modal-content h3 strong {
+    width: 55rem;
+    height: 10rem;
+    background: #000 url(../images/ico_logo_pop.png) no-repeat 50% 50% / 38rem auto;
+    border-radius: 10rem;
+  }
+  .pop-modal.modal-logo-type .modal-content {
+    width: 67rem;
+    height: 85%;
+    max-height: 100rem;
+  }
+  .pop-modal.modal-logo-type .modal-content h3 {
+    top: 5rem;
+  }
+  .pop-modal .modal-contents-middle strong {
+    font-size: 4rem;
+  }
+  .pop-modal .modal-contents-middle p {
+    font-size: 2.6rem;
+  }
+  .pop-modal .btn-bs-base {
+    height: auto;
+    padding: 1.4rem 0 1.6rem;
+    font-size: 3rem;
+  }
+
+  .modal-logo-type .modal-contents-scroll {
+    width: 95%;
+    height: 85%;
+    max-height: 80rem;
+    margin-top: 16rem;
+    font-size: 2.8rem;
+    line-height: 1.6;
+  }
+  .modal-email-update .form-box > p {
+    font-size: 2.8rem;
+  }
+  .modal-logo-type h4 {
+    font-size: 4rem;
+  }
+  .modal-password-reset p {
+    font-size: 2.8rem;
+  }
+  .modal-email-certification .modal-bottom-box a span {
+    font-size: 2.6rem;
+  }
+  .modal-login .info-box {
+    max-width: 55rem;
+  }
+  .modal-login .flex-box {
+    margin-bottom: 0;
+  }
+  .checkbox-form .flex-box p {
+    font-size: 2.6rem;
+  }
+  .modal-login .result-box {
+    max-width: 57rem;
+    min-height: 28rem;
+  }
+  .modal-login .result-box .captcha-box p {
+    padding-bottom: 1rem;
+    font-size: 2.6rem;
+  }
+  .modal-login .result-box .result-fail {
+    padding-top: 3rem;
+  }
+  .modal-password-reset .form-box {
+    padding: 6rem;
+  }
+  .modal-login .info-box {
+    width: 100%;
+    padding-bottom: 4.5rem;
+  }
+  .checkbox-form .warning-text {
+    left: 9rem;
+    font-size: 2.2rem;
+  }
+
   /* // 2022-04 (3/3) */
 }
