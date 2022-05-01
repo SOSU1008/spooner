@@ -47,6 +47,8 @@
   min-height: 13rem;
   padding-left: 1.7rem;
 }
+
+/* start : 2022-04 */
 .home .btn-play-game {
   display: inline-block;
   width: 25.4rem;
@@ -54,11 +56,10 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 100% auto;
-  background-image: url(../images/btn_play_game.png);
+  background-image: url(../images/btn_play_card.png);
   text-indent: -9999rem;
 }
 
-/* 2022-04(1/1) */
 /* baccarat */
 .baccarat.video-poker {
   min-height: 94.2rem;
@@ -128,6 +129,11 @@
 }
 .video-poker.baccarat .info-box li {
   padding-left: 0;
+}
+.video-poker.baccarat .info-box li em {
+  display: block;
+  font-style: normal;
+  margin-bottom: 1.2rem;
 }
 .video-poker .play-game {
   width: 100%;
@@ -547,7 +553,7 @@
   }
   .home .btn-play-game {
     margin-top: 3.3rem;
-    background-image: url(../images/btn_play_game_m.png);
+    background-image: url(../images/btn_play_card_m.png);
   }
   .home .guide-form {
     margin-top: 3.7rem;
@@ -726,7 +732,7 @@
   .video-poker.baccarat .play-game {
     margin-top: 8rem;
   }
-  /* 2022-04(1/1) */
+  /* end : 2022-04 */
   .video-poker .play-game .btn-play-game {
     width: 16rem;
     height: 16rem;
